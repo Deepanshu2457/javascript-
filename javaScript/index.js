@@ -21,36 +21,45 @@
 //-------switch using day name --------------
 
 
-let day = 3
+// let day = 3
 
-switch (day){
-    case 1:
-        console.log("monday");
-        break; 
+// switch (day){
+//     case 1:
+//         console.log("monday");
+//         break; 
     
-    case 2 : 
-    console.log("tuesday")
-    break;
+//     case 2 : 
+//     console.log("tuesday")
+//     break;
 
-    case 3 :
-        console.log("wednesday");
-         break ;
-    case 4 : 
-    console.log("thrusday");
-    break;
+//     case 3 :
+//         console.log("wednesday");
+//          break ;
+//     case 4 : 
+//     console.log("thrusday");
+//     break;
 
-    case 5 : 
-    console.log("friday");
-    break;
+//     case 5 : 
+//     console.log("friday");
+//     break;
 
-    case 6 : 
-    console.log("saturday");
-    break ;
+//     case 6 : 
+//     console.log("saturday");
+//     break ;
 
-    case 7 : 
-    console.log("sunday");
-    break; 
+//     case 7 : 
+//     console.log("sunday");
+//     break; 
 
-    default : 
-    console.log("invalid day");
+//     default : 
+//     console.log("invalid day");
+// }
+
+
+//  isloggin practice 
+
+function isLoggedIn(usernanme,password){
+    if(!usernanme || !password)return "invalid"
+    return "login sucesss"
 }
+  console.log( isLoggedIn("deep","123456yv"));
