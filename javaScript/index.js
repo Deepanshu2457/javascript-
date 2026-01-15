@@ -2,6 +2,7 @@
 //     if(n <= 0) return "not positive";
 //     if(n % 2 === 0) return "positive even"
 
+
 // return "postive odd"
 // }
 // console.log(oddEven(4))
@@ -56,10 +57,39 @@
 // }
 
 
-//  isloggin practice 
+// =------------- isloggin practice 
 
-function isLoggedIn(usernanme,password){
-    if(!usernanme || !password)return "invalid"
-    return "login sucesss"
+// function isLoggedIn(usernanme,password){
+//     if(!usernanme || !password)return "invalid"
+//     return "login sucesss"
+// }
+//   console.log( isLoggedIn("deep","123456yv"));
+
+
+//-------cart-discount-----------
+
+function getFinalAmount(cartvalue){
+    if(cartvalue >= 5000){
+        return cartvalue * 0.8
+    }else if(cartvalue >=1000){
+        return cartvalue * 0.9
+    }else{ return cartvalue}
 }
-  console.log( isLoggedIn("deep","123456yv"));
+console.log(getFinalAmount(7000));
+
+
+// ----------apply coupen ---------
+
+
+function applyCoupen(code ,amount){
+    switch(code){
+        case "SAVE10" :
+            return amount * 0.9
+        case "SAVE20" :
+            return amount * 0.8
+
+     default : 
+     return "invalid Coupan"
+    }
+}
+console.log(applyCoupen("SAVE20","4000"));
