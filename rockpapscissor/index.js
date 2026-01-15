@@ -1,0 +1,7 @@
+function game (user,computer){ 
+    if(user ==="rock" ,computer === "scissor" ) return "user"
+    if(user === "scissor" ,computer === "paper") return "user"
+    if(user === "paper" , computer === "rock") return "user"
+
+}
+console.log(game("paper","rock"))
