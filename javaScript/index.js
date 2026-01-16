@@ -68,28 +68,39 @@
 
 //-------cart-discount-----------
 
-function getFinalAmount(cartvalue){
-    if(cartvalue >= 5000){
-        return cartvalue * 0.8
-    }else if(cartvalue >=1000){
-        return cartvalue * 0.9
-    }else{ return cartvalue}
-}
-console.log(getFinalAmount(7000));
+// function getFinalAmount(cartvalue){
+//     if(cartvalue >= 5000){
+//         return cartvalue * 0.8
+//     }else if(cartvalue >=1000){
+//         return cartvalue * 0.9
+//     }else{ return cartvalue}
+// }
+// console.log(getFinalAmount(7000));
 
 
 // ----------apply coupen ---------
 
 
-function applyCoupen(code ,amount){
-    switch(code){
-        case "SAVE10" :
-            return amount * 0.9
-        case "SAVE20" :
-            return amount * 0.8
+// function applyCoupen(code ,amount){
+//     switch(code){
+//         case "SAVE10" :
+//             return amount * 0.9
+//         case "SAVE20" :
+//             return amount * 0.8
 
-     default : 
-     return "invalid Coupan"
-    }
+//      default : 
+//      return "invalid Coupan"
+//     }
+// }
+// console.log(applyCoupen("SAVE20","4000"));
+
+
+//-----------------------------------------------------------------------------
+
+
+
+let i = 10
+while(i >=1){
+console.log(i)
+i--
 }
-console.log(applyCoupen("SAVE20","4000"));
