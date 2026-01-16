@@ -136,6 +136,7 @@
 // for(let i = 1; i <=10; i++){
 //     console.log(`5 * ${i} = ${5*i}`);
 // }
+//      Given number prime hai ya nahi check karo
 
 // function isPrime(n){
 //     if(n <= 1) return " not prime"
@@ -150,14 +151,29 @@
 // }
 // console.log(isPrime(9)); 
 
+//   Given number ke digits ka sum nikaalo
 
-function sumOfDigit(n){
-    let sum=0
-    while(n > 0){
-        let lastDigit = n %10;
-        sum = sum + lastDigit
-        n = Math.floor(n/10)
-    }
-    return sum
+// function sumOfDigit(n){
+//     let sum=0
+//     while(n > 0){
+//         let lastDigit = n %10;
+//         sum = sum + lastDigit
+//         n = Math.floor(n/10)
+//     }
+//     return sum
+// }
+// console.log(sumOfDigit(123));
+
+// Given number me kitne digits hain, count karo
+
+function countNumber(n){
+    if(n === 0)return 'invalid number'
+
+    let count = 0
+   while(n>0){
+    count++
+    n=Math.floor(n/10)
+   }
+   return count
 }
-console.log(sumOfDigit(123));
+console.log(countNumber(1234));
