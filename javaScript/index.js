@@ -105,17 +105,59 @@
 // i--
 // }
 
-for(let i = 1 ; i <=20; i++){
-    if(i %2 ===0){
-console.log(i);
-    }
+// for(let i = 1 ; i <=20; i++){
+//     if(i %2 ===0){
+// console.log(i);
+//     }
     
-}
+// }
 
 
-for(let i = 1 ; i <=20; i++){
-    if(i %2 ===1){
-console.log(i);
-    }
+// for(let i = 1 ; i <=20; i++){
+//     if(i %2 ===1){
+// console.log(i);
+//     }
     
+// }
+
+// ----------factorial---------
+// function factorial(n){
+//     if(n<0)return "invalid number"
+
+//     let count = 1
+//     for(let i = 1 ; i<=n ; i++){
+//         count = count * i
+
+//     }
+//     return count 
+// }
+// console.log(factorial(7));
+// -------table-----------
+// for(let i = 1; i <=10; i++){
+//     console.log(`5 * ${i} = ${5*i}`);
+// }
+
+// function isPrime(n){
+//     if(n <= 1) return " not prime"
+
+//     for(let i = 2 ; i <=n; i++){
+//         if(n % i ===0){
+//             return "not prime"
+//         }
+      
+//     }
+//   return "prime"
+// }
+// console.log(isPrime(9)); 
+
+
+function sumOfDigit(n){
+    let sum=0
+    while(n > 0){
+        let lastDigit = n %10;
+        sum = sum + lastDigit
+        n = Math.floor(n/10)
+    }
+    return sum
 }
+console.log(sumOfDigit(123));
