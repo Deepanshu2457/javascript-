@@ -196,29 +196,63 @@
 
 
 
-for(let i = 0 ; i<=10; i++){
-    console.log(i)
-}
+// for(let i = 0 ; i<=10; i++){
+//     console.log(i)
+// }
 
-for(let i=0; i<=20; i++){
-    if(i % 2 ===0){
-        console.log(i);
+// for(let i=0; i<=20; i++){
+//     if(i % 2 ===0){
+//         console.log(i);
+//     }
+// }
+
+// for(let i=0; i<=20; i++){
+//     if(i % 2===1){
+//         console.log(i);
+//     }
+// }
+
+
+// for(let i = 20; i>=0; i--){
+//     console.log(i);
+// }
+
+// let sum=0
+// for(let i = 0; i<=10; i++){
+// sum = sum +i
+// console.log(sum);
+// }
+
+function abc(a,b){
+    console.log(a+b);
+}
+abc(2,3)
+
+function abcd(a,b,c){
+    console.log(a+b+c);
+}
+abcd(2,3,4)
+
+function even(num){
+ if(num % 2===0){
+    console.log("even number");
+ }else{
+    console.log("odd  number");
+ }
+}
+even(9)
+
+function abc(num){
+    return  num *num
+}
+console.log(abc(10));
+
+function checkNumber( a,b){
+    if(a>b){
+        console.log( a +" is greater ");
+    } else{
+        console.log(b +" is greter");
     }
 }
 
-for(let i=0; i<=20; i++){
-    if(i % 2===1){
-        console.log(i);
-    }
-}
-
-
-for(let i = 20; i>=0; i--){
-    console.log(i);
-}
-
-let sum=0
-for(let i = 0; i<=10; i++){
-sum = sum +i
-console.log(sum);
-}
+checkNumber(15,5)
