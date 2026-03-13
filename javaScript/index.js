@@ -5,7 +5,7 @@
 
 // return "postive odd"
 // }
-// console.log(oddEven(4))
+// console.log(oddEven(3))
 
 //-------------------------------------------------------------
 // function grade(score){
@@ -166,14 +166,59 @@
 
 // Given number me kitne digits hain, count karo
 
-function countNumber(n){
-    if(n === 0)return 'invalid number'
+// function countNumber(n){
+//     if(n === 0)return 'invalid number'
 
-    let count = 0
-   while(n>0){
-    count++
-    n=Math.floor(n/10)
-   }
-   return count
+//     let count = 0
+//    while(n>0){
+//     count++
+//     n=Math.floor(n/10)
+//    }
+//    return count
+// }
+// console.log(countNumber(1234));
+
+// for( let i=0; i<=5 ; i++ ){
+//   console.log(i);
+// }
+// let num = 5
+// while(num >=0){
+//     console.log(num);
+// num--
+// }
+
+// let sum = 0
+
+// for(let i =1; i <=10; i++){
+//     sum = sum + i
+// }
+// console.log(sum);
+
+
+
+for(let i = 0 ; i<=10; i++){
+    console.log(i)
 }
-console.log(countNumber(1234));
+
+for(let i=0; i<=20; i++){
+    if(i % 2 ===0){
+        console.log(i);
+    }
+}
+
+for(let i=0; i<=20; i++){
+    if(i % 2===1){
+        console.log(i);
+    }
+}
+
+
+for(let i = 20; i>=0; i--){
+    console.log(i);
+}
+
+let sum=0
+for(let i = 0; i<=10; i++){
+sum = sum +i
+console.log(sum);
+}
