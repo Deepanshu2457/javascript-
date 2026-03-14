@@ -265,17 +265,30 @@
 
 
 
-let fruit = ["apple", "banana","orange"]
-fruit.push("mango")
-fruit.unshift("pineapple")
-fruit.pop()     
-fruit.push("kiwi")
-console.log(fruit); 
+// let fruit = ["apple", "banana","orange"]
+// fruit.push("mango")
+// fruit.unshift("pineapple")
+// fruit.pop()     
+// fruit.push("kiwi")
+// console.log(fruit); 
 
 
-let num = [1,2,3,4,5,6,7]
+// let num = [1,2,3,4,5,6,7]
 
-let newNum = num.slice(2,5)
-console.log(newNum);
+// let newNum = num.slice(2,5)
+// console.log(newNum);
 
 
+
+let names = [ "virat", "abhishek", "pankaj","bulbul"]
+
+names.sort()
+names.reverse()
+console.log(names);
+
+let square = [2,3,4,5]
+
+ let newSqr=square.map( function (val){
+    return val * val
+})
+console.log(newSqr);
