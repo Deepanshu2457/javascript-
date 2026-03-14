@@ -261,7 +261,7 @@
 // checkNumber(15,5)
 
 
-// array question practice 
+// ---------------array question practice --------------------------------------------
 
 
 
@@ -280,15 +280,39 @@
 
 
 
-let names = [ "virat", "abhishek", "pankaj","bulbul"]
+// let names = [ "virat", "abhishek", "pankaj","bulbul"]
 
-names.sort()
-names.reverse()
-console.log(names);
+// names.sort()
+// names.reverse()
+// console.log(names);
 
-let square = [2,3,4,5]
+// let square = [2,3,4,5]
 
- let newSqr=square.map( function (val){
-    return val * val
+//  let newSqr=square.map( function (val){
+//     return val * val
+// })
+// console.log(newSqr);
+
+// use filter to keep num grater than of 10
+
+// let greaterNum = [ 15,36,58,43,78,7,3,32]
+
+// let newArr= greaterNum.filter((val)=>{
+//     return val > 10 
+// })
+// console.log(newArr);
+
+// use the reduce to find of sum this array
+
+let arr = [10,20,30]
+ let newArr= arr.reduce((acc,val)=>{
+    return acc + val 
 })
-console.log(newSqr);
+console.log(newArr);
+
+let find=[8,6,9,12,17,16]
+
+let newFind= find.find((val)=>{
+    return val >10
+})
+console.log(newFind);
