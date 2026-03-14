@@ -310,9 +310,34 @@ let arr = [10,20,30]
 })
 console.log(newArr);
 
-let find=[8,6,9,12,17,16]
+let find=[12,17,4,3,1,7,16]
 
 let newFind= find.find((val)=>{
-    return val >10
+    return val < 10
 })
 console.log(newFind);
+
+let fullName = ["deepanshu", "sharma"]
+
+let [firstName,lastName] = fullName
+
+
+console.log(firstName);
+console.log(lastName);
+
+let a = [1,2,3]
+let b = [4,5,6]
+
+let c = [...a , ...b]
+
+console.log(c);
+
+let countries = ["UK","USA"]
+countries = ["india", ...countries]
+console.log(countries);
+
+// clone array with out any refernce
+
+let arrr = [1,2,3]
+let arr2 = [...arrr]
+console.log(arr2);
