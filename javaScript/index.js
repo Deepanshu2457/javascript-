@@ -223,36 +223,59 @@
 // console.log(sum);
 // }
 
-function abc(a,b){
-    console.log(a+b);
-}
-abc(2,3)
 
-function abcd(a,b,c){
-    console.log(a+b+c);
-}
-abcd(2,3,4)
+// function qustions practice 
 
-function even(num){
- if(num % 2===0){
-    console.log("even number");
- }else{
-    console.log("odd  number");
- }
-}
-even(9)
+// function abc(a,b){
+//     console.log(a+b);
+// }
+// abc(2,3)
 
-function abc(num){
-    return  num *num
-}
-console.log(abc(10));
+// function abcd(a,b,c){
+//     console.log(a+b+c);
+// }
+// abcd(2,3,4)
 
-function checkNumber( a,b){
-    if(a>b){
-        console.log( a +" is greater ");
-    } else{
-        console.log(b +" is greter");
-    }
-}
+// function even(num){
+//  if(num % 2===0){
+//     console.log("even number");
+//  }else{
+//     console.log("odd  number");
+//  }
+// }
+// even(9)
 
-checkNumber(15,5)
+// function abc(num){
+//     return  num *num
+// }
+// console.log(abc(10));
+
+// function checkNumber( a,b){
+//     if(a>b){
+//         console.log( a +" is greater ");
+//     } else{
+//         console.log(b +" is greter");
+//     }
+// }
+
+// checkNumber(15,5)
+
+
+// array question practice 
+
+
+
+let fruit = ["apple", "banana","orange"]
+fruit.push("mango")
+fruit.unshift("pineapple")
+fruit.pop()     
+fruit.push("kiwi")
+console.log(fruit); 
+
+
+let num = [1,2,3,4,5,6,7]
+
+let newNum = num.slice(2,5)
+console.log(newNum);
+
+
