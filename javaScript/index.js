@@ -461,67 +461,140 @@
 //-----array practice --------------
 
 
-function evenNum(arr){
-    let even = []
-    for(let i = 0; i<arr.length ; i++){
-        if(arr[i] % 2 ===0){
-            even.push(arr[i])
-        }
-    }
-    return even
+// function evenNum(arr){
+//     let even = []
+//     for(let i = 0; i<arr.length ; i++){
+//         if(arr[i] % 2 ===0){
+//             even.push(arr[i])
+//         }
+//     }
+//     return even
+// }
+// console.log(evenNum([1,2,3,4,5,6,7,8]));
+
+
+// function oddNum(arr){
+//     let odd = []
+//     for(let i =0 ; i <arr.length; i++){
+//         if(arr[i] % 2 ===1 ){
+//             odd.push(arr[i])
+//         }
+//     }
+//    return odd 
+// }
+
+// console.log(oddNum([1,2,3,4,5,6,7,8,9,13,33]));
+
+
+// function bigNum(arr){
+//     let big = []
+//     for(let i = 0 ; i<arr.length; i++){
+//         if(arr[i] > 10){
+//             big++
+//         }
+//     }
+//     return big
+// }
+// console.log(bigNum([12,3,8,16]));
+
+// function duplicate(arr){
+//     let copy = []
+//     for(let i=0; i <arr.length ; i++){
+//         if(!copy.includes(arr[i])){
+//             copy.push(arr[i])
+//         }
+//     }
+//     return copy
+// }
+
+// console.log(duplicate([1,2,3,4,3,2,1,4]));
+
+// function assenOdr(arr){
+//     for(let i =0 ; i<arr.length; i++){
+//         for(let j=0; j<arr.length -1 ; j++){
+
+//             if(arr[j] > arr[j+1]){
+
+//                 let temp = arr[j]
+//                 arr[j]=arr[j+1]
+//                 arr[j+1]=temp
+//             }
+
+//         }
+//     }
+//     return arr
+// }
+// console.log(assenOdr([5,3,1,8,2]));
+
+
+
+
+// -----------objects practice ----------------
+
+
+
+let student = {
+    name : " deepanshu",
+    age: 23,
+    marks : 57
 }
-console.log(evenNum([1,2,3,4,5,6,7,8]));
-
-
-function oddNum(arr){
-    let odd = []
-    for(let i =0 ; i <arr.length; i++){
-        if(arr[i] % 2 ===1 ){
-            odd.push(arr[i])
-        }
-    }
-   return odd 
+if(student.marks >= 40){
+    console.log(student.name + " is pass");
+}else{
+    console.log(student.name + " is fail");
 }
 
-console.log(oddNum([1,2,3,4,5,6,7,8,9,13,33]));
 
-
-function bigNum(arr){
-    let big = []
-    for(let i = 0 ; i<arr.length; i++){
-        if(arr[i] > 10){
-            big++
-        }
+let user = {
+      name : "deepanshu",
+    interduce : function(){
+        console.log(`hello , my name is ${this.name}`);
     }
-    return big
 }
-console.log(bigNum([12,3,8,16]));
+user.interduce()
 
-function duplicate(arr){
-    let copy = []
-    for(let i=0; i <arr.length ; i++){
-        if(!copy.includes(arr[i])){
-            copy.push(arr[i])
-        }
+
+let profile = {
+    name : "deepanshu",
+    age : 25,
+    address : {
+        city:"delhi",
+        pincode : 110094
     }
-    return copy
 }
+console.log(profile.address.city);
+console.log(profile.address.pincode);
 
-console.log(duplicate([1,2,3,4,3,2,1,4]));
-
-function assenOdr(arr){
-    for(let i =0 ; i<arr.length; i++){
-        for(let j=0; j<arr.length -1 ; j++){
-
-            if(arr[j] > arr[j+1]){
-
-                let temp = arr[j]
-                arr[j]=arr[j+1]
-                arr[j+1]=temp
-            }
-
-        }
+let profile2 = {
+    name : "deepanshu",
+    age : 25,
+    address : {
+        city:"delhi",
+        pincode : 110094
     }
-    return arr
 }
-console.log(assenOdr([5,3,1,8,2]));
+for(let key in profile2){
+    console.log(key);
+}
+
+
+let profile3 = {
+    name : "deepanshu",
+    age : 25,
+    address : {
+        city:"delhi",
+        pincode : 110094
+    }
+}
+for(let key in profile3){
+    console.log(profile3[key]);
+}
+
+// bouns
+
+let user2 = {
+    skills : ["js","html","css"]
+}
+for(let i = 0; i<user2.skills.length; i++){
+    console.log(user2.skills[i]);
+}
