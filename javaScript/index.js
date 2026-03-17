@@ -349,50 +349,111 @@
 // loop--practice ------
 
 
-for(let i=1 ; i<=50; i++){
-    if(i %3 ===0){
-        console.log(i);
-    }
-}
+// for(let i=1 ; i<=50; i++){
+//     if(i %3 ===0){
+//         console.log(i);
+//     }
+// }
 
-for(let i =1 ; i<=10; i++){
-    console.log(`5 * ${i} = ${5*i}`);
-}
+// for(let i =1 ; i<=10; i++){
+//     console.log(`5 * ${i} = ${5*i}`);
+// }
 
-let n=5
-let result = 1
-for(let i = 1 ; i<=5;i++){
-    result = result * i
+// let n=5
+// let result = 1
+// for(let i = 1 ; i<=5;i++){
+//     result = result * i
    
+// }
+//  console.log(result);
+
+
+// let count = 0
+// for(let i = 1; i<=100; i++ ){
+//     if(i % 2 ===0){
+//         count++
+//     } 
+// }
+//  console.log(count);
+
+
+// let checkPrimeNum = 11
+
+// let isPrime = true
+
+// for(let i= 2; i<checkPrimeNum ; i++){
+//     if(checkPrimeNum % i ===0){
+//         isPrime = false;
+//         break;
+//     }
+
+
+// }
+//     if(isPrime && n > 1){
+//         console.log("prime number");
+//     }else{
+//         console.log("not prime");
+//     }
+
+// ---- function practice--------
+
+
+
+function factorial(n){
+    let result = 1
+    for(let i = 1; i<=n; i++){
+        result = result * i
+    }
+    return result
 }
- console.log(result);
+console.log(factorial(5)); 
 
 
-let count = 0
-for(let i = 1; i<=100; i++ ){
-    if(i % 2 ===0){
-        count++
-    } 
-}
- console.log(count);
-
-
-let checkPrimeNum = 11
-
-let isPrime = true
-
-for(let i= 2; i<checkPrimeNum ; i++){
-    if(checkPrimeNum % i ===0){
-        isPrime = false;
-        break;
+function checkNumber(n){
+    let isPrime = true
+    for(let i=2 ; i<n; i++){
+        if(n %i ===0){
+            isPrime = false;
+            break ;
+        }
     }
 
-
-}
     if(isPrime && n > 1){
-        console.log("prime number");
+        console.log("Prime Number");
     }else{
         console.log("not prime");
     }
+}
+console.log(checkNumber(11));
 
-// ---- function practice--------
+function arraySum(arr){
+    let sum = 0
+    for(let i = 0 ; i<arr.length; i++){
+        sum = sum + arr[i]
+    }
+    return sum
+}
+console.log(arraySum([1,2,3,4,5]));
+
+function reverseNumber(n){
+    let rev= 0
+    while(n>0){
+        let digit = n % 10
+        rev = rev*10+digit 
+
+        n= Math.floor(n/10)
+    }
+    return rev
+}
+console.log(reverseNumber(4321)); 
+
+
+function reverseString(str){
+    let rev = "";
+    for(let i = str.length -1 ; i>=0; i--){
+        rev = rev + str[i]
+    }
+    return rev 
+}
+console.log(reverseString("hello"));
+
