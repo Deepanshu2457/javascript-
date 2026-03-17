@@ -399,61 +399,129 @@
 
 
 
-function factorial(n){
-    let result = 1
-    for(let i = 1; i<=n; i++){
-        result = result * i
-    }
-    return result
-}
-console.log(factorial(5)); 
+// function factorial(n){
+//     let result = 1
+//     for(let i = 1; i<=n; i++){
+//         result = result * i
+//     }
+//     return result
+// }
+// console.log(factorial(5)); 
 
 
-function checkNumber(n){
-    let isPrime = true
-    for(let i=2 ; i<n; i++){
-        if(n %i ===0){
-            isPrime = false;
-            break ;
+// function checkNumber(n){
+//     let isPrime = true
+//     for(let i=2 ; i<n; i++){
+//         if(n %i ===0){
+//             isPrime = false;
+//             break ;
+//         }
+//     }
+
+//     if(isPrime && n > 1){
+//         console.log("Prime Number");
+//     }else{
+//         console.log("not prime");
+//     }
+// }
+// console.log(checkNumber(11));
+
+// function arraySum(arr){
+//     let sum = 0
+//     for(let i = 0 ; i<arr.length; i++){
+//         sum = sum + arr[i]
+//     }
+//     return sum
+// }
+// console.log(arraySum([1,2,3,4,5]));
+
+// function reverseNumber(n){
+//     let rev= 0
+//     while(n>0){
+//         let digit = n % 10
+//         rev = rev*10+digit 
+
+//         n= Math.floor(n/10)
+//     }
+//     return rev
+// }
+// console.log(reverseNumber(4321)); 
+
+
+// function reverseString(str){
+//     let rev = "";
+//     for(let i = str.length -1 ; i>=0; i--){
+//         rev = rev + str[i]
+//     }
+//     return rev 
+// }
+// console.log(reverseString("hello"));
+
+
+//-----array practice --------------
+
+
+function evenNum(arr){
+    let even = []
+    for(let i = 0; i<arr.length ; i++){
+        if(arr[i] % 2 ===0){
+            even.push(arr[i])
         }
     }
-
-    if(isPrime && n > 1){
-        console.log("Prime Number");
-    }else{
-        console.log("not prime");
-    }
+    return even
 }
-console.log(checkNumber(11));
+console.log(evenNum([1,2,3,4,5,6,7,8]));
 
-function arraySum(arr){
-    let sum = 0
+
+function oddNum(arr){
+    let odd = []
+    for(let i =0 ; i <arr.length; i++){
+        if(arr[i] % 2 ===1 ){
+            odd.push(arr[i])
+        }
+    }
+   return odd 
+}
+
+console.log(oddNum([1,2,3,4,5,6,7,8,9,13,33]));
+
+
+function bigNum(arr){
+    let big = []
     for(let i = 0 ; i<arr.length; i++){
-        sum = sum + arr[i]
+        if(arr[i] > 10){
+            big++
+        }
     }
-    return sum
+    return big
 }
-console.log(arraySum([1,2,3,4,5]));
+console.log(bigNum([12,3,8,16]));
 
-function reverseNumber(n){
-    let rev= 0
-    while(n>0){
-        let digit = n % 10
-        rev = rev*10+digit 
-
-        n= Math.floor(n/10)
+function duplicate(arr){
+    let copy = []
+    for(let i=0; i <arr.length ; i++){
+        if(!copy.includes(arr[i])){
+            copy.push(arr[i])
+        }
     }
-    return rev
+    return copy
 }
-console.log(reverseNumber(4321)); 
 
+console.log(duplicate([1,2,3,4,3,2,1,4]));
 
-function reverseString(str){
-    let rev = "";
-    for(let i = str.length -1 ; i>=0; i--){
-        rev = rev + str[i]
+function assenOdr(arr){
+    for(let i =0 ; i<arr.length; i++){
+        for(let j=0; j<arr.length -1 ; j++){
+
+            if(arr[j] > arr[j+1]){
+
+                let temp = arr[j]
+                arr[j]=arr[j+1]
+                arr[j+1]=temp
+            }
+
+        }
     }
-    return rev 
+    return arr
 }
-console.log(reverseString("hello"));
-
+console.log(assenOdr([5,3,1,8,2]));
