@@ -304,40 +304,95 @@
 
 // use the reduce to find of sum this array
 
-let arr = [10,20,30]
- let newArr= arr.reduce((acc,val)=>{
-    return acc + val 
-})
-console.log(newArr);
+// let arr = [10,20,30]
+//  let newArr= arr.reduce((acc,val)=>{
+//     return acc + val 
+// })
+// console.log(newArr);
 
-let find=[12,17,4,3,1,7,16]
+// let find=[12,17,4,3,1,7,16]
 
-let newFind= find.find((val)=>{
-    return val < 10
-})
-console.log(newFind);
+// let newFind= find.find((val)=>{
+//     return val < 10
+// })
+// console.log(newFind);
 
-let fullName = ["deepanshu", "sharma"]
+// let fullName = ["deepanshu", "sharma"]
 
-let [firstName,lastName] = fullName
+// let [firstName,lastName] = fullName
 
 
-console.log(firstName);
-console.log(lastName);
+// console.log(firstName);
+// console.log(lastName);
 
-let a = [1,2,3]
-let b = [4,5,6]
+// let a = [1,2,3]
+// let b = [4,5,6]
 
-let c = [...a , ...b]
+// let c = [...a , ...b]
 
-console.log(c);
+// console.log(c);
 
-let countries = ["UK","USA"]
-countries = ["india", ...countries]
-console.log(countries);
+// let countries = ["UK","USA"]
+// countries = ["india", ...countries]
+// console.log(countries);
 
 // clone array with out any refernce
 
-let arrr = [1,2,3]
-let arr2 = [...arrr]
-console.log(arr2);
+// let arrr = [1,2,3]
+// let arr2 = [...arrr]
+// console.log(arr2);
+
+
+//-------next day -----------
+
+
+// loop--practice ------
+
+
+for(let i=1 ; i<=50; i++){
+    if(i %3 ===0){
+        console.log(i);
+    }
+}
+
+for(let i =1 ; i<=10; i++){
+    console.log(`5 * ${i} = ${5*i}`);
+}
+
+let n=5
+let result = 1
+for(let i = 1 ; i<=5;i++){
+    result = result * i
+   
+}
+ console.log(result);
+
+
+let count = 0
+for(let i = 1; i<=100; i++ ){
+    if(i % 2 ===0){
+        count++
+    } 
+}
+ console.log(count);
+
+
+let checkPrimeNum = 11
+
+let isPrime = true
+
+for(let i= 2; i<checkPrimeNum ; i++){
+    if(checkPrimeNum % i ===0){
+        isPrime = false;
+        break;
+    }
+
+
+}
+    if(isPrime && n > 1){
+        console.log("prime number");
+    }else{
+        console.log("not prime");
+    }
+
+// ---- function practice--------
