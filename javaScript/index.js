@@ -776,3 +776,60 @@
 //  let arr5=[...arr3,...arr4]
 //  console.log(arr5);
 
+
+// -------object ---
+
+let student = {
+    name :  " deepanshu",
+    age:24,
+    marks:75
+}
+if( student.marks >=90){
+    console.log(student.name , " Grade A+");
+} if(student.marks >=80){
+    console.log(student.name , "grade A");
+}if(student.marks >= 60){
+    console.log(student.name , "grade B");
+}
+if(student.marks >= 50){
+    console.log(student.name , "grade c");
+}else{
+    console.log("D ");
+}
+// Object me method → full details print karo
+let studentes = {
+    name :  " deepanshu",
+    age:24,
+    marks:73,
+    printDetails : function(){
+      console.log(`name : ${this.name}, age : ${this.age}, marks : ${this.marks}`);
+    }
+    
+}
+studentes.printDetails()
+
+//Object me method → full details print karo
+let student1 = {
+    name :  " deepanshu",
+    age:24,
+    marks:75
+}
+student1.occupation="learning"
+console.log(student1);
+
+//Object me se ek key delete karo
+
+delete student1.age
+console.log(student1);
+
+
+let students = [
+    { name: "A", marks: 50 },
+    { name: "B", marks: 60 },
+    { name: "C", marks: 70 }
+];
+let total = 0
+for(let i = 0; i<students.length; i++){
+    total += students.marks 
+}
+console.log(total);
