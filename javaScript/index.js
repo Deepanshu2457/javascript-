@@ -533,68 +533,124 @@
 
 
 
-let student = {
-    name : " deepanshu",
-    age: 23,
-    marks : 57
-}
-if(student.marks >= 40){
-    console.log(student.name + " is pass");
-}else{
-    console.log(student.name + " is fail");
-}
+// let student = {
+//     name : " deepanshu",
+//     age: 23,
+//     marks : 57
+// }
+// if(student.marks >= 40){
+//     console.log(student.name + " is pass");
+// }else{
+//     console.log(student.name + " is fail");
+// }
 
 
-let user = {
-      name : "deepanshu",
-    interduce : function(){
-        console.log(`hello , my name is ${this.name}`);
+// let user = {
+//       name : "deepanshu",
+//     interduce : function(){
+//         console.log(`hello , my name is ${this.name}`);
+//     }
+// }
+// user.interduce()
+
+
+// let profile = {
+//     name : "deepanshu",
+//     age : 25,
+//     address : {
+//         city:"delhi",
+//         pincode : 110094
+//     }
+// }
+// console.log(profile.address.city);
+// console.log(profile.address.pincode);
+
+// let profile2 = {
+//     name : "deepanshu",
+//     age : 25,
+//     address : {
+//         city:"delhi",
+//         pincode : 110094
+//     }
+// }
+// for(let key in profile2){
+//     console.log(key);
+// }
+
+
+// let profile3 = {
+//     name : "deepanshu",
+//     age : 25,
+//     address : {
+//         city:"delhi",
+//         pincode : 110094
+//     }
+// }
+// for(let key in profile3){
+//     console.log(profile3[key]);
+// }
+
+// // bouns
+
+// let user2 = {
+//     skills : ["js","html","css"]
+// }
+// for(let i = 0; i<user2.skills.length; i++){
+//     console.log(user2.skills[i]);
+// }
+
+
+
+// next day
+
+
+//  loop practice 
+
+for(let i = 1 ; i<=100; i++){
+    if(i % 3 ===0 && i % 5 ===0){
+        console.log(i);
     }
 }
-user.interduce()
 
-
-let profile = {
-    name : "deepanshu",
-    age : 25,
-    address : {
-        city:"delhi",
-        pincode : 110094
+for(let i = 1 ; i<=5; i++){
+    let pattern = "";
+    for(let j=1 ; j<=i; j++){
+        pattern = pattern + "*"
     }
+    console.log(pattern);
 }
-console.log(profile.address.city);
-console.log(profile.address.pincode);
 
-let profile2 = {
-    name : "deepanshu",
-    age : 25,
-    address : {
-        city:"delhi",
-        pincode : 110094
+for(let i=1; i<=5; i++){
+    let num = "";
+    for(let j=1 ; j<=i ; j++){
+        num = num +  j
     }
-}
-for(let key in profile2){
-    console.log(key);
+    console.log(num);
 }
 
+let n=10
+  let sum = 0
+  let result = ""
+for( let i=1; i<=n ; i++){
+  
+   if(i%2 !== 0){
+    sum += i
 
-let profile3 = {
-    name : "deepanshu",
-    age : 25,
-    address : {
-        city:"delhi",
-        pincode : 110094
+       if( result !== ""){
+    result += "+"
+   }
+   result += i
+   }
+   }
+ console.log(result + "=" + sum )
+
+
+let no = 12
+ let count = 0 ;
+ 
+ for(let i =1; i<=no; i++){
+    if(no % i  ===0 ){
+        count++
     }
-}
-for(let key in profile3){
-    console.log(profile3[key]);
-}
-
-// bouns
-
-let user2 = {
-    skills : ["js","html","css"]
-}
-for(let i = 0; i<user2.skills.length; i++){
-    console.log(user2.skills[i]);
-}
+ }
+console.log(count);
