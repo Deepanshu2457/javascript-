@@ -659,77 +659,120 @@
 // functions practice --------------
 
 
-let n = 121;
-let original = n
-let rev = 0 
+// let n = 121;
+// let original = n
+// let rev = 0 
 
 
-while(n > 0){
-    let digit = n % 10
-    rev = rev *10 + digit 
-    n=Math.floor(n / 10)
+// while(n > 0){
+//     let digit = n % 10
+//     rev = rev *10 + digit 
+//     n=Math.floor(n / 10)
 
-}
-if(original === rev ){
-    console.log("palindrome");
+// }
+// if(original === rev ){
+//     console.log("palindrome");
 
-}
-else{
-    console.log("not palindrome");
-}
+// }
+// else{
+//     console.log("not palindrome");
+// }
 
 
-function checkNum(a,b,c){
-  if(a >= b && a >=c){
-   console.log(a);
-  } 
-  if(b >= a && b>=c){
-    console.log(b);
-  }else{
-    console.log(c);
-  }
+// function checkNum(a,b,c){
+//   if(a >= b && a >=c){
+//    console.log(a);
+//   } 
+//   if(b >= a && b>=c){
+//     console.log(b);
+//   }else{
+//     console.log(c);
+//   }
     
-}
+// }
 
-checkNum(13,24,5)
+// checkNum(13,24,5)
 
 
-function evenNum(arr){
-        let count = 0
-    for(let i = 0 ; i<arr.length; i++){
+// function evenNum(arr){
+//         let count = 0
+//     for(let i = 0 ; i<arr.length; i++){
    
-        if(arr[i] %2===0){
-            count++
+//         if(arr[i] %2===0){
+//             count++
 
-        }
+//         }
 
-    }
-    return count
+//     }
+//     return count
 
-}
-console.log(evenNum([1,2,3,4,56,6,7,8,9,9]));
-
-
-function vowel(arr){
-let count = 0
-    for(let i=0; i<arr.length; i++){
-        let str = arr[i]
-        if( str === "a" || str === "e" || str === "o" || str ===" i" || str === "u" ){
-            count++
-        }
-    }
-return count
-}
-console.log(vowel("hello"));
+// }
+// console.log(evenNum([1,2,3,4,56,6,7,8,9,9]));
 
 
-function sum(arr){
-    let total = 0 
-    while( arr > 0){
-        let digit = arr %10
-         total += digit
-        arr = Math.floor(arr /10)
-    }
-return total
-}
-console.log(sum(123));
+// function vowel(arr){
+// let count = 0
+//     for(let i=0; i<arr.length; i++){
+//         let str = arr[i]
+//         if( str === "a" || str === "e" || str === "o" || str ===" i" || str === "u" ){
+//             count++
+//         }
+//     }
+// return count
+// }
+// console.log(vowel("hello"));
+
+
+// function sum(arr){
+//     let total = 0 
+//     while( arr > 0){
+//         let digit = arr %10
+//          total += digit
+//         arr = Math.floor(arr /10)
+//     }
+// return total
+// }
+// console.log(sum(123));
+
+
+// array practice question 
+
+// function largetNum(a,b,c){
+//     let max = a
+ 
+//     if( b>=max ){
+//        max = b 
+//     }if( c >= max){
+//         max = c
+//     }
+//     return max
+
+// }
+// console.log(largetNum(8,2,5));
+
+// let arr = [1,2,3,4,5,6,7,8]
+// let newArr = []
+// for(let i = arr.length -1 ; i>0 ;i--){
+//    newArr.push(arr[i])
+// }
+// console.log(newArr);
+
+//  let arr2 = [ 1,1,2,2,3,3,4,4,8,8]
+// let uniqe = []
+//  for(let i=0 ; i<arr2.length; i++){
+
+//     if(!uniqe.includes(arr2[i])){
+//         uniqe.push(arr2[i])
+     
+//     }
+//  }
+
+//  console.log(uniqe);
+
+
+ // merge 
+//  let arr3=[1,2,3]
+//  let arr4=[4,5,6]
+//  let arr5=[...arr3,...arr4]
+//  console.log(arr5);
+
