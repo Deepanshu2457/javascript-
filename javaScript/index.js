@@ -606,51 +606,130 @@
 
 //  loop practice 
 
-for(let i = 1 ; i<=100; i++){
-    if(i % 3 ===0 && i % 5 ===0){
-        console.log(i);
-    }
-}
+// for(let i = 1 ; i<=100; i++){
+//     if(i % 3 ===0 && i % 5 ===0){
+//         console.log(i);
+//     }
+// }
 
-for(let i = 1 ; i<=5; i++){
-    let pattern = "";
-    for(let j=1 ; j<=i; j++){
-        pattern = pattern + "*"
-    }
-    console.log(pattern);
-}
+// for(let i = 1 ; i<=5; i++){
+//     let pattern = "";
+//     for(let j=1 ; j<=i; j++){
+//         pattern = pattern + "*"
+//     }
+//     console.log(pattern);
+// }
 
-for(let i=1; i<=5; i++){
-    let num = "";
-    for(let j=1 ; j<=i ; j++){
-        num = num +  j
-    }
-    console.log(num);
-}
+// for(let i=1; i<=5; i++){
+//     let num = "";
+//     for(let j=1 ; j<=i ; j++){
+//         num = num +  j
+//     }
+//     console.log(num);
+// }
 
-let n=10
-  let sum = 0
-  let result = ""
-for( let i=1; i<=n ; i++){
+// let n=10
+//   let sum = 0
+//   let result = ""
+// for( let i=1; i<=n ; i++){
   
-   if(i%2 !== 0){
-    sum += i
+//    if(i%2 !== 0){
+//     sum += i
 
-       if( result !== ""){
-    result += "+"
-   }
-   result += i
-   }
-   }
- console.log(result + "=" + sum )
+//        if( result !== ""){
+//     result += "+"
+//    }
+//    result += i
+//    }
+//    }
+//  console.log(result + "=" + sum )
 
 
-let no = 12
- let count = 0 ;
+// let no = 12
+//  let count = 0 ;
  
- for(let i =1; i<=no; i++){
-    if(no % i  ===0 ){
-        count++
+//  for(let i =1; i<=no; i++){
+//     if(no % i  ===0 ){
+//         count++
+//     }
+//  }
+// console.log(count);
+
+
+// functions practice --------------
+
+
+let n = 121;
+let original = n
+let rev = 0 
+
+
+while(n > 0){
+    let digit = n % 10
+    rev = rev *10 + digit 
+    n=Math.floor(n / 10)
+
+}
+if(original === rev ){
+    console.log("palindrome");
+
+}
+else{
+    console.log("not palindrome");
+}
+
+
+function checkNum(a,b,c){
+  if(a >= b && a >=c){
+   console.log(a);
+  } 
+  if(b >= a && b>=c){
+    console.log(b);
+  }else{
+    console.log(c);
+  }
+    
+}
+
+checkNum(13,24,5)
+
+
+function evenNum(arr){
+        let count = 0
+    for(let i = 0 ; i<arr.length; i++){
+   
+        if(arr[i] %2===0){
+            count++
+
+        }
+
     }
- }
-console.log(count);
+    return count
+
+}
+console.log(evenNum([1,2,3,4,56,6,7,8,9,9]));
+
+
+function vowel(arr){
+let count = 0
+    for(let i=0; i<arr.length; i++){
+        let str = arr[i]
+        if( str === "a" || str === "e" || str === "o" || str ===" i" || str === "u" ){
+            count++
+        }
+    }
+return count
+}
+console.log(vowel("hello"));
+
+
+function sum(arr){
+    let total = 0 
+    while( arr > 0){
+        let digit = arr %10
+         total += digit
+        arr = Math.floor(arr /10)
+    }
+return total
+}
+console.log(sum(123));
