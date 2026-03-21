@@ -964,33 +964,68 @@
 // console.log(total);
 
 
-//q 1
-for(let i = 0 ; i <= 50; i++){
-    if(i %2 === 0){
-            console.log(i);
-    }
-}
-// q 2
-let n = 5
- let sum = 0
-for(let i = 1 ; i<=n; i++){
-sum += i
-}
-  console.log(sum);
-// q 3
-let num = 7;
-let isPrime = true
+// //q 1
+// for(let i = 0 ; i <= 50; i++){
+//     if(i %2 === 0){
+//             console.log(i);
+//     }
+// }
+// // q 2
+// let n = 5
+//  let sum = 0
+// for(let i = 1 ; i<=n; i++){
+// sum += i
+// }
+//   console.log(sum);
+// // q 3
+// let num = 7;
+// let isPrime = true
 
-for(let i=2 ; i<num; i++){
-    if(num % i === 0){
-        isPrime =  false
-        break ;
-    }
+// for(let i=2 ; i<num; i++){
+//     if(num % i === 0){
+//         isPrime =  false
+//         break ;
+//     }
 
+// }
+// if( isPrime && num > 1){
+//         console.log("prime");
+//     }else{
+//         console.log("not prime ");
+//     }
+// console.log(isPrime);
+
+
+
+// function level 2 
+// q 1
+// function square(n){
+//  return n*n
+// }
+// console.log(square(2));
+
+function sum(arr){
+    let total = 0
+    for(let i = 0 ; i<arr.length; i++){
+         total = total +arr[i]
+    }
+    return total
 }
-if( isPrime && num > 1){
-        console.log("prime");
+console.log(sum([1,2,3,4]));
+
+function isPalindrome(str){
+  
+    let rev = ""
+    for(let i = str.length-1 ; i>=0; i--){
+        rev = rev + str[i]
+    }
+    if(str === rev ){
+        return "palindrome"
     }else{
-        console.log("not prime ");
+        return "not palindrome"
     }
-console.log(isPrime);
+}
+console.log(isPalindrome("hello"));
+console.log(isPalindrome("madam"));
+
+
