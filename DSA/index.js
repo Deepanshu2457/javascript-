@@ -1004,28 +1004,59 @@
 // }
 // console.log(square(2));
 
-function sum(arr){
-    let total = 0
-    for(let i = 0 ; i<arr.length; i++){
-         total = total +arr[i]
-    }
-    return total
-}
-console.log(sum([1,2,3,4]));
+// function sum(arr){
+//     let total = 0
+//     for(let i = 0 ; i<arr.length; i++){
+//          total = total +arr[i]
+//     }
+//     return total
+// }
+// console.log(sum([1,2,3,4]));
 
-function isPalindrome(str){
+// function isPalindrome(str){
   
-    let rev = ""
-    for(let i = str.length-1 ; i>=0; i--){
-        rev = rev + str[i]
-    }
-    if(str === rev ){
-        return "palindrome"
-    }else{
-        return "not palindrome"
+//     let rev = ""
+//     for(let i = str.length-1 ; i>=0; i--){
+//         rev = rev + str[i]
+//     }
+//     if(str === rev ){
+//         return "palindrome"
+//     }else{
+//         return "not palindrome"
+//     }
+// }
+// console.log(isPalindrome("hello"));
+// console.log(isPalindrome("madam"));
+
+
+// array level 2 practice
+
+let arr = [3,7,2,9,5]
+let maxx = arr[0]
+
+for(let i =1; i<arr.length; i++){
+    if(maxx <= arr[i]){
+        maxx= arr[i]
     }
 }
-console.log(isPalindrome("hello"));
-console.log(isPalindrome("madam"));
+console.log(maxx);
+
+let arr1= [1,2,3,4,5]
+let arr2=[]
+ 
+for(let i = arr1.length - 1 ; i>=0 ; i--){
+    arr2.push(arr1[i])
+}
+console.log(arr2);
+
+let arr3= [1,2,3,2,4,1]
+
+for(let i = 0 ; i<arr3.length ; i++){
+    for(let j= i+1 ; j<arr3.length; j++){
+        if(arr3[i] === arr3[j]){
+            console.log(arr3[i]);
+        }
+    }
+}
 
 
