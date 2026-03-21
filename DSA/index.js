@@ -840,125 +840,157 @@
 
 //que -1 
 
-function largeNum(a,b,c){
-    let maxx= a
-    if(b >=maxx){
-        return maxx = b 
-    }else if(c >=maxx){
-    return maxx = c
-    }
-    return maxx
-}
-console.log(largeNum(23,92,87));
+// function largeNum(a,b,c){
+//     let maxx= a
+//     if(b >=maxx){
+//         return maxx = b 
+//     }else if(c >=maxx){
+//     return maxx = c
+//     }
+//     return maxx
+// }
+// console.log(largeNum(23,92,87));
 
 
-//que -2
-function evenNum(arr){
-    let count=0
-   for(let i = 0; i<arr.length; i++){
-    if(arr[i] % 2===0){
-        count++
-    }
-   }
-   return count
-}
+// //que -2
+// function evenNum(arr){
+//     let count=0
+//    for(let i = 0; i<arr.length; i++){
+//     if(arr[i] % 2===0){
+//         count++
+//     }
+//    }
+//    return count
+// }
 
-console.log(evenNum([1,2,3,4,5,6,7,8]));
+// console.log(evenNum([1,2,3,4,5,6,7,8]));
 
-// que -3
-function vowel(arr){
-  let count = 0
-    for(let i =0; i<arr.length; i++){
-          let str = arr[i]
+// // que -3
+// function vowel(arr){
+//   let count = 0
+//     for(let i =0; i<arr.length; i++){
+//           let str = arr[i]
 
-        if( str === "a"  || str === "i" || str === "o" || str === "u" || str ==="e"){
-            count++
-        }
-    }
-    return count
-}
-console.log(vowel("hello"));
+//         if( str === "a"  || str === "i" || str === "o" || str === "u" || str ==="e"){
+//             count++
+//         }
+//     }
+//     return count
+// }
+// console.log(vowel("hello"));
 
-// que 4
-function sum(arr){
-    let arrSum=0
-    for(let i =0; i<arr.length;i++){
-        arrSum += arr[i]
-    }
-    return arrSum
+// // que 4
+// function sum(arr){
+//     let arrSum=0
+//     for(let i =0; i<arr.length;i++){
+//         arrSum += arr[i]
+//     }
+//     return arrSum
 
-}
-console.log(sum(1,2,3));
+// }
+// console.log(sum(1,2,3));
 
-// que -5
-function element(num){
+// // que -5
+// function element(num){
 
-let total = 0
-while(num > 0 ){
-    let digit = num % 10
-    total += digit
-    num = Math.floor(num/10)
-}
-return total
-}
-console.log(element(123));
+// let total = 0
+// while(num > 0 ){
+//     let digit = num % 10
+//     total += digit
+//     num = Math.floor(num/10)
+// }
+// return total
+// }
+// console.log(element(123));
 
-//que 6
+// //que 6
 
-let arr = [1,2,3,4,4,3,2,1]
+// let arr = [1,2,3,4,4,3,2,1]
 
-let newArr = []
-for( let i=0; i<arr.length; i++){
-    if(  !newArr.includes(arr[i])){
+// let newArr = []
+// for( let i=0; i<arr.length; i++){
+//     if(  !newArr.includes(arr[i])){
      
-        newArr.push(arr[i])
+//         newArr.push(arr[i])
+//     }
+// }
+// console.log(newArr);
+
+// //  que 7 
+// let arr1=[1,2,3]
+// let arr2=[4,5,6]
+// let newArr1=[ ...arr1, ...arr2]
+
+// console.log(newArr1);
+
+// // que 9
+
+// let student = {
+//     name : "deepanshu",
+//     age : 23,
+//     marks : 75
+// }
+// if(student.marks >= 90){
+//     console.log("A");
+// }else if(student.marks >= 70){
+//     console.log("B");
+// }else if( student .marks >= 50){
+//     console.log("C");
+// }else {
+//     console.log("fail");
+// }
+
+// // q 10
+// let obj = {
+//     name : "deepanshu",
+//     age: 23,
+//     isMarks : 23,
+//     fullDetails : function(){
+//         console.log(`name : ${this.name}, age: ${this.age} , isMarks : ${this.isMarks}`);
+//     }
+// }
+// obj.fullDetails();
+
+// // q 11
+// let students= [
+//  {name:"A", marks:50},
+//  {name:"B", marks:60}
+// ]
+
+// let total = 0 
+// for(let i =0; i<students.length; i++){
+//     total += students[i].marks
+// }
+// console.log(total);
+
+
+//q 1
+for(let i = 0 ; i <= 50; i++){
+    if(i %2 === 0){
+            console.log(i);
     }
 }
-console.log(newArr);
-
-//  que 7 
-let arr1=[1,2,3]
-let arr2=[4,5,6]
-let newArr1=[ ...arr1, ...arr2]
-
-console.log(newArr1);
-
-// que 9
-
-let student = {
-    name : "deepanshu",
-    age : 23,
-    marks : 75
+// q 2
+let n = 5
+ let sum = 0
+for(let i = 1 ; i<=n; i++){
+sum += i
 }
-if(student.marks >= 90){
-    console.log("A");
-}else if(student.marks >= 70){
-    console.log("B");
-}else if( student .marks >= 50){
-    console.log("C");
-}else {
-    console.log("fail");
-}
+  console.log(sum);
+// q 3
+let num = 7;
+let isPrime = true
 
-// q 10
-let obj = {
-    name : "deepanshu",
-    age: 23,
-    isMarks : 23,
-    fullDetails : function(){
-        console.log(`name : ${this.name}, age: ${this.age} , isMarks : ${this.isMarks}`);
+for(let i=2 ; i<num; i++){
+    if(num % i === 0){
+        isPrime =  false
+        break ;
     }
-}
-obj.fullDetails();
 
-// q 11
-let students= [
- {name:"A", marks:50},
- {name:"B", marks:60}
-]
-
-let total = 0 
-for(let i =0; i<students.length; i++){
-    total += students[i].marks
 }
-console.log(total);
+if( isPrime && num > 1){
+        console.log("prime");
+    }else{
+        console.log("not prime ");
+    }
+console.log(isPrime);
