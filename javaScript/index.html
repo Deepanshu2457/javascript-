@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>hellow world</h1>
+
+<div class="container">
+    <form autocomplete="off"  id="loginForm">
+        <h2>Login</h2>
+         
+        <input type="email" id="email" placeholder="Email Address" required>
+        <small class="error" id="emailError"></small>
+        <input type="password" id="password" placeholder="Password" required>
+           <small class="error" id="passwordError"></small>
+        <button type="submit">Login</button>
+
+        <p class="bottom-text">Forgot password?</p>
+    </form>
+</div>
+<script src="index.js"></script>
 </body>
 </html>

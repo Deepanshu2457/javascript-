@@ -1165,39 +1165,39 @@
 // console.log(arrFinal);
 
 
-let student = {
- name:"A",
- age:20,
- marks:50
-}
+// let student = {
+//  name:"A",
+//  age:20,
+//  marks:50
+// }
 
-for(let key in student){
-    console.log(key);
-}
-// Q2
+// for(let key in student){
+//     console.log(key);
+// }
+// // Q2
 
-let students = {
- name:"A",
- age:20,
- marks:50
-}
-for(let key in students){
-    console.log(students[key]);
-}
+// let students = {
+//  name:"A",
+//  age:20,
+//  marks:50
+// }
+// for(let key in students){
+//     console.log(students[key]);
+// }
 
-let studentes = [
- {name:"A", marks:50},
- {name:"B", marks:80},
- {name:"C", marks:30}
-]
-let maxNum = studentes[0].marks
-let topStudent = studentes[0].name
+// let studentes = [
+//  {name:"A", marks:50},
+//  {name:"B", marks:80},
+//  {name:"C", marks:30}
+// ]
+// let maxNum = studentes[0].marks
+// let topStudent = studentes[0].name
 
-for(let i=0; i<studentes.length;i++){
-    if(maxNum < studentes[i].marks){
-        maxNum= studentes[i].marks
-      topStudent = studentes[i].name
-    }
-}
-console.log(topStudent);
+// for(let i=0; i<studentes.length;i++){
+//     if(maxNum < studentes[i].marks){
+//         maxNum= studentes[i].marks
+//       topStudent = studentes[i].name
+//     }
+// }
+// console.log(topStudent);
 
