@@ -1066,33 +1066,63 @@
 // loop practice 
 
 
-// Q 1 
+// // Q 1 
 
-for(let i=0; i<=100; i++){
-    if(i%7==0){
-        console.log(i);
-    }
-}
-//Q2
-let sum=0
-for(let i=0; i<=50; i++){
-    if(i%2==0){
-     sum = sum + i
-    }
+// for(let i=0; i<=100; i++){
+//     if(i%7==0){
+//         console.log(i);
+//     }
+// }
+// //Q2
+// let sum=0
+// for(let i=0; i<=50; i++){
+//     if(i%2==0){
+//      sum = sum + i
+//     }
   
-}
-console.log(sum);
-// Q 3
-let n=5
-let a = 0 
-let b = 1
+// }
+// console.log(sum);
+// // Q 3
+// let n=5
+// let a = 0 
+// let b = 1
 
-console.log(a);
-console.log(b);
-for(let i=1; i<n; i++){
-    let c = a+b
-    console.log(c);
-    a=b
-    b=c
+// console.log(a);
+// console.log(b);
+// for(let i=1; i<n; i++){
+//     let c = a+b
+//     console.log(c);
+//     a=b
+//     b=c
   
+// }
+
+
+function checkNum(num){
+  if(num % 2 ===0)return "even"
+  if(num%2===1)return "odd"
 }
+console.log(checkNum(3));
+
+function largetNum(arr){
+    if(arr.length===0 )return "Array is empty"
+
+    let max = arr[0]
+    for(let i=1; i<arr.length; i++){
+        if(max < arr[i]){
+            max = arr[i]
+        }
+        
+    }
+    return max
+}
+console.log(largetNum([12,34,64,10,15,28,77]));
+
+function factorial(num){
+    let fact = 1
+    for(let i=1; i<=num; i++){
+        fact = fact * i
+    }
+    return fact
+}
+console.log(factorial(5));
