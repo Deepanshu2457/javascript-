@@ -1128,35 +1128,76 @@
 //     return fact
 // }
 // console.log(factorial(5));
+
+
+
 // array practice 
 
-// Q1 
-function checkNum(arr){
-    let count =0
-   for(let i=0; i<arr.length;i++){
-    if(arr[i] % 2===0){
-        count++
-    }
-   }
- return count
+// // Q1 
+// function checkNum(arr){
+//     let count =0
+//    for(let i=0; i<arr.length;i++){
+//     if(arr[i] % 2===0){
+//         count++
+//     }
+//    }
+//  return count
+// }
+// console.log(checkNum([1,2,3,4,5,6,8]));
+// // Q2
+// function arraySum(arr){
+//     if(arr.length ===0)return 0
+//    return  arr[0] + arraySum(arr.slice(1))
+// }
+// console.log(arraySum([1,2,3,4]));
+
+// // Q3
+// let arr=[1,2,3]
+// let arrSec =[4,5,6]
+// let arrFinal= []
+
+// for(let i=0; i<arr.length; i++){
+//     arrFinal[arrFinal.length] = arr[i]
+// }
+// for(let i=0; i<arrSec.length; i++){
+//     arrFinal.push(arrSec[i])
+// }
+// console.log(arrFinal);
+
+
+let student = {
+ name:"A",
+ age:20,
+ marks:50
 }
-console.log(checkNum([1,2,3,4,5,6,8]));
+
+for(let key in student){
+    console.log(key);
+}
 // Q2
-function arraySum(arr){
-    if(arr.length ===0)return 0
-   return  arr[0] + arraySum(arr.slice(1))
-}
-console.log(arraySum([1,2,3,4]));
 
-// Q3
-let arr=[1,2,3]
-let arrSec =[4,5,6]
-let arrFinal= []
+let students = {
+ name:"A",
+ age:20,
+ marks:50
+}
+for(let key in students){
+    console.log(students[key]);
+}
 
-for(let i=0; i<arr.length; i++){
-    arrFinal[arrFinal.length] = arr[i]
+let studentes = [
+ {name:"A", marks:50},
+ {name:"B", marks:80},
+ {name:"C", marks:30}
+]
+let maxNum = studentes[0].marks
+let topStudent = studentes[0].name
+
+for(let i=0; i<studentes.length;i++){
+    if(maxNum < studentes[i].marks){
+        maxNum= studentes[i].marks
+      topStudent = studentes[i].name
+    }
 }
-for(let i=0; i<arrSec.length; i++){
-    arrFinal.push(arrSec[i])
-}
-console.log(arrFinal);
+console.log(topStudent);
+
