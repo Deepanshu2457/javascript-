@@ -1097,32 +1097,66 @@
   
 // }
 
+// // function 
 
-function checkNum(num){
-  if(num % 2 ===0)return "even"
-  if(num%2===1)return "odd"
-}
-console.log(checkNum(3));
+// // Q1
+// function checkNum(num){
+//   if(num % 2 ===0)return "even"
+//   if(num%2===1)return "odd"
+// }
+// console.log(checkNum(3));
+// // Q 2
+// function largetNum(arr){
+//     if(arr.length===0 )return "Array is empty"
 
-function largetNum(arr){
-    if(arr.length===0 )return "Array is empty"
-
-    let max = arr[0]
-    for(let i=1; i<arr.length; i++){
-        if(max < arr[i]){
-            max = arr[i]
-        }
+//     let max = arr[0]
+//     for(let i=1; i<arr.length; i++){
+//         if(max < arr[i]){
+//             max = arr[i]
+//         }
         
-    }
-    return max
-}
-console.log(largetNum([12,34,64,10,15,28,77]));
+//     }
+//     return max
+// }
+// console.log(largetNum([12,34,64,10,15,28,77]));
+// // Q 3
+// function factorial(num){
+//     let fact = 1
+//     for(let i=1; i<=num; i++){
+//         fact = fact * i
+//     }
+//     return fact
+// }
+// console.log(factorial(5));
+// array practice 
 
-function factorial(num){
-    let fact = 1
-    for(let i=1; i<=num; i++){
-        fact = fact * i
+// Q1 
+function checkNum(arr){
+    let count =0
+   for(let i=0; i<arr.length;i++){
+    if(arr[i] % 2===0){
+        count++
     }
-    return fact
+   }
+ return count
 }
-console.log(factorial(5));
+console.log(checkNum([1,2,3,4,5,6,8]));
+// Q2
+function arraySum(arr){
+    if(arr.length ===0)return 0
+   return  arr[0] + arraySum(arr.slice(1))
+}
+console.log(arraySum([1,2,3,4]));
+
+// Q3
+let arr=[1,2,3]
+let arrSec =[4,5,6]
+let arrFinal= []
+
+for(let i=0; i<arr.length; i++){
+    arrFinal[arrFinal.length] = arr[i]
+}
+for(let i=0; i<arrSec.length; i++){
+    arrFinal.push(arrSec[i])
+}
+console.log(arrFinal);
