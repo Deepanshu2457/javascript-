@@ -1031,32 +1031,68 @@
 
 // array level 2 practice
 
-let arr = [3,7,2,9,5]
-let maxx = arr[0]
+// let arr = [3,7,2,9,5]
+// let maxx = arr[0]
 
-for(let i =1; i<arr.length; i++){
-    if(maxx <= arr[i]){
-        maxx= arr[i]
-    }
-}
-console.log(maxx);
+// for(let i =1; i<arr.length; i++){
+//     if(maxx <= arr[i]){
+//         maxx= arr[i]
+//     }
+// }
+// console.log(maxx);
 
-let arr1= [1,2,3,4,5]
-let arr2=[]
+// let arr1= [1,2,3,4,5]
+// let arr2=[]
  
-for(let i = arr1.length - 1 ; i>=0 ; i--){
-    arr2.push(arr1[i])
-}
-console.log(arr2);
+// for(let i = arr1.length - 1 ; i>=0 ; i--){
+//     arr2.push(arr1[i])
+// }
+// console.log(arr2);
 
-let arr3= [1,2,3,2,4,1]
+// let arr3= [1,2,3,2,4,1]
 
-for(let i = 0 ; i<arr3.length ; i++){
-    for(let j= i+1 ; j<arr3.length; j++){
-        if(arr3[i] === arr3[j]){
-            console.log(arr3[i]);
-        }
+// for(let i = 0 ; i<arr3.length ; i++){
+//     for(let j= i+1 ; j<arr3.length; j++){
+//         if(arr3[i] === arr3[j]){
+//             console.log(arr3[i]);
+//         }
+//     }
+// }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// loop practice 
+
+
+// Q 1 
+
+for(let i=0; i<=100; i++){
+    if(i%7==0){
+        console.log(i);
     }
 }
+//Q2
+let sum=0
+for(let i=0; i<=50; i++){
+    if(i%2==0){
+     sum = sum + i
+    }
+  
+}
+console.log(sum);
+// Q 3
+let n=5
+let a = 0 
+let b = 1
 
-
+console.log(a);
+console.log(b);
+for(let i=1; i<n; i++){
+    let c = a+b
+    console.log(c);
+    a=b
+    b=c
+  
+}
