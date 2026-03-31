@@ -1326,68 +1326,68 @@
 
 
 
-for(let i=0; i<=100; i++){
-    if(i%3===0 && i%5===0){
-        console.log();
-    }
-}
+// for(let i=0; i<=100; i++){
+//     if(i%3===0 && i%5===0){
+//         console.log();
+//     }
+// }
 
 
-for(let i=1 ; i<=5;i++){
-    let row = ""
-    for(let j = 1 ; j<=i ; j++){
-        row = row + j 
-    }
-    console.log(row);
-}
+// for(let i=1 ; i<=5;i++){
+//     let row = ""
+//     for(let j = 1 ; j<=i ; j++){
+//         row = row + j 
+//     }
+//     console.log(row);
+// }
 
-let num = 1234
-let rev =0
-while(num > 0 ){
-  let digit = num % 10 
-  rev = rev * 10 + digit
-  num = Math.floor(num / 10)
+// let num = 1234
+// let rev =0
+// while(num > 0 ){
+//   let digit = num % 10 
+//   rev = rev * 10 + digit
+//   num = Math.floor(num / 10)
 
-}
-console.log(rev);
+// }
+// console.log(rev);
 
-function sumOfDigit(num){
-    let sum = 0
-   while(num > 0 ){
-    let digit = num % 10
-    rev = rev * 10 + digit
-    num = Math.floor(num/10)
-   }
-return sum
-}
-console.log(sumOfDigit(1234));
+// function sumOfDigit(num){
+//     let sum = 0
+//    while(num > 0 ){
+//     let digit = num % 10
+//     rev = rev * 10 + digit
+//     num = Math.floor(num/10)
+//    }
+// return sum
+// }
+// console.log(sumOfDigit(1234));
 
-function vowel(str){
-    let count = 0 
-    for(let i=0 ; i<str.length; i++){
-        let ch = str[i]
-         if( ch === "a" || ch === "e" || ch === "o" || ch ==="i"|| ch === "u" ){
-        count++
-    }
-    }
+// function vowel(str){
+//     let count = 0 
+//     for(let i=0 ; i<str.length; i++){
+//         let ch = str[i]
+//          if( ch === "a" || ch === "e" || ch === "o" || ch ==="i"|| ch === "u" ){
+//         count++
+//     }
+//     }
    
-    return  count 
+//     return  count 
 
-}
-console.log(vowel("javascript"));
+// }
+// console.log(vowel("javascript"));
 
-function isPrime(num){
-    if(num <= 1) return "false"
+// function isPrime(num){
+//     if(num <= 1) return "false"
 
-    for(let i = 2 ; i<num ; i++){
-        if(num % i ===0){
-            return "false"
-        }
-    }
-    return "true"
-}
-console.log(isPrime(21));
-console.log(isPrime(7));
+//     for(let i = 2 ; i<num ; i++){
+//         if(num % i ===0){
+//             return "false"
+//         }
+//     }
+//     return "true"
+// }
+// console.log(isPrime(21));
+// console.log(isPrime(7));
 
 
 
