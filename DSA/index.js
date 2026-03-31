@@ -1201,3 +1201,128 @@
 // }
 // console.log(topStudent);
 
+// practice Mix
+
+// Q 2
+let sum=0
+for(let i=2; i<=100; i++){
+    if(i%2===0){
+        sum += i
+    }
+}
+console.log(sum);
+
+// Q 3
+
+let n=6
+let a = 0
+let b = 1
+console.log(a);
+console.log(b);
+
+for(let i=1; i<n;i++){
+
+    let c=a+b
+
+    a=b
+    b=c
+    console.log(a);
+
+}
+
+// Q4
+function checkNum(num){
+    if(num % 2 ===0) return "even"
+    if(num % 2 != 0) return "odd"
+
+}
+console.log(checkNum(3));
+console.log(checkNum(4));
+// Q5
+function largest(arr){
+    let max=arr[0]
+    for(let i=0; i<arr.length;i++){
+        if(max < arr[i]){
+            max = arr[i]
+        }
+    }
+   return max
+}
+console.log(largest([12,34,64,10,15,28,77]));
+// Q6
+function factorial(num){
+    let final = 1
+ for(let i=1 ;i<=num ; i++){
+     final =  final * i
+ }
+ return final
+}
+console.log(factorial(5));
+// Q 7 
+function palindrome(str){
+
+    let left = 0
+    let right = str.length - 1
+
+    while(left < right){
+        if(str[left] !== str[right]){
+            return false 
+        }
+        right--;
+        left++;   
+    }
+    return true
+
+}
+console.log(palindrome("hello"));
+console.log(palindrome("madem"));
+
+// Q8
+let arr= [3,7,2,9,5]
+let maxx= arr[0]
+for(let i=0 ; i<arr.length; i++){
+    if(maxx < arr[i]){
+        maxx= arr[i]
+    }
+}
+console.log(maxx);
+// Q 9
+let arr1=[1,2,3,4,5]
+
+arr1.reverse()
+console.log(arr1);
+
+//Q 11
+
+let array= [1,2,3]
+let array1=[4,5,6]
+
+let final = []
+for(let i =0; i<array.length; i++){
+    final.push(array[i])
+}
+for(let i=0; i<array1.length; i++){
+    final.push(array1[i])
+}
+console.log(final);
+
+// Q12
+let student = [
+ {name:"A", marks:50},
+ {name:"B", marks:80},
+ {name:"C", marks:30}
+]
+
+let topStudent = student[0].name
+let highmark = student[0].marks 
+
+for(let i = 0 ; i<student.length; i++){
+    if(highmark < student[i].marks){
+        highmark = student[i].marks
+        topStudent = student[i].name
+    }
+}
+console.log(topStudent);
+
+
+
