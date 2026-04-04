@@ -1389,8 +1389,132 @@
 // console.log(isPrime(21));
 // console.log(isPrime(7));
 
+// loop practice
+
+for(let i=0 ; i<=100; i++){
+    if(i%5===0){
+        console.log();
+    }
+}
+
+let n = 5
+for(let i=1;i<=n ; i++){
+   let num = ""
+   for(let j = 1; j<=i; j++){
+    num = num + i
+   }
+   console.log(num);
+}
 
 
+let num=5
+let f =1
+for(let i=1; i<=num; i++){
+    f = f * i
+}
+console.log(f);
+
+// function practice 
+
+function reverse(num){
+    let rev = 0
+    while(num >0){
+        let digit= num % 10
+        rev = rev * 10 + digit
+        num = Math.floor(num/10)
+    }
+    return rev
+}
+console.log(reverse(1234));
+
+function countOdd(num){
+    let count = 0
+    while(num>0){
+      let digit = num % 10
+      if(digit % 2===1){
+        count++
+      }
+      num=Math.floor(num/10)
+    }
+    return count
+}
+console.log(countOdd(12345678912));
+
+function larget(a,b,c){
+   let maxx = a 
+   if(b>maxx){
+      maxx = b 
+   }
+   if(c > maxx ){
+    maxx = c
+   }
+
+    return maxx
+}
+console.log(larget(12,45,35));
+
+// array 
+
+let arr = [1,2,3,4,5]
+let sum = 0
+for(let i =0; i<arr.length; i++){
+   sum =   sum + arr[i] 
+}
+
+console.log(sum);
+
+let even= [1,2,3,4,5]
+
+for(let i = 0 ; i<even.length; i++){
+      if(even[i]%2 ===0 ){
+        console.log(even[i]);
+      }
+}
+
+let arre = [1,2,3,4,5]
+let ne = arre.length
+let last = arre[n-1]
+
+for(let i = ne -1 ; i>0 ; i-- ){
+    arre[i] = arre[i -1]
+}
+
+arre[0]=last
+
+console.log(arre);  // help se kara h 
 
 
+let student = {
+ name:"Rahul",
+ age:20,
+ marks:70
+}
+for(let key in student){
+    console.log( key ,student[key]);
+}
 
+let student1 =[
+ {name:"A", marks:50},
+ {name:"B", marks:80},
+ {name:"C", marks:30}
+]
+let total = 0
+let highestMarks = student1[0].marks
+let highestStudent= student1[0].name
+for(let i =0 ; i<student1.length; i++){
+    total = total + student1[i].marks
+}
+console.log(total);
+
+
+for(let i=0;i<student1.length; i++){
+    if(highestMarks < student1[i].marks){
+          highestMarks =  student1[i].marks
+    highestStudent = student1[i].name
+    }
+  
+
+}
+
+console.log(highestMarks);
+console.log(highestStudent);
