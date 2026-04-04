@@ -68,3 +68,9 @@ h2 {
     font-size: 12px;
     color: #888;
 }
+.not-found {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}

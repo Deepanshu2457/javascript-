@@ -30,11 +30,19 @@ let cards =document.querySelector(".card-container")
 
 function showUser(arr){
 
+    
+     if(arr.length === 0){
+        cards.innerHTML = `<p class="not-found">User Not Found</p>`;
+        return;
+    }
 
 arr.forEach((users) => {
+    
 
+       
     const card = document.createElement("div")
     card.classList.add("card")
+
 
 
     const h3 = document.createElement("h3")
@@ -65,6 +73,7 @@ inp.addEventListener("input",()=>{
     let newUser= users.filter((user)=>{
        return user.name.toLowerCase().includes(inp.value.toLowerCase());
     });
+   
     cards.innerHTML = "";
   showUser(newUser);
 
