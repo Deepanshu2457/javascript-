@@ -1624,31 +1624,88 @@
 
 // new practice set 
 
-for(let i=0; i<=100;i++){
-    if(i%7===0){
-        console.log(i);
-    }
-}
+// Q1
 
-for(let i=1; i<=5; i++){
-   let row = ""
-   for(let j=i ; j>=1;j--){
-         row = row + j
-   }
+// 1 se 100 tak numbers print karo
+// 👉 jo 7 se divisible ho
 
-console.log(row);
+// for(let i=0; i<=100;i++){
+//     if(i%7===0){
+//         console.log(i);
+//     }
+// }
+
+// pattern print karo
+// 1
+// 21
+// 321
+// 4321
+// 54321
+
+
+// for(let i=1; i<=5; i++){
+//    let row = ""
+//    for(let j=i ; j>=1;j--){
+//          row = row + j
+//    }
+
+// console.log(row);
 
    
-}
+// }
 
-let n = 5
+// Q3
+// 1 se n tak numbers ka sum of squares nikalo
+// output 55
 
-let sum = 0 
-for(let i = 0 ; i<=n; i++){
+// let n = 5
+
+// let sum = 0 
+// for(let i = 0 ; i<=n; i++){
  
-    sum = sum + (i *i) 
+//     sum = sum + (i *i) 
         
    
+// }
+// console.log(sum);
+
+// function  practice
+
+// Q1 function banao ---  sumOfDigits(987) → 24
+
+function sumOfDigit(num){
+            let sum = 0
+
+    while(num>0){
+        let digit = num% 10
+        sum = sum + digit 
+        num=Math.floor(num/10)
+    }
+return sum
 }
-console.log(sum);
+console.log(sumOfDigit(987));
+
+function countOfDigit(num){
+    let count = 0
+    
+    while(num>0){
+        let digit = num % 10 
+        num= Math.floor(num/10)
+        count++
+    }
+    return count
+}
+console.log(countOfDigit(123456));
+
+function smallestNumber(a,b,c){
+    let min = a 
+    if(b < min ){
+        return " b"
+    }
+    else if( c < min){
+        return "C"
+    }
+    return min
+}
+console.log(smallestNumber(5,8,7));
 
