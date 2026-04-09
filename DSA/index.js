@@ -1715,68 +1715,100 @@
 // console.log(smallestNumber(5,8,7));
 
 
-// array .. 
+// // array .. 
 
-// Q 1   Array me odd numbers ka sum find karo
-// [1,2,3,4,5,6]
-// Output → 9
+// // Q 1   Array me odd numbers ka sum find karo
+// // [1,2,3,4,5,6]
+// // Output → 9
 
-let arr =  [1,2,3,4,5,6]
-let sum =0
-for(let i=0 ; i<arr.length; i++){
-    if(arr[i] %2 === 1 ){
-      sum = sum + arr[i]
+// let arr =  [1,2,3,4,5,6]
+// let sum =0
+// for(let i=0 ; i<arr.length; i++){
+//     if(arr[i] %2 === 1 ){
+//       sum = sum + arr[i]
+//     }
+// }
+// console.log(sum);
+
+// // Q 2 Array me duplicate elements print karo
+
+// // [1,2,3,2,4,1,5]
+
+// let arr = [1,2,3,2,3,4,1,5]
+
+
+
+// for(let i=0 ; i<arr.length; i++){
+//     for(let j = i +1 ; j<arr.length; j++){
+//         if(arr[i] === arr[j]){
+//             console.log(arr[i]);
+//             break ;
+//         }
+//     }
+// }
+
+// // 2 nd approche 
+
+// let duplicate = {}
+
+// for(let i=0 ; i<arr.length ; i++){
+//     if(duplicate[arr[i]]){
+//         duplicate[arr[i]]++
+//     }else{
+//         duplicate[arr[i]] = 1
+//     }
+// }
+
+// for(let key in duplicate){
+//     if(duplicate[key] > 1){
+//         console.log(key);
+//     }
+// }
+
+// // q3   Array ko left rotate by 1
+// // [1,2,3,4,5]  
+// // Output → [2,3,4,5,1]
+
+
+// let arr = [1,2,3,4,5]  
+// let n= arr.length
+// let first = arr[0]
+
+// for(let i=0; i<n-1;i++){
+//    arr[i] = arr[i+1]
+
+// }
+//    arr[n-1]=first
+// console.log(arr);
+
+
+let students = [
+ {name:"A", marks:50},
+ {name:"B", marks:70},
+ {name:"C", marks:30}
+]
+
+let totalMark =0
+let highMarks = students[0].marks
+let highName = students[0].name
+let lowestMarks = students[0].marks
+let lowestName = students[0].name
+
+for(let i = 0; i<students.length ; i++){
+    totalMark = totalMark + students[i].marks
+    if(students[i].marks > highMarks){
+        highMarks = students[i].marks
+        highName = students[i].name
+    }else if(students[i].marks < lowestMarks){
+        lowestMarks = students[i].marks
+        lowestName = students[i].name
     }
 }
-console.log(sum);
+    let avarge = totalMark / students.length
 
-// Q 2 Array me duplicate elements print karo
+console.log(totalMark);
+console.log(avarge);
 
-// [1,2,3,2,4,1,5]
+console.log(highMarks , highName);
 
-let arr = [1,2,3,2,3,4,1,5]
-
-
-
-for(let i=0 ; i<arr.length; i++){
-    for(let j = i +1 ; j<arr.length; j++){
-        if(arr[i] === arr[j]){
-            console.log(arr[i]);
-            break ;
-        }
-    }
-}
-
-// 2 nd approche 
-
-let duplicate = {}
-
-for(let i=0 ; i<arr.length ; i++){
-    if(duplicate[arr[i]]){
-        duplicate[arr[i]]++
-    }else{
-        duplicate[arr[i]] = 1
-    }
-}
-
-for(let key in duplicate){
-    if(duplicate[key] > 1){
-        console.log(key);
-    }
-}
-
-// q3   Array ko left rotate by 1
-// [1,2,3,4,5]  
-// Output → [2,3,4,5,1]
-
-
-let arr = [1,2,3,4,5]  
-let n= arr.length
-let first = arr[0]
-
-for(let i=0; i<n-1;i++){
-   arr[i] = arr[i+1]
-
-}
-   arr[n-1]=first
-console.log(arr);
+console.log(lowestMarks , lowestName);
