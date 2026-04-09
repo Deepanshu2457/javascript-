@@ -1673,39 +1673,110 @@
 
 // Q1 function banao ---  sumOfDigits(987) → 24
 
-function sumOfDigit(num){
-            let sum = 0
+// function sumOfDigit(num){
+//             let sum = 0
 
-    while(num>0){
-        let digit = num% 10
-        sum = sum + digit 
-        num=Math.floor(num/10)
-    }
-return sum
-}
-console.log(sumOfDigit(987));
+//     while(num>0){
+//         let digit = num% 10
+//         sum = sum + digit 
+//         num=Math.floor(num/10)
+//     }
+// return sum
+// }
+// console.log(sumOfDigit(987));
 
-function countOfDigit(num){
-    let count = 0
+
+// Q 2 =>  countofdigit  countDigits(12345) → 5
+
+// function countOfDigit(num){
+//     let count = 0
     
-    while(num>0){
-        let digit = num % 10 
-        num= Math.floor(num/10)
-        count++
-    }
-    return count
-}
-console.log(countOfDigit(123456));
+//     while(num>0){
+//         let digit = num % 10 
+//         num= Math.floor(num/10)
+//         count++
+//     }
+//     return count
+// }
+// console.log(countOfDigit(123456));
 
-function smallestNumber(a,b,c){
-    let min = a 
-    if(b < min ){
-        return " b"
-    }
-    else if( c < min){
-        return "C"
-    }
-    return min
-}
-console.log(smallestNumber(5,8,7));
+// // Q 3 => smallestOfThree(10, 2, 8) → 2
 
+// function smallestNumber(a,b,c){
+//     let min = a 
+//     if(b < min ){
+//         return " b"
+//     }
+//     else if( c < min){
+//         return "C"
+//     }
+//     return min
+// }
+// console.log(smallestNumber(5,8,7));
+
+
+// array .. 
+
+// Q 1   Array me odd numbers ka sum find karo
+// [1,2,3,4,5,6]
+// Output → 9
+
+let arr =  [1,2,3,4,5,6]
+let sum =0
+for(let i=0 ; i<arr.length; i++){
+    if(arr[i] %2 === 1 ){
+      sum = sum + arr[i]
+    }
+}
+console.log(sum);
+
+// Q 2 Array me duplicate elements print karo
+
+// [1,2,3,2,4,1,5]
+
+let arr = [1,2,3,2,3,4,1,5]
+
+
+
+for(let i=0 ; i<arr.length; i++){
+    for(let j = i +1 ; j<arr.length; j++){
+        if(arr[i] === arr[j]){
+            console.log(arr[i]);
+            break ;
+        }
+    }
+}
+
+// 2 nd approche 
+
+let duplicate = {}
+
+for(let i=0 ; i<arr.length ; i++){
+    if(duplicate[arr[i]]){
+        duplicate[arr[i]]++
+    }else{
+        duplicate[arr[i]] = 1
+    }
+}
+
+for(let key in duplicate){
+    if(duplicate[key] > 1){
+        console.log(key);
+    }
+}
+
+// q3   Array ko left rotate by 1
+// [1,2,3,4,5]  
+// Output → [2,3,4,5,1]
+
+
+let arr = [1,2,3,4,5]  
+let n= arr.length
+let first = arr[0]
+
+for(let i=0; i<n-1;i++){
+   arr[i] = arr[i+1]
+
+}
+   arr[n-1]=first
+console.log(arr);
