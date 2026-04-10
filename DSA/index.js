@@ -1842,36 +1842,79 @@
 
 // sumOfEvenDigits(2486) → 20
 
-function sumOfDigit(num){
-    let sum = 0 
-    while(num>0){
-        let digit = num%10
-        if(digit %2===0){
-             sum= sum + digit
-        }
+// function sumOfDigit(num){
+//     let sum = 0 
+//     while(num>0){
+//         let digit = num%10
+//         if(digit %2===0){
+//              sum= sum + digit
+//         }
      
-        num = Math.floor(num/10)
-    }
-    return sum
-}
-console.log(sumOfDigit(2486));
+//         num = Math.floor(num/10)
+//     }
+//     return sum
+// }
+// console.log(sumOfDigit(2486));
 
-function isPalindrome(num){
-    let original = num
-    let rev = 0 
+// function isPalindrome(num){
+//     let original = num
+//     let rev = 0 
     
-    while(num>0){
-        let digit = num % 10
-        rev = rev * 10 + digit 
-        num = Math.floor(num/10)
-    }
+//     while(num>0){
+//         let digit = num % 10
+//         rev = rev * 10 + digit 
+//         num = Math.floor(num/10)
+//     }
   
-    if(rev===original){
-        return true
-    }else{
-        return false
-    }
+//     if(rev===original){
+//         return true
+//     }else{
+//         return false
+//     }
     
+// }
+// console.log(isPalindrome(121));
+// console.log(isPalindrome(123));
+
+
+// array question
+
+// array mai even number ka count 
+// [2,5,6,3,8,1]
+
+let arr = [2,5,6,3,8,1]
+let count = 0
+for(let i=0; i<arr.length; i++){
+    if(arr[i] % 2===0){
+        count++
+    }
 }
-console.log(isPalindrome(121));
-console.log(isPalindrome(123));
+console.log(count);
+
+// // smallest or largest find karo single loop mai
+
+// //[12,5,8,20,3]
+
+let arr = [12,5,8,20,2]
+let max = arr[0]
+let min = arr[0]
+for(let i=0;i<arr.length; i++){
+    if(arr[i] < min){
+        min = arr[i]
+    }
+    if(arr[i] > max){
+        max = arr[i]
+    }
+}
+console.log(max);
+console.log(min);
+
+// array reverse with out .reverse()
+
+let arr= [1,2,3,4]
+let rev = []
+
+for(let i= arr.length -1 ; i>=0; i--){
+    rev.push(arr[i])
+}
+console.log(rev);
