@@ -1882,39 +1882,64 @@
 // array mai even number ka count 
 // [2,5,6,3,8,1]
 
-let arr = [2,5,6,3,8,1]
-let count = 0
-for(let i=0; i<arr.length; i++){
-    if(arr[i] % 2===0){
-        count++
-    }
+// let arr = [2,5,6,3,8,1]
+// let count = 0
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] % 2===0){
+//         count++
+//     }
+// }
+// console.log(count);
+
+// // // smallest or largest find karo single loop mai
+
+// // //[12,5,8,20,3]
+
+// let arr = [12,5,8,20,2]
+// let max = arr[0]
+// let min = arr[0]
+// for(let i=0;i<arr.length; i++){
+//     if(arr[i] < min){
+//         min = arr[i]
+//     }
+//     if(arr[i] > max){
+//         max = arr[i]
+//     }
+// }
+// console.log(max);
+// console.log(min);
+
+// // array reverse with out .reverse()
+
+// let arr= [1,2,3,4]
+// let rev = []
+
+// for(let i= arr.length -1 ; i>=0; i--){
+//     rev.push(arr[i])
+// }
+// console.log(rev);
+
+
+// object question 
+
+let students = [
+ {name:"A", marks:50},
+ {name:"B", marks:70},
+ {name:"C", marks:30}
+]
+let count =0
+for(let i=0;i<students.length;i++){
+   if(students[i].marks > 40){
+    count++
 }
+}
+
+for(let i=0;i<students.length;i++){
+   if(students[i].marks > 60){
+    console.log(students[i].name);
+     
+}
+}
+
 console.log(count);
 
-// // smallest or largest find karo single loop mai
-
-// //[12,5,8,20,3]
-
-let arr = [12,5,8,20,2]
-let max = arr[0]
-let min = arr[0]
-for(let i=0;i<arr.length; i++){
-    if(arr[i] < min){
-        min = arr[i]
-    }
-    if(arr[i] > max){
-        max = arr[i]
-    }
-}
-console.log(max);
-console.log(min);
-
-// array reverse with out .reverse()
-
-let arr= [1,2,3,4]
-let rev = []
-
-for(let i= arr.length -1 ; i>=0; i--){
-    rev.push(arr[i])
-}
-console.log(rev);
