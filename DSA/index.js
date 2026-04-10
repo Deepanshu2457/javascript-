@@ -1818,18 +1818,60 @@
 
 // loop 
 
-for(let i=0; i<=100; i++){
-    if(i%3 === 0 && i%5===0){
-        console.log();
+// for(let i=1; i<=100; i++){
+//     if((i%3 === 0 || i%5===0 ) && !(i%3===0 && i%5===0)){
+//         console.log(i);
+//     }
+// }
+
+// *
+// **
+// ***
+// ****
+// *****
+
+// for(let i=1;i<=5;i++){
+//     let str =""
+//     for(let j=1; j<=i ; j++){
+//         str= str + "*"
+//     }
+//     console.log(str);
+// }
+
+// functions 
+
+// sumOfEvenDigits(2486) → 20
+
+function sumOfDigit(num){
+    let sum = 0 
+    while(num>0){
+        let digit = num%10
+        if(digit %2===0){
+             sum= sum + digit
+        }
+     
+        num = Math.floor(num/10)
     }
+    return sum
 }
+console.log(sumOfDigit(2486));
 
-
-for(let i=0;i<5;i++){
-    let str ="*"
-    for(let j=1; j<=i ; j++){
-        str= str + "*"
+function isPalindrome(num){
+    let original = num
+    let rev = 0 
+    
+    while(num>0){
+        let digit = num % 10
+        rev = rev * 10 + digit 
+        num = Math.floor(num/10)
     }
-    console.log(str);
+  
+    if(rev===original){
+        return true
+    }else{
+        return false
+    }
+    
 }
-
+console.log(isPalindrome(121));
+console.log(isPalindrome(123));
