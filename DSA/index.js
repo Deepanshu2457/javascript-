@@ -1782,33 +1782,54 @@
 // console.log(arr);
 
 
-let students = [
- {name:"A", marks:50},
- {name:"B", marks:70},
- {name:"C", marks:30}
-]
+// let students = [
+//  {name:"A", marks:50},
+//  {name:"B", marks:70},
+//  {name:"C", marks:30}
+// ]
 
-let totalMark =0
-let highMarks = students[0].marks
-let highName = students[0].name
-let lowestMarks = students[0].marks
-let lowestName = students[0].name
+// let totalMark =0
+// let highMarks = students[0].marks
+// let highName = students[0].name
+// let lowestMarks = students[0].marks
+// let lowestName = students[0].name
 
-for(let i = 0; i<students.length ; i++){
-    totalMark = totalMark + students[i].marks
-    if(students[i].marks > highMarks){
-        highMarks = students[i].marks
-        highName = students[i].name
-    }else if(students[i].marks < lowestMarks){
-        lowestMarks = students[i].marks
-        lowestName = students[i].name
+// for(let i = 0; i<students.length ; i++){
+//     totalMark = totalMark + students[i].marks
+//     if(students[i].marks > highMarks){
+//         highMarks = students[i].marks
+//         highName = students[i].name
+//     }if(students[i].marks < lowestMarks){
+//         lowestMarks = students[i].marks
+//         lowestName = students[i].name
+//     }
+// }
+//     let avarge = totalMark / students.length
+
+// console.log(totalMark);
+// console.log(avarge);
+
+// console.log(highMarks , highName);
+
+// console.log(lowestMarks , lowestName);
+
+
+// practice set new 
+
+// loop 
+
+for(let i=0; i<=100; i++){
+    if(i%3 === 0 && i%5===0){
+        console.log();
     }
 }
-    let avarge = totalMark / students.length
 
-console.log(totalMark);
-console.log(avarge);
 
-console.log(highMarks , highName);
+for(let i=0;i<5;i++){
+    let str ="*"
+    for(let j=1; j<=i ; j++){
+        str= str + "*"
+    }
+    console.log(str);
+}
 
-console.log(lowestMarks , lowestName);
