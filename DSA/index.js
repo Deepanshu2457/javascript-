@@ -1922,24 +1922,39 @@
 
 // object question 
 
-let students = [
- {name:"A", marks:50},
- {name:"B", marks:70},
- {name:"C", marks:30}
-]
-let count =0
-for(let i=0;i<students.length;i++){
-   if(students[i].marks > 40){
-    count++
-}
-}
+// let students = [
+//  {name:"A", marks:50},
+//  {name:"B", marks:70},
+//  {name:"C", marks:30}
+// ]
+// let count =0
+// for(let i=0;i<students.length;i++){
+//    if(students[i].marks > 40){
+//     count++
+// }
+// }
 
-for(let i=0;i<students.length;i++){
-   if(students[i].marks > 60){
-    console.log(students[i].name);
+// for(let i=0;i<students.length;i++){
+//    if(students[i].marks > 60){
+//     console.log(students[i].name);
      
-}
-}
+// }
+// }
 
-console.log(count);
+// console.log(count);
+// today practice 
 
+//loop
+
+for(let i=0 ; i<=100;i++){
+    if(i % 4 ===0){
+        console.log(i);
+    }
+}
+for(let i=5; i>=1; i--){
+    let digit =""
+    for(let j=5; j>=i; j--){
+       digit=  digit + j
+    }
+    console.log(digit);
+}
