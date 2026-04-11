@@ -1946,15 +1946,58 @@
 
 //loop
 
-for(let i=0 ; i<=100;i++){
-    if(i % 4 ===0){
-        console.log(i);
+// for(let i=0 ; i<=100;i++){
+//     if(i % 4 ===0){
+//         console.log(i);
+//     }
+// }
+// for(let i=5; i>=1; i--){
+//     let digit =""
+//     for(let j=5; j>=i; j--){
+//        digit=  digit + j
+//     }
+//     console.log(digit);
+// }
+
+
+// functions practice 
+
+function sumOfOddDigit(num){
+     
+    let odd = 0 
+    while(num>0){
+        let digit = num % 10
+        if(digit % 2===1){
+            odd= odd + digit
+        }
+        num = Math.floor(num/10)
     }
+    return odd
 }
-for(let i=5; i>=1; i--){
-    let digit =""
-    for(let j=5; j>=i; j--){
-       digit=  digit + j
-    }
-    console.log(digit);
+console.log(sumOfOddDigit(13579));
+
+
+function countDigit(num){
+     let count = 0
+
+     while(num>0){
+        num % 10
+        num = Math.floor(num/10)
+        count++
+     }
+     return count
 }
+console.log(countDigit(108025));
+
+function largestOfThree(a,b,c){
+let maxx = a
+if(b > maxx){
+    maxx = b
+}
+if(c > maxx ){
+    maxx = c
+}
+return maxx
+
+}
+console.log(largestOfThree(10,25,7));
