@@ -2063,23 +2063,58 @@
 // }
 // console.log(largetOfArray([12,45,7,89,23]));
 
-// array
-let arr = [2,5,6,3,8,1]
-let sum=0
-for(let i=0;i<arr.length; i++){
-    if(arr[i]%2===0){
-            sum = sum + arr[i]
-    }
+// // array
+// let arr = [2,5,6,3,8,1]
+// let sum=0
+// for(let i=0;i<arr.length; i++){
+//     if(arr[i]%2===0){
+//             sum = sum + arr[i]
+//     }
 
+// }
+
+// console.log(sum);
+
+// let arr1 = [ 10,5,8,2,20]
+// let smallestNumber = arr[0]
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] < smallestNumber){
+//         smallestNumber = arr[i]
+//     }
+// }
+// console.log(smallestNumber);
+
+// let arr2=[4,3,2,1]
+
+// let rev =[]
+
+// for(let i = arr2.length -1 ; i >= 0; i--){
+//     rev.push(arr2[i])
+// }
+// console.log(rev);
+
+
+let students = [
+ {name:"A", marks:50},
+ {name:"B", marks:80},
+ {name:"C", marks:30}
+]
+
+let totalMarks= 0 
+for(let i=0; i<students.length;i++){
+    totalMarks = totalMarks +  students[i].marks
+}
+console.log(totalMarks);
+
+let highmarks = students[0].marks
+let highMarkStd = students[0].name
+
+for(let i =0 ; i<students.length; i++){
+    if(students[i].marks > highmarks){
+        highmarks = students[i].marks
+        highMarkStd = students[i].name
+    }
 }
 
-console.log(sum);
-
-let arr = [ 10,5,8,2,20]
-let smallestNumber = arr[0]
-for(let i=0; i<arr.length; i++){
-    if(arr[i] < smallestNumber){
-        smallestNumber = arr[i]
-    }
-}
-console.log(smallestNumber);
+console.log(highMarkStd);
+console.log(highmarks);
