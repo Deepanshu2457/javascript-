@@ -2037,3 +2037,28 @@ function sumOfDigit(num){
     return sum
 }
 console.log(sumOfDigit(456));
+
+
+function countOddDigit(num){
+    let count = 0
+    while(num>0){
+        let digit = num %10
+        if(digit % 2 ===0 ){
+            count++
+        }
+        num = Math.floor(num/10)
+    }
+    return count
+}
+console.log(countOddDigit(246135));
+
+function largetOfArray(arr){
+    let largest = arr[0]
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] > largest ){
+            largest = arr[i]
+        }
+    }
+    return largest
+}
+console.log(largetOfArray([12,45,7,89,23]));
