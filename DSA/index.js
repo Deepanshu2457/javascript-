@@ -1960,44 +1960,80 @@
 // }
 
 
-// functions practice 
+// // functions practice 
 
-function sumOfOddDigit(num){
+// function sumOfOddDigit(num){
      
-    let odd = 0 
+//     let odd = 0 
+//     while(num>0){
+//         let digit = num % 10
+//         if(digit % 2===1){
+//             odd= odd + digit
+//         }
+//         num = Math.floor(num/10)
+//     }
+//     return odd
+// }
+// console.log(sumOfOddDigit(13579));
+
+
+// function countDigit(num){
+//      let count = 0
+
+//      while(num>0){
+//         num % 10
+//         num = Math.floor(num/10)
+//         count++
+//      }
+//      return count
+// }
+// console.log(countDigit(108025));
+
+// function largestOfThree(a,b,c){
+// let maxx = a
+// if(b > maxx){
+//     maxx = b
+// }
+// if(c > maxx ){
+//     maxx = c
+// }
+// return maxx
+
+// }
+// console.log(largestOfThree(10,25,7));
+
+
+// practice pattern question
+
+// // loop 
+// let count = 0
+// for(let i=0; i<=100; i++){
+//     if(i%6===0){
+//         count++
+//     }
+// }
+// console.log(count);
+
+// for(let i=1; i<=5; i++){
+//     let num = ""
+//     for(let j=i; j>=1; j--){
+//        num =  num + j 
+//     }
+//     console.log(num);
+// }
+
+//
+
+
+// function 
+
+function sumOfDigit(num){
+    let sum = 0
     while(num>0){
-        let digit = num % 10
-        if(digit % 2===1){
-            odd= odd + digit
-        }
+        let digit = num%10
+        sum = sum + digit
         num = Math.floor(num/10)
     }
-    return odd
+    return sum
 }
-console.log(sumOfOddDigit(13579));
-
-
-function countDigit(num){
-     let count = 0
-
-     while(num>0){
-        num % 10
-        num = Math.floor(num/10)
-        count++
-     }
-     return count
-}
-console.log(countDigit(108025));
-
-function largestOfThree(a,b,c){
-let maxx = a
-if(b > maxx){
-    maxx = b
-}
-if(c > maxx ){
-    maxx = c
-}
-return maxx
-
-}
-console.log(largestOfThree(10,25,7));
+console.log(sumOfDigit(456));
