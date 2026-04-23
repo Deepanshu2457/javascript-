@@ -2027,38 +2027,59 @@
 
 // function 
 
-function sumOfDigit(num){
-    let sum = 0
-    while(num>0){
-        let digit = num%10
-        sum = sum + digit
-        num = Math.floor(num/10)
-    }
-    return sum
-}
-console.log(sumOfDigit(456));
+// function sumOfDigit(num){
+//     let sum = 0
+//     while(num>0){
+//         let digit = num%10
+//         sum = sum + digit
+//         num = Math.floor(num/10)
+//     }
+//     return sum
+// }
+// console.log(sumOfDigit(456));
 
 
-function countOddDigit(num){
-    let count = 0
-    while(num>0){
-        let digit = num %10
-        if(digit % 2 ===0 ){
-            count++
-        }
-        num = Math.floor(num/10)
-    }
-    return count
-}
-console.log(countOddDigit(246135));
+// function countOddDigit(num){
+//     let count = 0
+//     while(num>0){
+//         let digit = num %10
+//         if(digit % 2 ===0 ){
+//             count++
+//         }
+//         num = Math.floor(num/10)
+//     }
+//     return count
+// }
+// console.log(countOddDigit(246135));
 
-function largetOfArray(arr){
-    let largest = arr[0]
-    for(let i=0; i<arr.length; i++){
-        if(arr[i] > largest ){
-            largest = arr[i]
-        }
+// function largetOfArray(arr){
+//     let largest = arr[0]
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i] > largest ){
+//             largest = arr[i]
+//         }
+//     }
+//     return largest
+// }
+// console.log(largetOfArray([12,45,7,89,23]));
+
+// array
+let arr = [2,5,6,3,8,1]
+let sum=0
+for(let i=0;i<arr.length; i++){
+    if(arr[i]%2===0){
+            sum = sum + arr[i]
     }
-    return largest
+
 }
-console.log(largetOfArray([12,45,7,89,23]));
+
+console.log(sum);
+
+let arr = [ 10,5,8,2,20]
+let smallestNumber = arr[0]
+for(let i=0; i<arr.length; i++){
+    if(arr[i] < smallestNumber){
+        smallestNumber = arr[i]
+    }
+}
+console.log(smallestNumber);
