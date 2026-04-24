@@ -2119,64 +2119,105 @@
 // console.log(highMarkStd);
 // console.log(highmarks);
 
-loop
+// loop
 
-let count = 0
-for(let i=0; i<=100; i++){
-    if(i%9===0){
-      count++
+// let count = 0
+// for(let i=0; i<=100; i++){
+//     if(i%9===0){
+//       count++
+//     }
+// }
+// console.log(count);
+
+// for(let i=1; i<=5;i++){
+//     let star =""
+//     for(let j=1 ; j<=i;j++){
+//         star= star + "*"
+//     }
+//     console.log(star);
+// }
+// for(let i=4; i>=1; i--){
+//     let str = ""
+//     for(let j=1 ; j<=i ; j++){
+//       str = str + "*"
+//     }
+//     console.log(str);
+// }
+
+// function sumOfEvenDigits(num){
+//     let even= 0
+//     while(num>0){
+//         let digit = num%10
+//         if(digit % 2 ===0){
+//             even = even+ digit
+//         }
+//         num = Math.floor(num/10)
+//     }
+//     return even 
+// }
+// console.log(sumOfEvenDigits(246135));
+
+// function reverse(num){
+//     let rev =0
+//      while(num>0){
+//         let digit = num % 10
+//         rev = rev * 10 + digit
+//         num = Math.floor(num/10)
+//      }
+//      return rev
+// }
+// console.log(reverse(1234));
+
+// function smallest(a,b,c){
+//     let smallNum = a
+
+//     if(b < smallNum){
+//          smallNum = b
+//     }
+//     if(c < smallNum){
+//         smallNum = c
+//     }
+//     return smallNum
+// }
+// console.log(smallest(10,25,7));
+
+// array
+
+let arr = [1,2,3,4,5,6,7]
+let count =0
+for(let i=0; i<arr.length ; i++){
+    if(arr[i] % 2 !==0){
+         count++
+
     }
+    
 }
 console.log(count);
 
-for(let i=1; i<=5;i++){
-    let star =""
-    for(let j=1 ; j<=i;j++){
-        star= star + "*"
+let arr = [12,45,7,89,23]
+
+let large = arr[0]
+
+let small = arr[0]
+
+for(let i=0; i<arr.length ; i++){
+    if(arr[i] > large){
+        large = arr[i]
     }
-    console.log(star);
-}
-for(let i=4; i>=1; i--){
-    let str = ""
-    for(let j=1 ; j<=i ; j++){
-      str = str + "*"
+    if(arr[i] < small){
+        small = arr[i]
     }
-    console.log(str);
 }
 
-function sumOfEvenDigits(num){
-    let even= 0
-    while(num>0){
-        let digit = num%10
-        if(digit % 2 ===0){
-            even = even+ digit
-        }
-        num = Math.floor(num/10)
-    }
-    return even 
-}
-console.log(sumOfEvenDigits(246135));
+console.log(large);
+console.log(small);
 
-function reverse(num){
-    let rev =0
-     while(num>0){
-        let digit = num % 10
-        rev = rev * 10 + digit
-        num = Math.floor(num/10)
-     }
-     return rev
-}
-console.log(reverse(1234));
 
-function smallest(a,b,c){
-    let smallNum = a
+let arr1=[1,2,3,4]
 
-    if(b < smallNum){
-         smallNum = b
-    }
-    if(c < smallNum){
-        smallNum = c
-    }
-    return smallNum
+let rev =[]
+
+for(let i=arr1.length -1 ; i>=0; i--){
+    rev.push(arr1[i])
 }
-console.log(smallest(10,25,7));
+console.log(rev);
