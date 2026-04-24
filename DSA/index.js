@@ -2119,30 +2119,30 @@
 // console.log(highMarkStd);
 // console.log(highmarks);
 
-//loop
+loop
 
-// let count = 0
-// for(let i=0; i<=100; i++){
-//     if(i%9===0){
-//       count++
-//     }
-// }
-// console.log(count);
+let count = 0
+for(let i=0; i<=100; i++){
+    if(i%9===0){
+      count++
+    }
+}
+console.log(count);
 
-// for(let i=1; i<=5;i++){
-//     let star =""
-//     for(let j=1 ; j<=i;j++){
-//         star= star + "*"
-//     }
-//     console.log(star);
-// }
-// for(let i=4; i>=1; i--){
-//     let str = ""
-//     for(let j=1 ; j<=i ; j++){
-//       str = str + "*"
-//     }
-//     console.log(str);
-// }
+for(let i=1; i<=5;i++){
+    let star =""
+    for(let j=1 ; j<=i;j++){
+        star= star + "*"
+    }
+    console.log(star);
+}
+for(let i=4; i>=1; i--){
+    let str = ""
+    for(let j=1 ; j<=i ; j++){
+      str = str + "*"
+    }
+    console.log(str);
+}
 
 function sumOfEvenDigits(num){
     let even= 0
