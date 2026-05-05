@@ -2355,19 +2355,50 @@ console.log(frquency(122333));
 // }
 // console.log(reverseWord("hello world"));
 
-let arr = [10,5,8,20,15]
-let sL = -Infinity
-let large = -Infinity
+// let arr = [10,5,8,20,15]
+// let sL = -Infinity
+// let large = -Infinity
 
-for(let i = 0 ; i<arr.length; i++){
+// for(let i = 0 ; i<arr.length; i++){
+//     let num = arr[i]
+//     if(num > large){
+//         sL=large
+//         large = num 
+//     } else if(num > sL && num !== large){
+//         sL = num 
+//     }
+
+
+// }
+// console.log(sL);
+
+let arr = [1,2,2,3,3,3]
+
+let feq = {}
+
+for(let i=0; i<arr.length ; i++){
     let num = arr[i]
-    if(num > large){
-        sL=large
-        large = num 
-    } else if(num > sL && num !== large){
-        sL = num 
+    if(feq[num]){
+        feq[num]++
+    }else{
+        feq[num] = 1
     }
 
-
 }
-console.log(sL);
+console.log(feq);
+
+function rotation(arr,k){
+    let n = arr.length
+
+    for(let i=0; i<k; i++){
+        let first = arr[0]
+        for(let j=0; j< n-1; j++){
+            arr[j] = arr[j+1]
+        }
+        arr[n-1] = first
+    }
+    
+   return arr
+}
+
+console.log(rotation([1,2,3,4,5], 2));
