@@ -2402,3 +2402,37 @@ function rotation(arr,k){
 }
 
 console.log(rotation([1,2,3,4,5], 2));
+
+let students = [
+ {name:"A", marks:50},
+ {name:"B", marks:80},
+ {name:"C", marks:80},
+ {name:"D", marks:30}
+]
+let maxx = -Infinity
+let topper = []
+
+for(let student of students){
+    if(student.marks > maxx){
+        maxx = student.marks
+        topper =[student]
+    }else if( student.marks === maxx){
+          topper.push(student)
+    }
+}
+for(let i=0; i<students.length; i++){
+    let mark = students[i].marks
+    let name = students[i].name
+
+    if(mark < 40){
+       console.log(name , "fail");
+    } 
+    else if(mark <= 70 ){
+        console.log(name , "Averge");
+    }else{
+        console.log(name, "tooper");
+    }
+    console.log(mark);
+    // console.log(name);
+}
+
