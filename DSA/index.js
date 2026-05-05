@@ -2314,43 +2314,60 @@ console.log(frquency(122333));
 //         }
 //      }
 
-function strong(num){
-    let original = num
-    let sum =0
+// function strong(num){
+//     let original = num
+//     let sum =0
     
-    while(num>0){
-        let digit = num % 10
+//     while(num>0){
+//         let digit = num % 10
 
-        let fact = 1
-        let i = 1
-        while(i <=digit){
-            fact =fact * i
-            i++
-        }
-        sum = sum + fact 
-        num = Math.floor(num/10)
+//         let fact = 1
+//         let i = 1
+//         while(i <=digit){
+//             fact =fact * i
+//             i++
+//         }
+//         sum = sum + fact 
+//         num = Math.floor(num/10)
+//     }
+//     if(sum === original ){
+//         return "strong number"
+//     }else{
+//         return "Not strong number"
+//     }
+// }
+// console.log(strong(145));
+// console.log(strong(123));
+
+// function reverse(str){
+//     let word= str.split(" ")
+//     let result = ""
+//     for(let i = word.length -1 ; i>=0; i--){
+//         result = result + word[i] + " "
+
+//     }
+//     return result.trim()
+// }
+// console.log(reverse("hello world"));
+
+// function reverseWord(str){
+//     return str.split(" ").reverse().join()
+// }
+// console.log(reverseWord("hello world"));
+
+let arr = [10,5,8,20,15]
+let sL = -Infinity
+let large = -Infinity
+
+for(let i = 0 ; i<arr.length; i++){
+    let num = arr[i]
+    if(num > large){
+        sL=large
+        large = num 
+    } else if(num > sL && num !== large){
+        sL = num 
     }
-    if(sum === original ){
-        return "strong number"
-    }else{
-        return "Not strong number"
-    }
-}
-console.log(strong(145));
-console.log(strong(123));
 
-function reverse(str){
-    let word= str.split(" ")
-    let result = ""
-    for(let i = word.length -1 ; i>=0; i--){
-        result = result + word[i] + " "
 
-    }
-    return result.trim()
 }
-console.log(reverse("hello world"));
-
-function reverseWord(str){
-    return str.split(" ").reverse().join()
-}
-console.log(reverseWord("hello world"));
+console.log(sL);
