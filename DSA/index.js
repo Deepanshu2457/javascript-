@@ -2258,51 +2258,51 @@
 
 // loop
 
-for(let i = 1 ; i<=100; i++){
-    if(i%2===0){
-        let isPrime= true 
-        for(let j=2 ; j<i ; j++){
-            if(i % j ===0){
-                isPrime = false
-                break;
-            }
-        }
-        if(isPrime && i > 1){
-            console.log(i);
-        }
-    }
-}
+// for(let i = 1 ; i<=100; i++){
+//     if(i%2===0){
+//         let isPrime= true 
+//         for(let j=2 ; j<i ; j++){
+//             if(i % j ===0){
+//                 isPrime = false
+//                 break;
+//             }
+//         }
+//         if(isPrime && i > 1){
+//             console.log(i);
+//         }
+//     }
+// }
 
-for(let i=1; i<=5 ; i++){
-    let pattern = ""
-    for(let j=1; j<=i; j++){
-        if((i + j) % 2===0){
-            pattern = pattern + "1"
-        }else{
-            pattern = pattern + "0"
-        }
-    }
-    console.log(pattern);
-}
+// for(let i=1; i<=5 ; i++){
+//     let pattern = ""
+//     for(let j=1; j<=i; j++){
+//         if((i + j) % 2===0){
+//             pattern = pattern + "1"
+//         }else{
+//             pattern = pattern + "0"
+//         }
+//     }
+//     console.log(pattern);
+// }
 
-// functions
+// // functions
 
-function frquency(num){
-    let freq = {}
+// function frquency(num){
+//     let freq = {}
     
-     while(num>0){
-        let digit = num%10
-        if(freq[digit]){
-            freq[digit]++
-        }else{
-            freq[digit]=1
-        }
-        num=Math.floor(num/10)
-     }
+//      while(num>0){
+//         let digit = num%10
+//         if(freq[digit]){
+//             freq[digit]++
+//         }else{
+//             freq[digit]=1
+//         }
+//         num=Math.floor(num/10)
+//      }
     
-    return freq
-    }
-console.log(frquency(122333));
+//     return freq
+//     }
+// console.log(frquency(122333));
 
 //  num = num.tostring()
 //  for(let i=0 ; i<num.length; i++){
@@ -2372,67 +2372,101 @@ console.log(frquency(122333));
 // }
 // console.log(sL);
 
-let arr = [1,2,2,3,3,3]
+// let arr = [1,2,2,3,3,3]
 
-let feq = {}
+// let feq = {}
 
-for(let i=0; i<arr.length ; i++){
-    let num = arr[i]
-    if(feq[num]){
-        feq[num]++
-    }else{
-        feq[num] = 1
-    }
+// for(let i=0; i<arr.length ; i++){
+//     let num = arr[i]
+//     if(feq[num]){
+//         feq[num]++
+//     }else{
+//         feq[num] = 1
+//     }
 
-}
-console.log(feq);
+// }
+// console.log(feq);
 
-function rotation(arr,k){
-    let n = arr.length
+// function rotation(arr,k){
+//     let n = arr.length
 
-    for(let i=0; i<k; i++){
-        let first = arr[0]
-        for(let j=0; j< n-1; j++){
-            arr[j] = arr[j+1]
-        }
-        arr[n-1] = first
-    }
+//     for(let i=0; i<k; i++){
+//         let first = arr[0]
+//         for(let j=0; j< n-1; j++){
+//             arr[j] = arr[j+1]
+//         }
+//         arr[n-1] = first
+//     }
     
-   return arr
+//    return arr
+// }
+
+// console.log(rotation([1,2,3,4,5], 2));
+
+// let students = [
+//  {name:"A", marks:50},
+//  {name:"B", marks:80},
+//  {name:"C", marks:80},
+//  {name:"D", marks:30}
+// ]
+// let maxx = -Infinity
+// let topper = []
+
+// for(let student of students){
+//     if(student.marks > maxx){
+//         maxx = student.marks
+//         topper =[student]
+//     }else if( student.marks === maxx){
+//           topper.push(student)
+//     }
+// }
+// for(let i=0; i<students.length; i++){
+//     let mark = students[i].marks
+//     let name = students[i].name
+
+//     if(mark < 40){
+//        console.log(name , "fail");
+//     } 
+//     else if(mark <= 70 ){
+//         console.log(name , "Averge");
+//     }else{
+//         console.log(name, "tooper");
+//     }
+//     console.log(mark);
+//     // console.log(name);
+// }
+
+
+// loop
+
+for(let i=0; i<=100; i++){
+    if(i%2===0){
+        let isPrime = true
+        for(let j=2; j<i; j++){
+            if(i% j ==0){
+                isPrime = false
+            }
+             
+        }
+       
+         if(isPrime && i > 1){
+        console.log(i);
+    }
+    }
+   
 }
 
-console.log(rotation([1,2,3,4,5], 2));
-
-let students = [
- {name:"A", marks:50},
- {name:"B", marks:80},
- {name:"C", marks:80},
- {name:"D", marks:30}
-]
-let maxx = -Infinity
-let topper = []
-
-for(let student of students){
-    if(student.marks > maxx){
-        maxx = student.marks
-        topper =[student]
-    }else if( student.marks === maxx){
-          topper.push(student)
+for(let i=1;i<=5;i++){
+    let row = ""
+    for(let j =1 ; j<=i; j++){
+         if((i + j ) % 2 ===0 ){
+            row = row + "1"
+        }
+        else{
+         row = row + "0"
+        }
+       
     }
-}
-for(let i=0; i<students.length; i++){
-    let mark = students[i].marks
-    let name = students[i].name
-
-    if(mark < 40){
-       console.log(name , "fail");
-    } 
-    else if(mark <= 70 ){
-        console.log(name , "Averge");
-    }else{
-        console.log(name, "tooper");
-    }
-    console.log(mark);
-    // console.log(name);
+    console.log(row);
 }
 
