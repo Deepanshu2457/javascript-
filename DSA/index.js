@@ -2514,3 +2514,19 @@ function strong(num){
 
 console.log(strong(145));
 console.log(strong(123));
+
+function reverse(str){
+    return str.split(" ").reverse().join(" ")
+}
+console.log(reverse("hello  world"));
+
+function reverseWord(str){
+    let n  = str.split(" ")
+    let result = " "
+    for(let i = n.length -1; i>=0; i--){
+        result = result + n[i] + " "
+
+    }
+    return result.trim()
+}
+console.log(reverseWord("hello world"));
