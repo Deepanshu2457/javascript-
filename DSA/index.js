@@ -2439,34 +2439,51 @@
 
 // loop
 
-for(let i=0; i<=100; i++){
-    if(i%2===0){
-        let isPrime = true
-        for(let j=2; j<i; j++){
-            if(i% j ==0){
-                isPrime = false
-            }
+// for(let i=0; i<=100; i++){
+//     if(i%2===0){
+//         let isPrime = true
+//         for(let j=2; j<i; j++){
+//             if(i% j ==0){
+//                 isPrime = false
+//             }
              
-        }
+//         }
        
-         if(isPrime && i > 1){
-        console.log(i);
-    }
-    }
+//          if(isPrime && i > 1){
+//         console.log(i);
+//     }
+//     }
    
-}
+// }
 
-for(let i=1;i<=5;i++){
-    let row = ""
-    for(let j =1 ; j<=i; j++){
-         if((i + j ) % 2 ===0 ){
-            row = row + "1"
-        }
-        else{
-         row = row + "0"
-        }
+// for(let i=1;i<=5;i++){
+//     let row = ""
+//     for(let j =1 ; j<=i; j++){
+//          if((i + j ) % 2 ===0 ){
+//             row = row + "1"
+//         }
+//         else{
+//          row = row + "0"
+//         }
        
+//     }
+//     console.log(row);
+// }
+
+function digitFreq(num){
+
+    let freq = {}
+
+    while(num>0){
+        let digit = num % 10
+        if(freq[digit]){
+            freq[digit]++
+        }else{
+            freq[digit] = 1
+        }
+        num = Math.floor(num/10)
     }
-    console.log(row);
+ return freq   
 }
 
+console.log(digitFreq(122333));
