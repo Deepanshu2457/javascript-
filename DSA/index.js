@@ -2355,6 +2355,7 @@
 // }
 // console.log(reverseWord("hello world"));
 
+
 // let arr = [10,5,8,20,15]
 // let sL = -Infinity
 // let large = -Infinity
@@ -2470,63 +2471,83 @@
 //     console.log(row);
 // }
 
-function digitFreq(num){
+// function digitFreq(num){
 
-    let freq = {}
+//     let freq = {}
 
-    while(num>0){
-        let digit = num % 10
-        if(freq[digit]){
-            freq[digit]++
-        }else{
-            freq[digit] = 1
-        }
-        num = Math.floor(num/10)
+//     while(num>0){
+//         let digit = num % 10
+//         if(freq[digit]){
+//             freq[digit]++
+//         }else{
+//             freq[digit] = 1
+//         }
+//         num = Math.floor(num/10)
+//     }
+//  return freq   
+// }
+
+// console.log(digitFreq(122333));
+
+// function strong(num){
+//     let original = num
+//     let sum =0
+
+//     while(num>0){
+//         let digit = num%10
+
+//         let fact = 1
+//         let i =1
+//         while(i<=digit){
+//             fact = fact * i
+//             i++
+
+//         }
+//         sum = sum + fact
+//         num = Math.floor(num/10)
+//     }
+//     if(sum===original){
+//         return("strong number");
+//     }else{
+//         return ("not strong number");
+//     }
+// }
+
+// console.log(strong(145));
+// console.log(strong(123));
+
+// function reverse(str){
+//     return str.split(" ").reverse().join(" ")
+// }
+// console.log(reverse("hello  world"));
+
+// function reverseWord(str){
+//     let n  = str.split(" ")
+//     let result = " "
+//     for(let i = n.length -1; i>=0; i--){
+//         result = result + n[i] + " "
+
+//     }
+//     return result.trim()
+// }
+// console.log(reverseWord("hello world"));
+
+
+ let arr = [10,5,8,20,15]
+
+ let sl = -Infinity
+ let large = -Infinity
+ for(let i=0; i<arr.length; i++){
+    let num = arr[i]
+    if(num > large){
+        sl = large
+        large = num 
     }
- return freq   
-}
-
-console.log(digitFreq(122333));
-
-function strong(num){
-    let original = num
-    let sum =0
-
-    while(num>0){
-        let digit = num%10
-
-        let fact = 1
-        let i =1
-        while(i<=digit){
-            fact = fact * i
-            i++
-
-        }
-        sum = sum + fact
-        num = Math.floor(num/10)
+    else if( num > sl && num !== large){
+        sl = num
     }
-    if(sum===original){
-        return("strong number");
-    }else{
-        return ("not strong number");
-    }
-}
+ }
 
-console.log(strong(145));
-console.log(strong(123));
+ console.log(sl);
+ console.log(large);
 
-function reverse(str){
-    return str.split(" ").reverse().join(" ")
-}
-console.log(reverse("hello  world"));
-
-function reverseWord(str){
-    let n  = str.split(" ")
-    let result = " "
-    for(let i = n.length -1; i>=0; i--){
-        result = result + n[i] + " "
-
-    }
-    return result.trim()
-}
-console.log(reverseWord("hello world"));
