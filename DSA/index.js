@@ -2487,3 +2487,30 @@ function digitFreq(num){
 }
 
 console.log(digitFreq(122333));
+
+function strong(num){
+    let original = num
+    let sum =0
+
+    while(num>0){
+        let digit = num%10
+
+        let fact = 1
+        let i =1
+        while(i<=digit){
+            fact = fact * i
+            i++
+
+        }
+        sum = sum + fact
+        num = Math.floor(num/10)
+    }
+    if(sum===original){
+        return("strong number");
+    }else{
+        return ("not strong number");
+    }
+}
+
+console.log(strong(145));
+console.log(strong(123));
