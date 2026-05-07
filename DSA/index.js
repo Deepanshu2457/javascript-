@@ -2645,22 +2645,48 @@
 // }
 
 
-let arr=[1,2,2,3,3,3,4,4]
+// let arr=[1,2,2,3,3,3,4,4]
 
-let freq = {}
-for(let i =0; i<arr.length; i++){
-    let num = arr[i]
-    if(freq[num]){
-        freq[num]++
+// let freq = {}
+// for(let i =0; i<arr.length; i++){
+//     let num = arr[i]
+//     if(freq[num]){
+//         freq[num]++
         
-    }else{
-        freq[num] = 1
-    }
-}
-for(let i=0 ; i<arr.length; i++){
-    if(freq[arr[i]]===1){
-        console.log(arr[i]);
-        break;
+//     }else{
+//         freq[num] = 1
+//     }
+// }
+// for(let i=0 ; i<arr.length; i++){
+//     if(freq[arr[i]]===1){
+//         console.log(arr[i]);
+//         break;
+//     }
+  
+// }
+
+
+
+// let arr = [2,7,11,15]
+// let target = 9
+
+// for(let i=0; i<arr.length; i++){
+//     for(let j=i+1 ; j<arr.length; j++){
+        
+//         if(arr[i] + arr[j] == target ){
+//             console.log(arr[i], arr[j] ,"=", target);
+//             break;
+//         }
+//     }
+// }
+
+let arr = [1,2,2,3,1]
+
+let result = []
+for(let i=0; i<arr.length; i++){
+    if(!result.includes(arr[i])){
+      result.push(arr[i])
     }
   
 }
+console.log(result);
