@@ -2440,206 +2440,227 @@
 
 // loop
 
-for(let i=0; i<=100; i++){
-    if(i%2===0){
-        let isPrime = true
-        for(let j=2; j<i; j++){
-            if(i% j ==0){
-                isPrime = false
-            }
+// for(let i=0; i<=100; i++){
+//     if(i%2===0){
+//         let isPrime = true
+//         for(let j=2; j<i; j++){
+//             if(i% j ==0){
+//                 isPrime = false
+//             }
              
-        }
+//         }
        
-         if(isPrime && i > 1){
-        console.log(i);
-    }
-    }
+//          if(isPrime && i > 1){
+//         console.log(i);
+//     }
+//     }
    
-}
+// }
 
-for(let i=1;i<=5;i++){
-    let row = ""
-    for(let j =1 ; j<=i; j++){
-         if((i + j ) % 2 ===0 ){
-            row = row + "1"
-        }
-        else{
-         row = row + "0"
-        }
+// for(let i=1;i<=5;i++){
+//     let row = ""
+//     for(let j =1 ; j<=i; j++){
+//          if((i + j ) % 2 ===0 ){
+//             row = row + "1"
+//         }
+//         else{
+//          row = row + "0"
+//         }
        
-    }
-    console.log(row);
-}
+//     }
+//     console.log(row);
+// }
 
-function digitFreq(num){
+// function digitFreq(num){
 
-    let freq = {}
+//     let freq = {}
 
-    while(num>0){
-        let digit = num % 10
-        if(freq[digit]){
-            freq[digit]++
-        }else{
-            freq[digit] = 1
-        }
-        num = Math.floor(num/10)
-    }
- return freq   
-}
+//     while(num>0){
+//         let digit = num % 10
+//         if(freq[digit]){
+//             freq[digit]++
+//         }else{
+//             freq[digit] = 1
+//         }
+//         num = Math.floor(num/10)
+//     }
+//  return freq   
+// }
 
-console.log(digitFreq(122333));
+// console.log(digitFreq(122333));
 
-function strong(num){
-    let original = num
-    let sum =0
+// function strong(num){
+//     let original = num
+//     let sum =0
 
-    while(num>0){
-        let digit = num%10
+//     while(num>0){
+//         let digit = num%10
 
-        let fact = 1
-        let i =1
-        while(i<=digit){
-            fact = fact * i
-            i++
+//         let fact = 1
+//         let i =1
+//         while(i<=digit){
+//             fact = fact * i
+//             i++
 
-        }
-        sum = sum + fact
-        num = Math.floor(num/10)
-    }
-    if(sum===original){
-        return("strong number");
-    }else{
-        return ("not strong number");
-    }
-}
+//         }
+//         sum = sum + fact
+//         num = Math.floor(num/10)
+//     }
+//     if(sum===original){
+//         return("strong number");
+//     }else{
+//         return ("not strong number");
+//     }
+// }
 
-console.log(strong(145));
-console.log(strong(123));
+// console.log(strong(145));
+// console.log(strong(123));
 
-function reverse(str){
-    return str.split(" ").reverse().join(" ")
-}
-console.log(reverse("hello  world"));
+// function reverse(str){
+//     return str.split(" ").reverse().join(" ")
+// }
+// console.log(reverse("hello  world"));
 
-function reverseWord(str){
-    let n  = str.split(" ")
-    let result = " "
-    for(let i = n.length -1; i>=0; i--){
-        result = result + n[i] + " "
+// function reverseWord(str){
+//     let n  = str.split(" ")
+//     let result = " "
+//     for(let i = n.length -1; i>=0; i--){
+//         result = result + n[i] + " "
 
-    }
-    return result.trim()
-}
-console.log(reverseWord("hello world"));
-
-
- let arr = [10,5,8,20,15]
-
- let sl = -Infinity
- let large = -Infinity
- for(let i=0; i<arr.length; i++){
-    let num = arr[i]
-    if(num > large){
-        sl = large
-        large = num 
-    }
-    else if( num > sl && num !== large){
-        sl = num
-    }
- }
-
- console.log(sl);
- console.log(large);
-
-function second(arr){
-  let array= arr
-  let sl = -Infinity
-  let large = -Infinity
-
-  for(let i=0; i<array.length; i++){
-    if(arr[i] > large){
-        sl = large
-        large = arr[i]
-    }
-    else if(arr[i] > sl && arr[i] !== large){
-        sl = arr[i]
-    }
-  }
-  return sl
-}
-console.log(second([10,5,8,20,15]));
+//     }
+//     return result.trim()
+// }
+// console.log(reverseWord("hello world"));
 
 
-let arr = [1,2,2,3,3,3]
+//  let arr = [10,5,8,20,15]
+
+//  let sl = -Infinity
+//  let large = -Infinity
+//  for(let i=0; i<arr.length; i++){
+//     let num = arr[i]
+//     if(num > large){
+//         sl = large
+//         large = num 
+//     }
+//     else if( num > sl && num !== large){
+//         sl = num
+//     }
+//  }
+
+//  console.log(sl);
+//  console.log(large);
+
+// function second(arr){
+//   let array= arr
+//   let sl = -Infinity
+//   let large = -Infinity
+
+//   for(let i=0; i<array.length; i++){
+//     if(arr[i] > large){
+//         sl = large
+//         large = arr[i]
+//     }
+//     else if(arr[i] > sl && arr[i] !== large){
+//         sl = arr[i]
+//     }
+//   }
+//   return sl
+// }
+// console.log(second([10,5,8,20,15]));
+
+
+// let arr = [1,2,2,3,3,3]
+
+// let freq = {}
+
+// for(let i =0; i<arr.length; i++){
+//     let digit = arr[i]
+//     if(freq[digit]){
+//         freq[digit]++
+//     }else{
+//         freq[digit]=1
+//     }
+// }
+// console.log(freq);
+
+
+
+
+
+// function rotation(arr,k){
+
+//     let n = arr.length
+//     for(let i=0 ; i<k; i++){
+//         let first = arr[0]
+//         for(let j=0; j<n-1; j++){
+//             arr[j] = arr[j+1]
+//         }
+//         arr[n-1] = first 
+//     }
+//       return arr
+// }
+// console.log(rotation([1,2,3,4,5],3));
+
+
+
+
+
+
+// let students = [
+//  {name:"A", marks:50},
+//  {name:"B", marks:80},
+//  {name:"C", marks:80},
+//  {name:"D", marks:30}
+// ]
+
+// let maxx = -Infinity
+
+// let topper =[]
+
+// for(let i =0 ; i<students.length; i++){
+//      if(students[i].marks > maxx){
+//         maxx = students[i].marks
+//         topper = [students[i]]
+//      }else if( students[i].marks === maxx){
+//         topper.push(students[i])
+//      }
+// }
+
+// console.log(topper);
+
+// for(let i=0 ; i<students.length ;i++){
+//     let name = students[i].name
+//     let marks = students[i].marks
+
+//     if(marks < 40){
+//         console.log(name , "fail");
+//     }else if( marks < 70){
+//         console.log(name , " Average");
+//     }else {
+//         console.log(name , "Topper");
+//     }
+//     // console.log(name);
+//     console.log(marks);
+// }
+
+
+let arr=[1,2,2,3,3,3,4,4]
 
 let freq = {}
-
 for(let i =0; i<arr.length; i++){
-    let digit = arr[i]
-    if(freq[digit]){
-        freq[digit]++
+    let num = arr[i]
+    if(freq[num]){
+        freq[num]++
+        
     }else{
-        freq[digit]=1
+        freq[num] = 1
     }
 }
-console.log(freq);
-
-
-
-
-
-function rotation(arr,k){
-
-    let n = arr.length
-    for(let i=0 ; i<k; i++){
-        let first = arr[0]
-        for(let j=0; j<n-1; j++){
-            arr[j] = arr[j+1]
-        }
-        arr[n-1] = first 
+for(let i=0 ; i<arr.length; i++){
+    if(freq[arr[i]]===1){
+        console.log(arr[i]);
+        break;
     }
-      return arr
-}
-console.log(rotation([1,2,3,4,5],3));
-
-
-
-
-
-
-let students = [
- {name:"A", marks:50},
- {name:"B", marks:80},
- {name:"C", marks:80},
- {name:"D", marks:30}
-]
-
-let maxx = -Infinity
-
-let topper =[]
-
-for(let i =0 ; i<students.length; i++){
-     if(students[i].marks > maxx){
-        maxx = students[i].marks
-        topper = [students[i]]
-     }else if( students[i].marks === maxx){
-        topper.push(students[i])
-     }
-}
-
-console.log(topper);
-
-for(let i=0 ; i<students.length ;i++){
-    let name = students[i].name
-    let marks = students[i].marks
-
-    if(marks < 40){
-        console.log(name , "fail");
-    }else if( marks < 70){
-        console.log(name , " Average");
-    }else {
-        console.log(name , "Topper");
-    }
-    // console.log(name);
-    console.log(marks);
+  
 }
