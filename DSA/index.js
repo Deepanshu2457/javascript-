@@ -2551,49 +2551,83 @@
 //  console.log(sl);
 //  console.log(large);
 
-function second(arr){
-  let array= arr
-  let sl = -Infinity
-  let large = -Infinity
+// function second(arr){
+//   let array= arr
+//   let sl = -Infinity
+//   let large = -Infinity
 
-  for(let i=0; i<array.length; i++){
-    if(arr[i] > large){
-        sl = large
-        large = arr[i]
+//   for(let i=0; i<array.length; i++){
+//     if(arr[i] > large){
+//         sl = large
+//         large = arr[i]
+//     }
+//     else if(arr[i] > sl && arr[i] !== large){
+//         sl = arr[i]
+//     }
+//   }
+//   return sl
+// }
+// console.log(second([10,5,8,20,15]));
+
+// let arr = [1,2,2,3,3,3]
+
+// let feq = {}
+
+// for(let i=0; i<arr.length ; i++){
+//     let num = arr[i]
+//     if(feq[num]){
+//         feq[num]++
+//     }else{
+//         feq[num] = 1
+//     }
+
+// }
+// console.log(feq);
+
+// let arr = [1,2,2,3,3,3]
+
+// let freq = {}
+
+// for(let i =0; i<arr.length; i++){
+//     let digit = arr[i]
+//     if(freq[digit]){
+//         freq[digit]++
+//     }else{
+//         freq[digit]=1
+//     }
+// }
+// console.log(freq);
+
+// function rotation(arr,k){
+//     let n = arr.length
+
+//     for(let i=0; i<k; i++){
+//         let first = arr[0]
+//         for(let j=0; j< n-1; j++){
+//             arr[j] = arr[j+1]
+//         }
+//         arr[n-1] = first
+//     }
+    
+//    return arr
+// }
+
+// console.log(rotation([1,2,3,4,5], 2));
+
+
+
+
+
+function rotation(arr,k){
+
+    let n = arr.length
+    for(let i=0 ; i<k; i++){
+        let first = arr[0]
+        for(let j=0; j<n-1; j++){
+            arr[j] = arr[j+1]
+        }
+        arr[n-1] = first 
     }
-    else if(arr[i] > sl && arr[i] !== large){
-        sl = arr[i]
-    }
-  }
-  return sl
+      return arr
 }
-console.log(second([10,5,8,20,15]));
-
-let arr = [1,2,2,3,3,3]
-
-let feq = {}
-
-for(let i=0; i<arr.length ; i++){
-    let num = arr[i]
-    if(feq[num]){
-        feq[num]++
-    }else{
-        feq[num] = 1
-    }
-
-}
-console.log(feq);
-
-let arr = [1,2,2,3,3,3]
-
-let freq = {}
-
-for(let i =0; i<arr.length; i++){
-    let digit = arr[i]
-    if(freq[digit]){
-        freq[digit]++
-    }else{
-        freq[digit]=1
-    }
-}
-console.log(freq);
+console.log(rotation([1,2,3,4,5],3));
