@@ -2707,16 +2707,26 @@
 // console.log(arr);
 
 
-let arr=[1,2,3,4,5]
-let left = 0
-let right = arr.length -1
+// let arr=[1,2,3,4,5]
+// let left = 0
+// let right = arr.length -1
 
-while(left < right){
-    let temp = arr[left]
-    arr[left] = arr[right]
-    arr[right] = temp
+// while(left < right){
+//     let temp = arr[left]
+//     arr[left] = arr[right]
+//     arr[right] = temp
 
-    left++
-    right--
+//     left++
+//     right--
+// }
+// console.log(arr); 
+
+let str = "i love js"
+let count = 1
+
+for(let i =0; i<str.length; i++){
+    if(str[i] === " "){
+        count++
+    }
 }
-console.log(arr); 
+console.log(count);
