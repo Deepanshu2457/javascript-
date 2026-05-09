@@ -2721,12 +2721,46 @@
 // }
 // console.log(arr); 
 
-let str = "i love js"
-let count = 1
+// let str = "i love js"
+// let count = 1
 
-for(let i =0; i<str.length; i++){
-    if(str[i] === " "){
-        count++
+// for(let i =0; i<str.length; i++){
+//     if(str[i] === " "){
+//         count++
+//     }
+// }
+// console.log(count);
+
+ // first non repeting
+
+// let arr = [4,5,1,2,1,2,5]
+
+// let copy = {}
+// for(let i=0 ; i<arr.length; i++){
+//     if(copy[arr[i]]){
+//         copy[arr[i]]++
+//     }else{
+//         copy[arr[i]] = 1
+//     }
+// }
+// for(let i=0 ;i<arr.length;i++ ){
+//     if(arr[i] === 1){
+//         console.log(arr[i]);
+//         break;
+//     }
+// }
+
+// pair sum
+
+let pair =  [3,8,12,4,6]
+let target = 10
+
+for(let i=0; i<pair.length; i++){
+    for(j=i+1 ; j<pair.length; j++ ){
+      if( pair[j] + pair[i] === target){
+         console.log(pair[j] , pair[i]);
+       break
+      }
     }
 }
-console.log(count);
+
