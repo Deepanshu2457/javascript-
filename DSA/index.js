@@ -2821,8 +2821,8 @@ function palindrome(str){
     }
    
 }
-console.log(palindrome("madam"));
-console.log(palindrome("hello"));
+// console.log(palindrome("madam"));
+// console.log(palindrome("hello"));
 
 let arr = [0,1,0,3,12]
 
@@ -2837,4 +2837,48 @@ for(let i=0;i<arr.length;i++){
      for(let i=index; i<arr.length; i++){
          arr[i] =0
 }
-console.log(arr);
+// console.log(arr);
+// anagram with method
+
+function anagram(str1 , str2){
+    if(str1.length !== str2.length){
+        return " false "
+    }
+    let s1 = str1.split("").sort().join("")
+    let s2 = str2.split("").sort().join("")
+    return s1 === s2
+}
+// console.log(anagram("listen" , "silent"));
+// console.log(anagram("hello" , "world"));
+
+// Anagram without method 
+
+function anagrams(str1 , str2){
+  if(str1.length !== str2.length){
+    return false
+  }
+  let freq = {}
+  for(let i=0;i<str1.length; i++){
+    if(freq[str1[i]]){
+        freq[str1[i]]++
+    }else{
+        freq[str1[i]] =1
+    }
+  }
+  for(let i=0; i<str2.length; i++){
+    if(freq[str2[i]]){
+        freq[str2[i]]--
+    }else{
+        return false
+    }
+  }
+      for(let key in freq){
+        if(freq[key] !== 0){
+            return false     
+         }
+
+      }
+  return true
+}
+console.log(anagrams("listen", "silent"));
+console.log(anagrams("hello" , "world"));
