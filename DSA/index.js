@@ -2744,7 +2744,7 @@
 //     }
 // }
 // for(let i=0 ;i<arr.length;i++ ){
-//     if(arr[i] === 1){
+//     if(copy[arr[i]] === 1){
 //         console.log(arr[i]);
 //         break;
 //     }
@@ -2752,15 +2752,89 @@
 
 // pair sum
 
-let pair =  [3,8,12,4,6]
-let target = 10
+// let pair =  [3,8,12,4,6]
+// let target = 10
 
-for(let i=0; i<pair.length; i++){
-    for(j=i+1 ; j<pair.length; j++ ){
-      if( pair[j] + pair[i] === target){
-         console.log(pair[j] , pair[i]);
-       break
-      }
+// for(let i=0; i<pair.length; i++){
+//     for(j=i+1 ; j<pair.length; j++ ){
+//       if( pair[j] + pair[i] === target){
+//          console.log(pair[j] , pair[i]);
+//        break
+//       }
+//     }
+// }
+
+// Q 3 remove duplicate
+
+// let arr = [1,1,2,3,2,4,5,4]
+
+// let result = []
+
+// for(let i=0 ; i<arr.length; i++){
+//  if(!result.includes(arr[i])){
+//     result.push(arr[i])
+//  }   
+// }
+// console.log(result);
+
+// Q4 reverse array
+
+// let arr = [10,20,30,40]
+// let left = 0
+// let right = arr.length -1
+// while(left<right){
+//     let temp = arr[left]
+//     arr[left] = arr[right]
+//     arr[right] = temp
+
+//     left++
+//     right--
+
+// }
+// console.log(arr);
+
+// Q 5 count word (with out split)
+
+// let str = "javascript is awesome"
+
+// let count = 1
+// for(let i =0 ; i<str.length; i++){
+//     if(str[i] === " "){
+//         count++
+//     }
+// }
+
+// console.log(count);
+
+
+
+function palindrome(str){
+    let original = str
+    let rev = ""
+    for(let i=str.length-1; i>=0; i--){
+       rev = rev + str[i]
     }
+        if(rev === original){
+        return "palindrome"
+    }else{
+        return "not palindrome"
+    }
+   
 }
+console.log(palindrome("madam"));
+console.log(palindrome("hello"));
 
+let arr = [0,1,0,3,12]
+
+let index = 0
+for(let i=0;i<arr.length;i++){
+   if(arr[i] !== 0){
+   arr[index] = arr[i]
+   index++
+  
+   }
+   }
+     for(let i=index; i<arr.length; i++){
+         arr[i] =0
+}
+console.log(arr);
