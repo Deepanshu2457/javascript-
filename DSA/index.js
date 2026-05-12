@@ -2913,34 +2913,96 @@
 
 
 
-function firstCap(str){
-    let word = str.split(" ")
-    let result = " "
+// function firstCap(str){
+//     let word = str.split(" ")
+//     let result = " "
 
-    for(let i=0; i<word.length; i++){
-        let words = word[i]
-        let capital = words[0].toUpperCase() + words.slice(1)
-        result = result + capital + " "
+//     for(let i=0; i<word.length; i++){
+//         let words = word[i]
+//         let capital = words[0].toUpperCase() + words.slice(1)
+//         result = result + capital + " "
+//     }
+//     return result.trim()
+// }
+// console.log(firstCap("hello , deepanshu"));
+
+
+// function checkDouble(str){
+//     let result = ""
+//     for(let i=0; i<str.length; i++){
+//         if(!result.includes(str[i])){
+//             result = result + str[i]
+//         }
+//     }
+//     return result
+// }
+// console.log(checkDouble("programming"));
+
+ practice level 3 All Question
+
+let arr = [4, 5, 1, 2, 1, 2, 5]
+let freq ={}
+for(let i=0;i<arr.length;i++){
+    let num = arr[i]
+    if(freq[num]){
+        freq[num]++
+    }else{
+        freq[num] = 1
     }
-    return result.trim()
 }
-console.log(firstCap("hello , deepanshu"));
+for(let i=0; i<arr.length; i++){
+    if(freq[arr[i]] === 1){
+        console.log(arr[i]);
+        break
+    }
+}
+
+let arr = [2,7,11,15]
+let target = 9
+for(let i=0;i<arr.length; i++){
+    for(let j=i+1; i<arr.length; i++){
+       if(arr[i] + arr[j] === target){
+        console.log(arr[i], arr[j] , "=" , target);
+       }
+    }
+}
 
 
-function checkDouble(str){
-    let result = ""
-    for(let i=0; i<str.length; i++){
-        if(!result.includes(str[i])){
-            result = result + str[i]
+let arr = [1,1,2,3,2,4,5,4]
+
+let result =[]
+for(let i=0; i<arr.length ; i++){
+   
+        if(!result.includes(arr[i])){
+            result.push(arr[i])
         }
-    }
-    return result
+    
 }
-console.log(checkDouble("programming"));
+console.log(result);
 
+let arr=[10,20,30,40,50]
+let left =0
+let right = arr.length -1
 
+while(left < right){
+    let temp = arr[left]
+    arr[left] = arr[right]
+    arr[right] = temp
 
+    left++
+    right--
+}
+console.log(arr);
 
+let str = "javascript is awesome deepanshu"
 
+let count = 1
 
+for(let i =0; i<str.length;i++){
+    if(str[i] === " "){
+        count++
+    }
+}
+
+console.log(count);
 
