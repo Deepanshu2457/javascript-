@@ -2898,15 +2898,49 @@
 
 // console.log(missingNum([1,2,3,5]));
 
-function firstCap(str){
-     let word  = str.split(" ")
-      let result = ""
-    for(let i=0; i<word.length;i++){
-     let words = word[i]
-     let capital = words[0].toUpperCase() + words.slice(1)
-      result = result + capital + " "
-    }
+// function firstCap(str){
+//      let word  = str.split(" ")
+//       let result = ""
+//     for(let i=0; i<word.length;i++){
+//      let words = word[i]
+//      let capital = words[0].toUpperCase() + words.slice(1)
+//       result = result + capital + " "
+//     }
 
+//     return result.trim()
+// }
+// console.log(firstCap("hello, world"));
+
+
+
+function firstCap(str){
+    let word = str.split(" ")
+    let result = " "
+
+    for(let i=0; i<word.length; i++){
+        let words = word[i]
+        let capital = words[0].toUpperCase() + words.slice(1)
+        result = result + capital + " "
+    }
     return result.trim()
 }
-console.log(firstCap("hello, world"));
+console.log(firstCap("hello , deepanshu"));
+
+
+function checkDouble(str){
+    let result = ""
+    for(let i=0; i<str.length; i++){
+        if(!result.includes(str[i])){
+            result = result + str[i]
+        }
+    }
+    return result
+}
+console.log(checkDouble("programming"));
+
+
+
+
+
+
+
