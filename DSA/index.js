@@ -2883,16 +2883,30 @@
 // console.log(anagrams("listen", "silent"));
 // console.log(anagrams("hello" , "world"));
 
+//  missing number find 
 
-function missingNum(arr){
-    let n = arr.length + 1 
-    let expectedNum = (n * (n+1))/ 2
-    let actualNum = 0
-    for(let i =0; i<arr.length ; i++){
-        actualNum = actualNum + arr[i]
+// function missingNum(arr){
+//     let n = arr.length + 1 
+//     let expectedNum = (n * (n+1))/ 2
+//     let actualNum = 0
+//     for(let i =0; i<arr.length ; i++){
+//         actualNum = actualNum + arr[i]
 
+//     }
+//     return expectedNum - actualNum
+// }
+
+// console.log(missingNum([1,2,3,5]));
+
+function firstCap(str){
+     let word  = str.split(" ")
+      let result = ""
+    for(let i=0; i<word.length;i++){
+     let words = word[i]
+     let capital = words[0].toUpperCase() + words.slice(1)
+      result = result + capital + " "
     }
-    return expectedNum - actualNum
-}
 
-console.log(missingNum([1,2,3,5]));
+    return result.trim()
+}
+console.log(firstCap("hello, world"));
