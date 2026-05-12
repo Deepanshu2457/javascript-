@@ -2808,77 +2808,91 @@
 
 
 
-function palindrome(str){
-    let original = str
-    let rev = ""
-    for(let i=str.length-1; i>=0; i--){
-       rev = rev + str[i]
-    }
-        if(rev === original){
-        return "palindrome"
-    }else{
-        return "not palindrome"
-    }
+// function palindrome(str){
+//     let original = str
+//     let rev = ""
+//     for(let i=str.length-1; i>=0; i--){
+//        rev = rev + str[i]
+//     }
+//         if(rev === original){
+//         return "palindrome"
+//     }else{
+//         return "not palindrome"
+//     }
    
-}
+// }
 // console.log(palindrome("madam"));
 // console.log(palindrome("hello"));
 
-let arr = [0,1,0,3,12]
+// let arr = [0,1,0,3,12]
 
-let index = 0
-for(let i=0;i<arr.length;i++){
-   if(arr[i] !== 0){
-   arr[index] = arr[i]
-   index++
+// let index = 0
+// for(let i=0;i<arr.length;i++){
+//    if(arr[i] !== 0){
+//    arr[index] = arr[i]
+//    index++
   
-   }
-   }
-     for(let i=index; i<arr.length; i++){
-         arr[i] =0
-}
+//    }
+//    }
+//      for(let i=index; i<arr.length; i++){
+//          arr[i] =0
+// }
 // console.log(arr);
 // anagram with method
 
-function anagram(str1 , str2){
-    if(str1.length !== str2.length){
-        return " false "
-    }
-    let s1 = str1.split("").sort().join("")
-    let s2 = str2.split("").sort().join("")
-    return s1 === s2
-}
+// function anagram(str1 , str2){
+//     if(str1.length !== str2.length){
+//         return " false "
+//     }
+//     let s1 = str1.split("").sort().join("")
+//     let s2 = str2.split("").sort().join("")
+//     return s1 === s2
+// }
 // console.log(anagram("listen" , "silent"));
 // console.log(anagram("hello" , "world"));
 
 // Anagram without method 
 
-function anagrams(str1 , str2){
-  if(str1.length !== str2.length){
-    return false
-  }
-  let freq = {}
-  for(let i=0;i<str1.length; i++){
-    if(freq[str1[i]]){
-        freq[str1[i]]++
-    }else{
-        freq[str1[i]] =1
-    }
-  }
-  for(let i=0; i<str2.length; i++){
-    if(freq[str2[i]]){
-        freq[str2[i]]--
-    }else{
-        return false
-    }
-  }
-      for(let key in freq){
-        if(freq[key] !== 0){
-            return false     
-         }
+// function anagrams(str1 , str2){
+//   if(str1.length !== str2.length){
+//     return false
+//   }
+//   let freq = {}
+//   for(let i=0;i<str1.length; i++){
+//     if(freq[str1[i]]){
+//         freq[str1[i]]++
+//     }else{
+//         freq[str1[i]] =1
+//     }
+//   }
+//   for(let i=0; i<str2.length; i++){
+//     if(freq[str2[i]]){
+//         freq[str2[i]]--
+//     }else{
+//         return false
+//     }
+//   }
+//       for(let key in freq){
+//         if(freq[key] !== 0){
+//             return false     
+//          }
 
-      }
-  return true
+//       }
+//   return true
+// }
+// console.log(anagrams("listen", "silent"));
+// console.log(anagrams("hello" , "world"));
+
+
+function missingNum(arr){
+    let n = arr.length + 1 
+    let expectedNum = (n * (n+1))/ 2
+    let actualNum = 0
+    for(let i =0; i<arr.length ; i++){
+        actualNum = actualNum + arr[i]
+
+    }
+    return expectedNum - actualNum
 }
-console.log(anagrams("listen", "silent"));
-console.log(anagrams("hello" , "world"));
+
+console.log(missingNum([1,2,3,5]));
