@@ -2938,71 +2938,89 @@
 // }
 // console.log(checkDouble("programming"));
 
- practice level 3 All Question
+//  practice level 3 All Question
 
-let arr = [4, 5, 1, 2, 1, 2, 5]
-let freq ={}
-for(let i=0;i<arr.length;i++){
-    let num = arr[i]
-    if(freq[num]){
-        freq[num]++
-    }else{
-        freq[num] = 1
-    }
-}
-for(let i=0; i<arr.length; i++){
-    if(freq[arr[i]] === 1){
-        console.log(arr[i]);
-        break
-    }
-}
+// let arr = [4, 5, 1, 2, 1, 2, 5]
+// let freq ={}
+// for(let i=0;i<arr.length;i++){
+//     let num = arr[i]
+//     if(freq[num]){
+//         freq[num]++
+//     }else{
+//         freq[num] = 1
+//     }
+// }
+// for(let i=0; i<arr.length; i++){
+//     if(freq[arr[i]] === 1){
+//         console.log(arr[i]);
+//         break
+//     }
+// }
 
-let arr = [2,7,11,15]
-let target = 9
-for(let i=0;i<arr.length; i++){
-    for(let j=i+1; i<arr.length; i++){
-       if(arr[i] + arr[j] === target){
-        console.log(arr[i], arr[j] , "=" , target);
-       }
-    }
-}
+// let arr = [2,7,11,15]
+// let target = 9
+// for(let i=0;i<arr.length; i++){
+//     for(let j=i+1; i<arr.length; i++){
+//        if(arr[i] + arr[j] === target){
+//         console.log(arr[i], arr[j] , "=" , target);
+//        }
+//     }
+// }
 
 
-let arr = [1,1,2,3,2,4,5,4]
+// let arr = [1,1,2,3,2,4,5,4]
 
-let result =[]
-for(let i=0; i<arr.length ; i++){
+// let result =[]
+// for(let i=0; i<arr.length ; i++){
    
-        if(!result.includes(arr[i])){
-            result.push(arr[i])
-        }
+//         if(!result.includes(arr[i])){
+//             result.push(arr[i])
+//         }
     
-}
-console.log(result);
+// }
+// console.log(result);
 
-let arr=[10,20,30,40,50]
-let left =0
-let right = arr.length -1
+// let arr=[10,20,30,40,50]
+// let left =0
+// let right = arr.length -1
 
-while(left < right){
-    let temp = arr[left]
-    arr[left] = arr[right]
-    arr[right] = temp
+// while(left < right){
+//     let temp = arr[left]
+//     arr[left] = arr[right]
+//     arr[right] = temp
 
-    left++
-    right--
-}
-console.log(arr);
+//     left++
+//     right--
+// }
+// console.log(arr);
 
-let str = "javascript is awesome deepanshu"
+// let str = "javascript is awesome deepanshu"
 
-let count = 1
+// let count = 1
 
-for(let i =0; i<str.length;i++){
-    if(str[i] === " "){
-        count++
+// for(let i =0; i<str.length;i++){
+//     if(str[i] === " "){
+//         count++
+//     }
+// }
+
+// console.log(count);
+
+// frequency of digit 
+
+function digits(arr){
+    let freq = {}
+
+    while(arr>0){
+        let digit = arr % 10
+        if(freq[digit]){
+            freq[digit]++
+        }else{
+            freq[digit] = 1
+        }
+        arr = Math.floor(arr/10)
     }
+    return freq
 }
 
-console.log(count);
-
+console.log(digits(122333));
