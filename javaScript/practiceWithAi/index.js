@@ -348,92 +348,188 @@
 // console.log(arr);
 
 // day 7 Strings
+// Q1
+
+// let str = "hello"
+// let rev =" "
+
+// for(let i = str.length -1 ; i>=0; i--){
+//     rev = rev + str[i]
+// }
+// console.log(rev);
+
+// Q2
+// let str = "madam"
+
+// function isPalindrome(str){
+//     let check = ""
+//   for(let i= str.length -1 ; i>=0; i--){
+//    check = check + str[i]
+//   }
+//   if(str === check){
+//     return true
+//   } else{ 
+//     return false
+//   }
+// }
+// console.log(isPalindrome("madam"));
+
+
+// function palindrome(str){
+//     let left = 0
+//     let right = str.length -1
+
+//     while(left < right){
+//         if(str[left] !== str[right]){
+//                return false
+//         }
+//         left++
+//         right--
+//     }
+//     return true
+
+// }
+
+// console.log(palindrome("madam"));
+// console.log(palindrome("deepa"));
+
+
+// Q3
+
+// let str = "javascript"
+// let count = 0
+
+// for(let i=0; i<str.length; i++){
+//     if("aeiou".includes(str[i])){
+//         count++
+// }
+// }
+// console.log(count);
+
+// for(let i=0; i<str.length; i++){
+//     if(str[i] === "a" || str[i] === "e" || str[i] === "i" || str[i] === "o" || str[i] === "u"){
+//      count++
+// }
+// }
+// console.log(count);
+
+// Q4
+//   note : str ki value ku change nhhi hui .. dusre varible mai store ku karna pada .. dusre variable value change ho gyi ( asa ku )
+// let str = "hello world"
+//   let upper = str.toUpperCase()
+// console.log(upper);
+// console.log(str); 
+
+
+
+// Q5
+
+// let str = "HELLO WORLD"
+// let lower = str.toLowerCase()
+// console.log(lower);
+
+// Q6
+
+// let str = " j a v a s c r i p t ";
+// let result = ""
+// for(let i=0; i<str.length; i++){
+//     if(str[i] !== " ")
+//    result = result + str[i]
+// }
+// console.log(result);
+
+day 8 Array methods
+
 Q1
 
-let str = "hello"
-let rev =" "
-
-for(let i = str.length -1 ; i>=0; i--){
-    rev = rev + str[i]
-}
-console.log(rev);
+let arr = [1,2,3]
+arr.push(4)
+console.log(arr);
 
 Q2
-let str = "madam"
 
-function isPalindrome(str){
-    let check = ""
-  for(let i= str.length -1 ; i>=0; i--){
-   check = check + str[i]
-  }
-  if(str === check){
-    return true
-  } else{ 
-    return false
-  }
-}
-console.log(isPalindrome("madam"));
-
-
-function palindrome(str){
-    let left = 0
-    let right = str.length -1
-
-    while(left < right){
-        if(str[left] !== str[right]){
-               return false
-        }
-        left++
-        right--
-    }
-    return true
-
-}
-
-console.log(palindrome("madam"));
-console.log(palindrome("deepa"));
-
+let arr = [10,20,30,40]
+arr.pop()
+console.log(arr);
 
 Q3
 
-let str = "javascript"
-let count = 0
+let arr = [1,2,1,3,2,1]
 
-for(let i=0; i<str.length; i++){
-    if("aeiou".includes(str[i])){
-        count++
-}
-}
-console.log(count);
+let freq = {}
 
-for(let i=0; i<str.length; i++){
-    if(str[i] === "a" || str[i] === "e" || str[i] === "i" || str[i] === "o" || str[i] === "u"){
-     count++
+for(let i = 0; i<arr.length; i++){
+    if(freq[arr[i]]){
+        freq[arr[i]]++
+    }else{
+        freq[arr[i]] = 1
+    }
 }
-}
-console.log(count);
+console.log(freq);
 
 Q4
-  note : str ki value ku change nhhi hui .. dusre varible mai store ku karna pada .. dusre variable value change ho gyi ( asa ku )
-let str = "hello world"
-  let upper = str.toUpperCase()
-console.log(upper);
-console.log(str); 
 
-
+let arr = [1,2,3,2,4,1,5];
+let result = {}
+for(let i=0 ; i<arr.length; i++){
+    if(result[arr[i]]){
+        result[arr[i]]++
+    }else{
+        result[arr[i]] = 1
+    }
+    
+}
+for(let key in result){
+    if(result[key] !== 1){
+        console.log(key);
+    }
+}
 
 Q5
 
-let str = "HELLO WORLD"
-let lower = str.toLowerCase()
-console.log(lower);
-
-Q6
-
-let str = " j a v a s c r i p t ";
-let result = ""
-for(let i=0; i<str.length; i++){
-    if(str[i] !== " ")
-   result = result + str[i]
+let arr = [1,2,2,3,4,4,5];
+let uniqe = []
+for(let i = 0; i<arr.length; i++){
+    if(!uniqe.includes(arr[i])){
+        uniqe.push(arr[i])
+    }
 }
-console.log(result);
+console.log(uniqe);
+
+Q 6
+
+let arr = [10,20,30,40];
+let found = false
+for(let i = 0 ; i<arr.length; i++){
+    if(arr[i] === 30){
+      found = true
+       break;
+    }
+}
+if(found){
+    console.log("exist");
+}else{
+    console.log("not Exist");
+}
+
+
+
+interview Question
+
+
+let arr = [10,45,23,89,67];
+
+let large = -Infinity
+let sL = -Infinity
+
+for(let i =0 ; i<arr.length; i++){
+    if(arr[i] > large){
+        sL = large
+        large = arr[i]
+    }
+    if( arr[i] > sL && arr[i] !== large){
+        sL = arr[i]
+    }
+    
+}
+console.log(sL);
