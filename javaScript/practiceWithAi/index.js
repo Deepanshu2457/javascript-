@@ -438,98 +438,146 @@
 // }
 // console.log(result);
 
-day 8 Array methods
+// day 8 Array methods
 
-Q1
+// Q1
 
-let arr = [1,2,3]
-arr.push(4)
-console.log(arr);
+// let arr = [1,2,3]
+// arr.push(4)
+// console.log(arr);
 
-Q2
+// Q2
 
-let arr = [10,20,30,40]
-arr.pop()
-console.log(arr);
+// let arr = [10,20,30,40]
+// arr.pop()
+// console.log(arr);
 
-Q3
+// Q3
 
-let arr = [1,2,1,3,2,1]
+// let arr = [1,2,1,3,2,1]
 
-let freq = {}
+// let freq = {}
 
-for(let i = 0; i<arr.length; i++){
-    if(freq[arr[i]]){
-        freq[arr[i]]++
-    }else{
-        freq[arr[i]] = 1
-    }
-}
-console.log(freq);
+// for(let i = 0; i<arr.length; i++){
+//     if(freq[arr[i]]){
+//         freq[arr[i]]++
+//     }else{
+//         freq[arr[i]] = 1
+//     }
+// }
+// console.log(freq);
 
-Q4
+// Q4
 
-let arr = [1,2,3,2,4,1,5];
-let result = {}
-for(let i=0 ; i<arr.length; i++){
-    if(result[arr[i]]){
-        result[arr[i]]++
-    }else{
-        result[arr[i]] = 1
-    }
+// let arr = [1,2,3,2,4,1,5];
+// let result = {}
+// for(let i=0 ; i<arr.length; i++){
+//     if(result[arr[i]]){
+//         result[arr[i]]++
+//     }else{
+//         result[arr[i]] = 1
+//     }
     
-}
-for(let key in result){
-    if(result[key] !== 1){
-        console.log(key);
-    }
-}
+// }
+// for(let key in result){
+//     if(result[key] !== 1){
+//         console.log(key);
+//     }
+// }
 
-Q5
+// Q5
 
-let arr = [1,2,2,3,4,4,5];
-let uniqe = []
-for(let i = 0; i<arr.length; i++){
-    if(!uniqe.includes(arr[i])){
-        uniqe.push(arr[i])
-    }
-}
-console.log(uniqe);
+// let arr = [1,2,2,3,4,4,5];
+// let uniqe = []
+// for(let i = 0; i<arr.length; i++){
+//     if(!uniqe.includes(arr[i])){
+//         uniqe.push(arr[i])
+//     }
+// }
+// console.log(uniqe);
 
-Q 6
+// Q 6
 
-let arr = [10,20,30,40];
-let found = false
-for(let i = 0 ; i<arr.length; i++){
-    if(arr[i] === 30){
-      found = true
-       break;
-    }
-}
-if(found){
-    console.log("exist");
-}else{
-    console.log("not Exist");
-}
-
-
-
-interview Question
+// let arr = [10,20,30,40];
+// let found = false
+// for(let i = 0 ; i<arr.length; i++){
+//     if(arr[i] === 30){
+//       found = true
+//        break;
+//     }
+// }
+// if(found){
+//     console.log("exist");
+// }else{
+//     console.log("not Exist");
+// }
 
 
-let arr = [10,45,23,89,67];
 
-let large = -Infinity
-let sL = -Infinity
+// interview Question
 
-for(let i =0 ; i<arr.length; i++){
-    if(arr[i] > large){
-        sL = large
-        large = arr[i]
-    }
-    if( arr[i] > sL && arr[i] !== large){
-        sL = arr[i]
-    }
+
+// let arr = [10,45,23,89,67];
+
+// let large = -Infinity
+// let sL = -Infinity
+
+// for(let i =0 ; i<arr.length; i++){
+//     if(arr[i] > large){
+//         sL = large
+//         large = arr[i]
+//     }
+//     if( arr[i] > sL && arr[i] !== large){
+//         sL = arr[i]
+//     }
     
+// }
+// console.log(sL);
+
+// day 9 objects
+
+// Q1
+// let student = {
+//     name: "Aman",
+//     age: 22,
+//     marks: 88
+// };
+// console.log(student.name);
+// console.log(student["age"]);
+// console.log(student.marks);
+
+// Q2
+
+// let student = {
+//     name: "Aman",
+//     age: 22,
+//     marks: 88
+// };
+// student.marks = 95
+
+// console.log(student.marks);
+
+// Q3
+
+let students = [
+    {name: "A", marks: 50},
+    {name: "B", marks: 80},
+    {name: "C", marks: 70}
+];
+
+let topper = students[0].marks
+
+for(let i=0; i<students.length; i++){
+    if(students[i].marks > topper){
+        topper = students[i].marks
+    }
 }
-console.log(sL);
+console.log(topper);
+
+// Q4
+
+for(let i =0; i<students.length; i++){
+    console.log(students[i].name);
+}
+
+// Q5
