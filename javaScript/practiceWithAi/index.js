@@ -581,3 +581,21 @@ for(let i =0; i<students.length; i++){
 }
 
 // Q5
+
+let totalMarks = 0
+for(let i=0; i<students.length; i++){
+    totalMarks = totalMarks + students[i].marks
+}
+console.log(totalMarks);
+
+let lowestMarks = students[0].marks
+let lowStudentName = students[0].name
+
+for(let i=0; i<students.length; i++){
+    if(students[i].marks <= lowestMarks){
+        lowestMarks = students[i].marks
+        lowStudentName = students[i].name
+    }
+}
+console.log(lowestMarks);
+console.log(lowStudentName);
