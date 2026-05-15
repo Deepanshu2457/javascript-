@@ -534,76 +534,76 @@
 // }
 // console.log(sL);
 
-// day 9 objects
+day 9 objects
 
-// Q1
-// let student = {
-//     name: "Aman",
-//     age: 22,
-//     marks: 88
-// };
-// console.log(student.name);
-// console.log(student["age"]);
-// console.log(student.marks);
+Q1
+let student = {
+    name: "Aman",
+    age: 22,
+    marks: 88
+};
+console.log(student.name);
+console.log(student["age"]);
+console.log(student.marks);
 
-// Q2
+Q2
 
-// let student = {
-//     name: "Aman",
-//     age: 22,
-//     marks: 88
-// };
-// student.marks = 95
+let student = {
+    name: "Aman",
+    age: 22,
+    marks: 88
+};
+student.marks = 95
 
-// console.log(student.marks);
+console.log(student.marks);
 
-// Q3
+Q3
 
-// let students = [
-//     {name: "A", marks: 50},
-//     {name: "B", marks: 80},
-//     {name: "C", marks: 70}
-// ];
+let students = [
+    {name: "A", marks: 50},
+    {name: "B", marks: 80},
+    {name: "C", marks: 70}
+];
 
-// let topper = students[0].marks
+let topper = students[0].marks
 
-// for(let i=0; i<students.length; i++){
-//     if(students[i].marks > topper){
-//         topper = students[i].marks
-//     }
-// }
-// console.log(topper);
+for(let i=0; i<students.length; i++){
+    if(students[i].marks > topper){
+        topper = students[i].marks
+    }
+}
+console.log(topper);
 
-// // Q4
+// Q4
 
-// for(let i =0; i<students.length; i++){
-//     console.log(students[i].name);
-// }
+for(let i =0; i<students.length; i++){
+    console.log(students[i].name);
+}
 
-// Q5
+Q5
 
-// let totalMarks = 0
-// for(let i=0; i<students.length; i++){
-//     totalMarks = totalMarks + students[i].marks
-// }
-// console.log(totalMarks);
+let totalMarks = 0
+for(let i=0; i<students.length; i++){
+    totalMarks = totalMarks + students[i].marks
+}
+console.log(totalMarks);
 
 
-// // interview question 
-// let lowestMarks = students[0].marks
-// let lowStudentName = students[0].name
+// interview question 
+let lowestMarks = students[0].marks
+let lowStudentName = students[0].name
 
-// for(let i=0; i<students.length; i++){
-//     if(students[i].marks <= lowestMarks){
-//         lowestMarks = students[i].marks
-//         lowStudentName = students[i].name
-//     }
-// }
-// console.log(lowestMarks);
-// console.log(lowStudentName);
+for(let i=0; i<students.length; i++){
+    if(students[i].marks <= lowestMarks){
+        lowestMarks = students[i].marks
+        lowStudentName = students[i].name
+    }
+}
+console.log(lowestMarks);
+console.log(lowStudentName);
 
-// day 10  array and objects 
-// Q1
+day 10  array and objects 
+Q1
 
 let students = [
     {name: "A", marks: 80},
@@ -654,3 +654,75 @@ for(let i =0 ; i<students.length; i++){
     
 }
 console.log(topperName);
+
+// Q5
+
+let arr = [1,2,3,4,5,6];
+
+let result = {
+    even : [],
+    odd : []
+}
+for(let i=0; i<arr.length; i++){
+    if(arr[i] % 2 ===0){
+        result.even.push(arr[i])
+    } 
+    if(arr[i] % 2 !== 0 ){
+        result.odd.push(arr[i])
+    }
+}
+console.log(result)
+
+// Q6
+
+let str = "javascript";
+
+let freq = {}
+
+for(let i=0; i<str.length; i++){
+    if(freq[str[i]]){
+        freq[str[i]]++
+    }else{
+        freq[str[i]]=1
+    }
+}
+console.log(freq);
+
+// Q7
+
+let students = [
+    {name: "A", marks: 50},
+    {name: "B", marks: 80},
+    {name: "C", marks: 70},
+    {name: "D", marks: 90}
+];
+
+let top = students[0].marks
+let sTop = students[0].marks
+
+let max1 = -Infinity
+let max2 = -Infinity
+
+let firstTop= null
+let secondTop = null
+
+for(let i=0;i<students.length ; i++){
+    let marks = students[i].marks
+    if(marks > max1){
+
+        max2 = max1
+        secondTop = firstTop
+        max1 = marks
+        firstTop = students[i]
+    }
+    else if(marks > max2 && marks !== max1){
+        max2 = marks
+        secondTop = students[i]
+    }
+}
+console.log(secondTop);
+
+console.log(firstTop);
+
+
+
