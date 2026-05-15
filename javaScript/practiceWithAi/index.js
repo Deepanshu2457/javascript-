@@ -534,195 +534,268 @@
 // }
 // console.log(sL);
 
-day 9 objects
+// day 9 objects
 
-Q1
-let student = {
-    name: "Aman",
-    age: 22,
-    marks: 88
-};
-console.log(student.name);
-console.log(student["age"]);
-console.log(student.marks);
-
-Q2
-
-let student = {
-    name: "Aman",
-    age: 22,
-    marks: 88
-};
-student.marks = 95
-
-console.log(student.marks);
-
-Q3
-
-let students = [
-    {name: "A", marks: 50},
-    {name: "B", marks: 80},
-    {name: "C", marks: 70}
-];
-
-let topper = students[0].marks
-
-for(let i=0; i<students.length; i++){
-    if(students[i].marks > topper){
-        topper = students[i].marks
-    }
-}
-console.log(topper);
-
-// Q4
-
-for(let i =0; i<students.length; i++){
-    console.log(students[i].name);
-}
-
-Q5
-
-let totalMarks = 0
-for(let i=0; i<students.length; i++){
-    totalMarks = totalMarks + students[i].marks
-}
-console.log(totalMarks);
-
-
-// interview question 
-let lowestMarks = students[0].marks
-let lowStudentName = students[0].name
-
-for(let i=0; i<students.length; i++){
-    if(students[i].marks <= lowestMarks){
-        lowestMarks = students[i].marks
-        lowStudentName = students[i].name
-    }
-}
-console.log(lowestMarks);
-console.log(lowStudentName);
-
-day 10  array and objects 
-Q1
-
-let students = [
-    {name: "A", marks: 80},
-    {name: "B", marks: 45},
-    {name: "C", marks: 90},
-    {name: "D", marks: 30}
-];
-
-let passedStudent = []
-
-for(let i = 0 ; i<students.length; i++){
-    if(students[i].marks >= 50){
-         passedStudent.push(students[i])
-    }
-}
-console.log(passedStudent);
+// Q1
+// let student = {
+//     name: "Aman",
+//     age: 22,
+//     marks: 88
+// };
+// console.log(student.name);
+// console.log(student["age"]);
+// console.log(student.marks);
 
 // Q2
 
-let failedStudent = []
-for(let i=0; i<students.length; i++){
-    if(students[i].marks < 50){
-      failedStudent.push(students[i])
-    }
-}
-console.log(failedStudent);
+// let student = {
+//     name: "Aman",
+//     age: 22,
+//     marks: 88
+// };
+// student.marks = 95
+
+// console.log(student.marks);
 
 // Q3
- 
-let totalMarks = 0 
- for(let i=0; i<students.length; i++){
-    totalMarks = totalMarks + students[i].marks
- }
-  let average =  totalMarks / students.length
-  console.log(average);
 
-//   Q4
+// let students = [
+//     {name: "A", marks: 50},
+//     {name: "B", marks: 80},
+//     {name: "C", marks: 70}
+// ];
 
-let topperName = students[0].name
-let topper = students[0].marks
+// let topper = students[0].marks
 
-for(let i =0 ; i<students.length; i++){
-    if(students[i].marks >= topper ){
-       topper = students[i].marks
-       topperName = students[i].name
+// for(let i=0; i<students.length; i++){
+//     if(students[i].marks > topper){
+//         topper = students[i].marks
+//     }
+// }
+// console.log(topper);
 
-    }
-    
-}
-console.log(topperName);
+// // Q4
+
+// for(let i =0; i<students.length; i++){
+//     console.log(students[i].name);
+// }
 
 // Q5
 
-let arr = [1,2,3,4,5,6];
+// let totalMarks = 0
+// for(let i=0; i<students.length; i++){
+//     totalMarks = totalMarks + students[i].marks
+// }
+// console.log(totalMarks);
 
-let result = {
-    even : [],
-    odd : []
-}
-for(let i=0; i<arr.length; i++){
-    if(arr[i] % 2 ===0){
-        result.even.push(arr[i])
-    } 
-    if(arr[i] % 2 !== 0 ){
-        result.odd.push(arr[i])
-    }
-}
-console.log(result)
+
+// // interview question 
+// let lowestMarks = students[0].marks
+// let lowStudentName = students[0].name
+
+// for(let i=0; i<students.length; i++){
+//     if(students[i].marks <= lowestMarks){
+//         lowestMarks = students[i].marks
+//         lowStudentName = students[i].name
+//     }
+// }
+// console.log(lowestMarks);
+// console.log(lowStudentName);
+
+// day 10  array and objects 
+// Q1
+
+// let students = [
+//     {name: "A", marks: 80},
+//     {name: "B", marks: 45},
+//     {name: "C", marks: 90},
+//     {name: "D", marks: 30}
+// ];
+
+// let passedStudent = []
+
+// for(let i = 0 ; i<students.length; i++){
+//     if(students[i].marks >= 50){
+//          passedStudent.push(students[i])
+//     }
+// }
+// console.log(passedStudent);
+
+// // Q2
+
+// let failedStudent = []
+// for(let i=0; i<students.length; i++){
+//     if(students[i].marks < 50){
+//       failedStudent.push(students[i])
+//     }
+// }
+// console.log(failedStudent);
+
+// // Q3
+ 
+// let totalMarks = 0 
+//  for(let i=0; i<students.length; i++){
+//     totalMarks = totalMarks + students[i].marks
+//  }
+//   let average =  totalMarks / students.length
+//   console.log(average);
+
+// //   Q4
+
+// let topperName = students[0].name
+// let topper = students[0].marks
+
+// for(let i =0 ; i<students.length; i++){
+//     if(students[i].marks >= topper ){
+//        topper = students[i].marks
+//        topperName = students[i].name
+
+//     }
+    
+// }
+// console.log(topperName);
+
+// // Q5
+
+// let arr = [1,2,3,4,5,6];
+
+// let result = {
+//     even : [],
+//     odd : []
+// }
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] % 2 ===0){
+//         result.even.push(arr[i])
+//     } 
+//     if(arr[i] % 2 !== 0 ){
+//         result.odd.push(arr[i])
+//     }
+// }
+// console.log(result)
+
+// // Q6
+
+// let str = "javascript";
+
+// let freq = {}
+
+// for(let i=0; i<str.length; i++){
+//     if(freq[str[i]]){
+//         freq[str[i]]++
+//     }else{
+//         freq[str[i]]=1
+//     }
+// }
+// console.log(freq);
+
+// // Q7
+
+// let students = [
+//     {name: "A", marks: 50},
+//     {name: "B", marks: 80},
+//     {name: "C", marks: 70},
+//     {name: "D", marks: 90}
+// ];
+
+// let top = students[0].marks
+// let sTop = students[0].marks
+
+// let max1 = -Infinity
+// let max2 = -Infinity
+
+// let firstTop= null
+// let secondTop = null
+
+// for(let i=0;i<students.length ; i++){
+//     let marks = students[i].marks
+//     if(marks > max1){
+
+//         max2 = max1
+//         secondTop = firstTop
+//         max1 = marks
+//         firstTop = students[i]
+//     }
+//     else if(marks > max2 && marks !== max1){
+//         max2 = marks
+//         secondTop = students[i]
+//     }
+// }
+// console.log(secondTop);
+
+// console.log(firstTop);
+
+
+
+day 11 array advance 
+
+Q1 
+let arr = [ 1,2,3,4]
+
+let ans = arr.map((num)=>{
+    return  num * 2
+})
+console.log(ans);
+
+Q2
+
+let arr = [1,2,3,4,5,6]
+
+let ans = arr.filter((num)=>{
+    return num % 2 ===0
+})
+console.log(ans);
+
+Q3
+
+let arr = [10,20,30]
+
+let ans = arr.reduce((acc , curr)=>{
+    return acc + curr
+
+},0)
+console.log(ans);
+
+Q 4
+
+let students = [
+   {name:"A", marks:50},
+   {name:"B", marks:90},
+   {name:"C", marks:70}
+];
+
+
+let ans = students.find((num)=>{
+    return num.marks > 80;
+})
+console.log(ans);
+
+Q5
+
+let arr = [5,10,-2,8];
+
+let ans  = arr.some((num)=>{
+    return num < 0 
+})
+console.log(ans);
 
 // Q6
 
-let str = "javascript";
+let arr = [2,4,6,8];
 
-let freq = {}
+let ans = arr.every((num)=>{
+    return num % 2 === 0
+})
+console.log(ans);
 
-for(let i=0; i<str.length; i++){
-    if(freq[str[i]]){
-        freq[str[i]]++
-    }else{
-        freq[str[i]]=1
-    }
-}
-console.log(freq);
 
-// Q7
+Q6
 
 let students = [
-    {name: "A", marks: 50},
-    {name: "B", marks: 80},
-    {name: "C", marks: 70},
-    {name: "D", marks: 90}
+   {name:"A", marks:50},
+   {name:"B", marks:90},
+   {name:"C", marks:70}
 ];
-
-let top = students[0].marks
-let sTop = students[0].marks
-
-let max1 = -Infinity
-let max2 = -Infinity
-
-let firstTop= null
-let secondTop = null
-
-for(let i=0;i<students.length ; i++){
-    let marks = students[i].marks
-    if(marks > max1){
-
-        max2 = max1
-        secondTop = firstTop
-        max1 = marks
-        firstTop = students[i]
-    }
-    else if(marks > max2 && marks !== max1){
-        max2 = marks
-        secondTop = students[i]
-    }
-}
-console.log(secondTop);
-
-console.log(firstTop);
-
-
-
+let ans = students.reduce((acc , curr)=>{
+      return acc + curr.marks
+},0)
+console.log(ans);
