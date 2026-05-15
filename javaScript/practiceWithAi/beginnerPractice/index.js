@@ -726,76 +726,107 @@
 
 
 
-day 11 array advance 
+// day 11 array advance 
 
-Q1 
-let arr = [ 1,2,3,4]
+// Q1 
+// let arr = [ 1,2,3,4]
 
-let ans = arr.map((num)=>{
-    return  num * 2
-})
-console.log(ans);
+// let ans = arr.map((num)=>{
+//     return  num * 2
+// })
+// console.log(ans);
 
-Q2
+// Q2
 
-let arr = [1,2,3,4,5,6]
+// let arr = [1,2,3,4,5,6]
 
-let ans = arr.filter((num)=>{
-    return num % 2 ===0
-})
-console.log(ans);
+// let ans = arr.filter((num)=>{
+//     return num % 2 ===0
+// })
+// console.log(ans);
 
-Q3
+// Q3
 
-let arr = [10,20,30]
+// let arr = [10,20,30]
 
-let ans = arr.reduce((acc , curr)=>{
-    return acc + curr
+// let ans = arr.reduce((acc , curr)=>{
+//     return acc + curr
 
-},0)
-console.log(ans);
+// },0)
+// console.log(ans);
 
-Q 4
+// Q 4
 
-let students = [
-   {name:"A", marks:50},
-   {name:"B", marks:90},
-   {name:"C", marks:70}
-];
+// let students = [
+//    {name:"A", marks:50},
+//    {name:"B", marks:90},
+//    {name:"C", marks:70}
+// ];
 
 
-let ans = students.find((num)=>{
-    return num.marks > 80;
-})
-console.log(ans);
+// let ans = students.find((num)=>{
+//     return num.marks > 80;
+// })
+// console.log(ans);
 
-Q5
+// Q5
 
-let arr = [5,10,-2,8];
+// let arr = [5,10,-2,8];
 
-let ans  = arr.some((num)=>{
-    return num < 0 
-})
-console.log(ans);
+// let ans  = arr.some((num)=>{
+//     return num < 0 
+// })
+// console.log(ans);
+
+// // Q6
+
+// let arr = [2,4,6,8];
+
+// let ans = arr.every((num)=>{
+//     return num % 2 === 0
+// })
+// console.log(ans);
+
 
 // Q6
 
-let arr = [2,4,6,8];
+// let students = [
+//    {name:"A", marks:50},
+//    {name:"B", marks:90},
+//    {name:"C", marks:70}
+// ];
+// let ans = students.reduce((acc , curr)=>{
+//       return acc + curr.marks
+// },0)
 
-let ans = arr.every((num)=>{
-    return num % 2 === 0
-})
-console.log(ans);
+// console.log(ans);
 
 
-Q6
 
-let students = [
-   {name:"A", marks:50},
-   {name:"B", marks:90},
-   {name:"C", marks:70}
-];
-let ans = students.reduce((acc , curr)=>{
-      return acc + curr.marks
-},0)
-console.log(ans);
+
+
+
+//           Dom Javascript   day 12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
