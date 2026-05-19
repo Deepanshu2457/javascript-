@@ -3161,36 +3161,51 @@
 
 // help se kiya hai
 
-function rotateArr( arr , k ){
-    let n = arr.length 
+// function rotateArr( arr , k ){
+//     let n = arr.length 
 
-    for(let i =0 ; i<k ; i++){
-        let first = arr[0]
-        for(let j=0 ; j<n-1; j++){
-            arr[j] = arr[j+1]
+//     for(let i =0 ; i<k ; i++){
+//         let first = arr[0]
+//         for(let j=0 ; j<n-1; j++){
+//             arr[j] = arr[j+1]
         
-        }
-            arr[n-1] = first
-    }
-    return arr
+//         }
+//             arr[n-1] = first
+//     }
+//     return arr
 
-}
-console.log(rotateArr([1,2,3,4,5],2));
+// }
+// console.log(rotateArr([1,2,3,4,5],2));
 
 
 // Q5 maximum diffrence 
  
+let arr = [2,3,10,6,4,8,1]
+let maxxDiff = -Infinity
+
+for(let i=0; i<arr.length; i++){
+    
+    for(let j=i+1; j<arr.length; j++){
+        let diff = arr[j] - arr[i]
+
+        if(diff > maxxDiff){
+            maxxDiff = diff
+        }
+    }
+}
+
+console.log(maxxDiff);
 // Q6 marge two array 
 
-let arr1 = [1,2,3]
-let arr2 = [ 4,5,6]
-let result = []
+// let arr1 = [1,2,3]
+// let arr2 = [ 4,5,6]
+// let result = []
 
-for(let i = 0; i<arr1.length; i++){
-     result.push(arr1[i])
-}
-   for(let j=0 ; j<arr2.length; j++){
-        result.push(arr2[j])
-    }
-console.log(result);
+// for(let i = 0; i<arr1.length; i++){
+//      result.push(arr1[i])
+// }
+//    for(let j=0 ; j<arr2.length; j++){
+//         result.push(arr2[j])
+//     }
+// console.log(result);
 
