@@ -3105,3 +3105,43 @@
 // }
 // console.log(anagrams("silent", "listen"));
 // console.log(anagrams("hello" ,"hello"));
+
+
+// level 3 array question
+
+// Q1 second largest
+let arr = [12,45,7,89,23]
+
+let sL = -Infinity
+let large = -Infinity
+
+for(let i=0; i<arr.length; i++){
+    if(arr[i] > large){
+        sL = large
+        large = arr[i]
+    }
+
+    if(arr[i] > sL && arr[i] !== large){
+        sL= arr[i]
+    }
+}
+console.log(sL);
+console.log(large);
+
+// Q2  move all zero
+
+ let arr = [0,1,0,3,12]
+
+let index =0
+
+for(let i=0; i<arr.length; i++){
+    if(arr[i] !== 0){
+        arr[index] = arr[i]
+        index++
+    }
+}
+for(let i = index ; i<arr.length; i++){
+    arr[i] = 0
+}
+
+console.log(arr);
