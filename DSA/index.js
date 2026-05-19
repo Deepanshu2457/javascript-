@@ -3110,38 +3110,87 @@
 // level 3 array question
 
 // Q1 second largest
-let arr = [12,45,7,89,23]
+// let arr = [12,45,7,89,23]
 
-let sL = -Infinity
-let large = -Infinity
+// let sL = -Infinity
+// let large = -Infinity
 
-for(let i=0; i<arr.length; i++){
-    if(arr[i] > large){
-        sL = large
-        large = arr[i]
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] > large){
+//         sL = large
+//         large = arr[i]
+//     }
+
+//     if(arr[i] > sL && arr[i] !== large){
+//         sL= arr[i]
+//     }
+// }
+// console.log(sL);
+// console.log(large);
+
+// // Q2  move all zero
+
+//  let arr = [0,1,0,3,12]
+
+// let index =0
+
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] !== 0){
+//         arr[index] = arr[i]
+//         index++
+//     }
+// }
+// for(let i = index ; i<arr.length; i++){
+//     arr[i] = 0
+// }
+
+// console.log(arr);
+
+// Q3 find duplicate element 
+
+// let arr = [1,2,3,2,4,5,1]
+// let result = []
+// for(let i=0; i<arr.length ; i++){
+//     if(!result.includes(arr[i])){
+//         result.push(arr[i])
+//     }
+// }
+// console.log(result);
+
+// Q4 left rotate  array by 2  
+
+// help se kiya hai
+
+function rotateArr( arr , k ){
+    let n = arr.length 
+
+    for(let i =0 ; i<k ; i++){
+        let first = arr[0]
+        for(let j=0 ; j<n-1; j++){
+            arr[j] = arr[j+1]
+        
+        }
+            arr[n-1] = first
     }
+    return arr
 
-    if(arr[i] > sL && arr[i] !== large){
-        sL= arr[i]
+}
+console.log(rotateArr([1,2,3,4,5],2));
+
+
+// Q5 maximum diffrence 
+ 
+// Q6 marge two array 
+
+let arr1 = [1,2,3]
+let arr2 = [ 4,5,6]
+let result = []
+
+for(let i = 0; i<arr1.length; i++){
+     result.push(arr1[i])
+}
+   for(let j=0 ; j<arr2.length; j++){
+        result.push(arr2[j])
     }
-}
-console.log(sL);
-console.log(large);
+console.log(result);
 
-// Q2  move all zero
-
- let arr = [0,1,0,3,12]
-
-let index =0
-
-for(let i=0; i<arr.length; i++){
-    if(arr[i] !== 0){
-        arr[index] = arr[i]
-        index++
-    }
-}
-for(let i = index ; i<arr.length; i++){
-    arr[i] = 0
-}
-
-console.log(arr);
