@@ -3180,21 +3180,21 @@
 
 // Q5 maximum diffrence 
  
-let arr = [2,3,10,6,4,8,1]
-let maxxDiff = -Infinity
+// let arr = [2,3,10,6,4,8,1]
+// let maxxDiff = -Infinity
 
-for(let i=0; i<arr.length; i++){
+// for(let i=0; i<arr.length; i++){
     
-    for(let j=i+1; j<arr.length; j++){
-        let diff = arr[j] - arr[i]
+//     for(let j=i+1; j<arr.length; j++){
+//         let diff = arr[j] - arr[i]
 
-        if(diff > maxxDiff){
-            maxxDiff = diff
-        }
-    }
-}
+//         if(diff > maxxDiff){
+//             maxxDiff = diff
+//         }
+//     }
+// }
 
-console.log(maxxDiff);
+// console.log(maxxDiff);
 // Q6 marge two array 
 
 // let arr1 = [1,2,3]
