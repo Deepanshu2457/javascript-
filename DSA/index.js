@@ -3306,22 +3306,44 @@
 // }
 // console.log(freq);
 
+// Q 8 
 
-let arr = [1,2,3,2,4,5]
+// let arr = [1,2,3,2,4,5]
 
-let dup = {}
+// let dup = {}
 
-for(let i = 0 ; i<arr.length ; i++){
-    let digit = arr[i]
-    if(dup[digit]){
-        dup[digit]++
+// for(let i = 0 ; i<arr.length ; i++){
+//     let digit = arr[i]
+//     if(dup[digit]){
+//         dup[digit]++
+//     }else{
+//         dup[digit] =1 
+//     }
+// }
+// for(let i = 0 ; i<arr.length; i++){
+//     if(dup[arr[i]] >  1){
+//         console.log(arr[i]);
+//         break 
+//     }
+// }
+
+let arr = [1,2,2,3,3,3,4]
+
+let freq = {}
+
+for(let i=0 ; i<arr.length ; i++){
+    if(freq[arr[i]]){
+        freq[arr[i]]++
     }else{
-        dup[digit] =1 
+        freq[arr[i]] = 1
     }
 }
-for(let i = 0 ; i<arr.length; i++){
-    if(dup[arr[i]] >  1){
-        console.log(arr[i]);
-        break 
+let maxfreq =0
+let answer = 0
+for(let key in freq){
+    if(freq[key] > maxfreq){
+        maxfreq = freq[key]
+        answer = key 
     }
 }
+console.log(answer);
