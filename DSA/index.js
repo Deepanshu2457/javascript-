@@ -3213,60 +3213,74 @@
 
 //  Q1
 
-let arr1 = [1,2,3,4]
-let arr2 = [3,4,5,6]
+// let arr1 = [1,2,3,4]
+// let arr2 = [3,4,5,6]
 
-let result = []
+// let result = []
 
-for(let i=0 ; i<arr1.length; i++){
-   for(let j=0; j<arr2.length; j++){
-   if(arr1[i] === arr2[j]) {
-    result.push(arr1[i])
-   }
-   }
+// for(let i=0 ; i<arr1.length; i++){
+//    for(let j=0; j<arr2.length; j++){
+//    if(arr1[i] === arr2[j]) {
+//     result.push(arr1[i])
+//    }
+//    }
+// }
+// console.log(result);
+
+
+// Q 2 
+
+// let arr = [1,2,3,4,5,6]
+// let even = 0
+// let odd = 0
+
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] % 2 ===0){
+//         even++
+//     }else{
+//         odd++
+//     }
+// }
+// console.log(even);
+// console.log(odd);
+
+// Q 4 sorted array check 
+
+// let arr = [1,2,3,4,5]
+
+// for(let i=0 ; i<arr.length -1; i++){
+//     if(arr[i] > arr[i+1]){
+//         return false
+//     } else{
+//         return true
+//     }
+// }
+
+// q5
+
+// let arr = [2,-3,4,-1,5]
+
+// let original = []
+// for(let i =0 ; i<arr.length ; i++){
+// if(arr[i] >= 0){
+//  original.push(arr[i])
+// }
+// }
+// console.log(original);
+
+// Q6
+
+function misingNum(arr){
+    let max = Math.max(...arr)
+    let min = Math.min(...arr)
+
+    let mising = []
+
+     for(let i = min +1 ; i<max; i++){
+        if(!arr.includes(i)){
+         mising.push(i)
+        }
+     }
+     return mising
 }
-console.log(result);
-
-
-Q 2 
-
-let arr = [1,2,3,4,5,6]
-let even = 0
-let odd = 0
-
-for(let i=0; i<arr.length; i++){
-    if(arr[i] % 2 ===0){
-        even++
-    }else{
-        odd++
-    }
-}
-console.log(even);
-console.log(odd);
-
-Q 4 sorted array check 
-
-let arr = [1,2,3,4,5]
-
-for(let i=0 ; i<arr.length -1; i++){
-    if(arr[i] > arr[i+1]){
-        return false
-    } else{
-        return true
-    }
-}
-
-q5
-
-let arr = [2,-3,4,-1,5]
-
-let original = []
-for(let i =0 ; i<arr.length ; i++){
-if(arr[i] >= 0){
- original.push(arr[i])
-}
-}
-console.log(original);
-
-Q6
-
+console.log(misingNum([1,3,5]));
