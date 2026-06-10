@@ -3247,13 +3247,17 @@
 // Q 4 sorted array check 
 
 // let arr = [1,2,3,4,5]
+// let isShorted = true
 
 // for(let i=0 ; i<arr.length -1; i++){
 //     if(arr[i] > arr[i+1]){
-//         return false
-//     } else{
-//         return true
-//     }
+//        isShorted = false
+//     } 
+// }
+// if(isShorted){
+//     console.log("sorted");
+// }else{
+//     console.log("Not sorted");
 // }
 
 // q5
@@ -3270,17 +3274,54 @@
 
 // Q6
 
-function misingNum(arr){
-    let max = Math.max(...arr)
-    let min = Math.min(...arr)
+// function misingNum(arr){
+//     let max = Math.max(...arr)
+//     let min = Math.min(...arr)
 
-    let mising = []
+//     let mising = []
 
-     for(let i = min +1 ; i<max; i++){
-        if(!arr.includes(i)){
-         mising.push(i)
-        }
-     }
-     return mising
+//      for(let i = min +1 ; i<max; i++){
+//         if(!arr.includes(i)){
+//          mising.push(i)
+//         }
+//      }
+//      return mising
+// }
+// console.log(misingNum([1,3,5]));
+
+// Q 7
+
+// let arr = [1,2,2,3,3,3]
+
+// let freq = {}
+
+// for(let i = 0 ; i<arr.length; i++){
+//     let digit = arr[i]
+
+//     if(freq[digit]){
+//         freq[digit]++
+//     }else{
+//         freq[digit] = 1
+//     }
+// }
+// console.log(freq);
+
+
+let arr = [1,2,3,2,4,5]
+
+let dup = {}
+
+for(let i = 0 ; i<arr.length ; i++){
+    let digit = arr[i]
+    if(dup[digit]){
+        dup[digit]++
+    }else{
+        dup[digit] =1 
+    }
 }
-console.log(misingNum([1,3,5]));
+for(let i = 0 ; i<arr.length; i++){
+    if(dup[arr[i]] >  1){
+        console.log(arr[i]);
+        break 
+    }
+}
