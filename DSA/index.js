@@ -3351,18 +3351,34 @@
 // }
 // console.log(answer);
 
-let arr = [4,5,1,2,1,2,5]
 
-for(let i=0 ; i<arr.length; i++){
-    let count = 0
+//------------------------------second practice set revision------------
 
-    for(let j=0; j<arr.length; j++){
-        if(arr[i] === arr[j]){
-            count++
-        }
-    }
-    if(count===1){
-        console.log(arr[i]);
-        break;
+
+
+// let arr = [4,5,1,2,1,2,5]
+
+// for(let i=0 ; i<arr.length; i++){
+//     let count = 0
+
+//     for(let j=0; j<arr.length; j++){
+//         if(arr[i] === arr[j]){
+//             count++
+//         }
+//     }
+//     if(count===1){
+//         console.log(arr[i]);
+//         break;
+//     }
+// }
+// pair sum 
+let arr= [2,7, 11, 15]
+let target = 9 
+
+for(let i=0 ; i<arr.length ; i++){
+    for(let j=0 ; j<arr.length; j++){
+         if(arr[i] + arr[j] === target) {
+            console.log(arr[i] );
+         }
     }
 }
