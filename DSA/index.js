@@ -3372,13 +3372,41 @@
 //     }
 // }
 // pair sum 
-let arr= [2,7, 11, 15]
-let target = 9 
+// let arr= [2,7, 11, 15]
+// let target = 9 
 
-for(let i=0 ; i<arr.length ; i++){
-    for(let j=0 ; j<arr.length; j++){
-         if(arr[i] + arr[j] === target) {
-            console.log(arr[i] );
-         }
+// for(let i=0 ; i<arr.length ; i++){
+//     for(let j=0 ; j<arr.length; j++){
+//          if(arr[i] + arr[j] === target) {
+//             console.log(arr[i] );
+//          }
+//     }
+// }
+
+let arr = [1,1,2,3,2,4,5,4]
+
+let result = []
+
+// with out method
+for(let i = 0 ; i<arr.length ; i++){
+    let found = false
+    for(let j=0 ; j<result.length; j++){
+        if(arr[i] === result[j]){
+            found = true
+            break;
+        }
+    }
+    if(!found){
+        result.push(arr[i])
     }
 }
+console.log(result);
+
+// with includes
+
+for(let i=0; i<arr.length; i++){
+    if(!result.includes(arr[i])){
+        result.push(arr[i])
+    }
+}
+console.log(result);
