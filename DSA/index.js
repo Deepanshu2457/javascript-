@@ -3383,30 +3383,141 @@
 //     }
 // }
 
-let arr = [1,1,2,3,2,4,5,4]
+// not repeat number in array 
 
-let result = []
+// let arr = [1,1,2,3,2,4,5,4]
 
-// with out method
-for(let i = 0 ; i<arr.length ; i++){
-    let found = false
-    for(let j=0 ; j<result.length; j++){
-        if(arr[i] === result[j]){
-            found = true
-            break;
-        }
-    }
-    if(!found){
-        result.push(arr[i])
+// let result = []
+
+// // with out method
+// for(let i = 0 ; i<arr.length ; i++){
+//     let found = false
+//     for(let j=0 ; j<result.length; j++){
+//         if(arr[i] === result[j]){
+//             found = true
+//             break;
+//         }
+//     }
+//     if(!found){
+//         result.push(arr[i])
+//     }
+// }
+// console.log(result);
+
+// // with includes
+
+// for(let i=0; i<arr.length; i++){
+//     if(!result.includes(arr[i])){
+//         result.push(arr[i])
+//     }
+// }
+// console.log(result);
+
+
+
+
+//  let arr = [1,1,2,3,2,4,5,4]
+
+//  let result =  []
+
+//  for(let i =0 ; i<arr.length; i++){
+//     let found = false
+
+//     for(let j=0 ; j<result.length; j++){
+//         if(arr[i] === result[j]){
+//             found=true
+//             break
+//         }
+//     }
+//     if(!found){
+//         result.push(arr[i])
+//     }
+//  }
+//  console.log(result);
+
+// for(let i=0; i<arr.length; i++){
+//     if(!result.includes(arr[i])){
+//         result.push(arr[i])
+//     }
+// }
+
+// console.log(result);
+
+// Q 4
+
+// let arr = [10,20,30,40,50]
+
+// let left = 0
+// let right = arr.length -1
+
+// while(left < right){
+//     let temp = arr[left]
+//     arr[left] = arr[right]
+//     arr[right] = temp
+//     left++
+//     right--
+
+// }
+// console.log(arr);
+
+Q 5
+
+let arr = [1,2,3,5]
+
+let n = arr.length + 1 
+let expectedNum = n * (n+1) / 2
+
+let actualNum = 0 
+for(let i = 0 ; i<arr.length; i++){
+    actualNum += arr[i]
+  
+}
+
+let  found = expectedNum - actualNum
+   arr.push(found)
+console.log(arr);
+
+Q6
+
+let str = "hello world"
+
+let ans = str.split(" ").reverse().join(" ")
+console.log(ans);
+
+
+let str = "hello world"
+
+let word = ""
+let result = ""
+
+for(let i = str.length -1 ; i>=0; i--){
+    if(str[i] != " "){
+        word = str[i] + word
+    }else{
+        result += word + " "
+        word = ""
     }
 }
+result += word
 console.log(result);
 
-// with includes
 
-for(let i=0; i<arr.length; i++){
-    if(!result.includes(arr[i])){
-        result.push(arr[i])
+
+let check = "i    love     javascript"
+
+let results = ""
+let words = ""
+
+for(let i=check.length -1; i>=0; i--){
+    if(check[i] != " "){
+        words = check[i] + words
+    }else{
+     results += words + " "
+     words =  ""
     }
 }
-console.log(result);
+results += words
+console.log(results);
+
+
+
