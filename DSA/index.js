@@ -3615,44 +3615,61 @@
 
 // console.log(result);
 
+// Q7
 
-function isPalindrome(str){
+// function isPalindrome(str){
 
-    let left = 0 
-    let right = str.length -1 
+//     let left = 0 
+//     let right = str.length -1 
 
-     while(left < right){
-        if(str[left] !== str[right]){
-           return false
+//      while(left < right){
+//         if(str[left] !== str[right]){
+//            return false
+//         }
+//         left++
+//         right--
+//      }
+
+//      return true
+// }
+
+// console.log(isPalindrome("madam"));
+// console.log(isPalindrome("hello"));
+
+
+
+// function palindrome(str){
+//     str = str.toLowerCase()
+
+//     let left = 0
+//     let right = str.length -1 
+
+//     while(left < right){
+//         if(str[left] !== str[right]){
+//             return false
+//         }
+//         left++
+//         right--
+//     }
+//     return true
+
+// }
+
+// console.log(palindrome("MADAM"));
+// console.log(palindrome("madam"));
+// console.log(palindrome("hello"));
+
+// Q-8
+
+function capitalFirst(str){
+    let words = str.split(" ")
+
+    for(let i=0 ; i<words.length ; i++){
+        if(words[i] !== ""){
+            words[i] = words[i][0].toUpperCase() + words[i].slice(1)
         }
-        left++
-        right--
-     }
 
-     return true
-}
-
-console.log(isPalindrome("madam"));
-console.log(isPalindrome("hello"));
-
-
-function palindrome(str){
-    str = str.toLowerCase()
-
-    let left = 0
-    let right = str.length -1 
-
-    while(left < right){
-        if(str[left] !== str[right]){
-            return false
-        }
-        left++
-        right--
     }
-    return true
-
+    return words.join(" ")
 }
-
-console.log(palindrome("MADAM"));
-console.log(palindrome("madam"));
-console.log(palindrome("hello"));
+console.log(capitalFirst("hello world"));
