@@ -3710,28 +3710,100 @@
 
 // q 11
 
-let arr = [1,2,3,2,4,5]
+// let arr = [1,2,3,2,4,5]
 
-let freq = {}
+// let freq = {}
 
-for(let i=0;i<arr.length; i++){
-    if(freq[arr[i]]){
-       console.log(arr[i]);
-       break;
+// for(let i=0;i<arr.length; i++){
+//     if(freq[arr[i]]){
+//        console.log(arr[i]);
+//        break;
+//     }
+//     freq[arr[i]] = true
+// }
+
+
+// function firstDup(arr){
+//  let freq = {}
+//  for(let i=0; i<arr.length; i++){
+//     if(freq[arr[i]]){
+//         return arr[i]
+//     }
+//     freq[arr[i]] = true
+//  }
+//  return -1
+// }
+
+// console.log(firstDup([1,2,3,2,4,5]));
+
+
+function maximumFreq(arr){
+
+    let freq = {}
+    
+    for(let i=0; i<arr.length; i++){
+        if(freq[arr[i]]){
+            freq[arr[i]]++
+        }else{
+            freq[arr[i]] =1 
+        }
+      
     }
-    freq[arr[i]] = true
+    let maxFreq = 0
+    let ans; 
+    for(let key in freq){
+        if(freq[key] > maxFreq){
+            maxFreq = freq[key]
+            ans = key 
+        }
+    }
+    return ans
+}
+console.log(maximumFreq([1,2,2,3,3,3,4]));
+
+
+
+
+
+
+function secMAxfreq(arr){
+    let freq = {}
+
+    for(let i=0; i<arr.length; i++){
+        if(freq[arr[i]]){
+            freq[arr[i]]++
+        }else{
+            freq[arr[i]] =1 
+        }
+    }
+    let maxNum =0
+    let ans ;
+    for(let key in freq){
+        if(freq[key] >= maxNum){
+            maxNum = freq[key]
+            ans = key
+        }
+    }
+
+    return ans
 }
 
+console.log(secMAxfreq([1,2,2,3,3]));
 
-function firstDup(arr){
- let freq = {}
- for(let i=0; i<arr.length; i++){
-    if(freq[arr[i]]){
-        return arr[i]
-    }
-    freq[arr[i]] = true
- }
- return -1
+
+let freq = {
+ 10:5,
+ 20:5,
+ 30:5
 }
 
-console.log(firstDup([1,2,3,2,4,5]));
+let maxNum = 0
+let ans ; 
+for(let key in freq){
+    if(freq[key] >= maxNum){
+        maxNum = freq[key]
+        ans = key
+    }
+}
+
+console.log(ans);
