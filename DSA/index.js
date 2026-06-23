@@ -3661,15 +3661,32 @@
 
 // Q-8
 
-function capitalFirst(str){
-    let words = str.split(" ")
+// function capitalFirst(str){
+//     let words = str.split(" ")
 
-    for(let i=0 ; i<words.length ; i++){
-        if(words[i] !== ""){
-            words[i] = words[i][0].toUpperCase() + words[i].slice(1)
-        }
+//     for(let i=0 ; i<words.length ; i++){
+//         if(words[i] !== ""){
+//             words[i] = words[i][0].toUpperCase() + words[i].slice(1)
+//         }
 
+//     }
+//     return words.join(" ")
+// }
+// console.log(capitalFirst("hello world"));
+
+
+// Q9
+
+let str = " javascript is awesome"
+
+let count = 0
+
+for(let i=0; i<str.length; i++){
+    if(str[i] !== " " && (i=== 0) || str[i-1] === " "){
+        count++
     }
-    return words.join(" ")
+    // if(str[i] === " "){
+    //     count++
+    // }
 }
-console.log(capitalFirst("hello world"));
+console.log(count);
