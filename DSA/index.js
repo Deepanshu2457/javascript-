@@ -3570,26 +3570,26 @@
 // console.log(result);
 
 
-let str = "hello world"
+// let str = "hello world"
 
-let result = ""
-let word = ""
-for(let i=str.length -1 ; i>=0; i--){
-     if(str[i] !== " "){
-        word = str[i] + word
-     } else{
-        if(word !== ""){
-            result += word + " "
-            word = ""
-        }
-     }
+// let result = ""
+// let word = ""
+// for(let i=str.length -1 ; i>=0; i--){
+//      if(str[i] !== " "){
+//         word = str[i] + word
+//      } else{
+//         if(word !== ""){
+//             result += word + " "
+//             word = ""
+//         }
+//      }
    
-}
-  if(result !== ""){
-        result += word
-     }
+// }
+//   if(result !== ""){
+//         result += word
+//      }
 
-console.log(result);
+// console.log(result);
 
 // let str = " i    am learning       javascript everyday"
 
@@ -3614,3 +3614,45 @@ console.log(result);
 
 
 // console.log(result);
+
+
+function isPalindrome(str){
+
+    let left = 0 
+    let right = str.length -1 
+
+     while(left < right){
+        if(str[left] !== str[right]){
+           return false
+        }
+        left++
+        right--
+     }
+
+     return true
+}
+
+console.log(isPalindrome("madam"));
+console.log(isPalindrome("hello"));
+
+
+function palindrome(str){
+    str = str.toLowerCase()
+
+    let left = 0
+    let right = str.length -1 
+
+    while(left < right){
+        if(str[left] !== str[right]){
+            return false
+        }
+        left++
+        right--
+    }
+    return true
+
+}
+
+console.log(palindrome("MADAM"));
+console.log(palindrome("madam"));
+console.log(palindrome("hello"));
