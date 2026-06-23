@@ -3693,17 +3693,45 @@
 
 // Q 10
 
-let obj = 122333
+// let obj = 122333
+
+// let freq = {}
+
+// while(obj > 0){
+//     let digit = obj % 10
+//     if(freq[digit]){
+//         freq[digit]++
+//     }else{
+//       freq[digit] =1 
+//     }
+//      obj = Math.floor(obj / 10)
+// }
+// console.log(freq);
+
+// q 11
+
+let arr = [1,2,3,2,4,5]
 
 let freq = {}
 
-while(obj > 0){
-    let digit = obj % 10
-    if(freq[digit]){
-        freq[digit]++
-    }else{
-      freq[digit] =1 
+for(let i=0;i<arr.length; i++){
+    if(freq[arr[i]]){
+       console.log(arr[i]);
+       break;
     }
-     obj = Math.floor(obj / 10)
+    freq[arr[i]] = true
 }
-console.log(freq);
+
+
+function firstDup(arr){
+ let freq = {}
+ for(let i=0; i<arr.length; i++){
+    if(freq[arr[i]]){
+        return arr[i]
+    }
+    freq[arr[i]] = true
+ }
+ return -1
+}
+
+console.log(firstDup([1,2,3,2,4,5]));
