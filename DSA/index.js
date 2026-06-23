@@ -3677,16 +3677,33 @@
 
 // Q9
 
-let str = " javascript is awesome"
+// let str = " javascript is awesome"
 
-let count = 0
+// let count = 0
 
-for(let i=0; i<str.length; i++){
-    if(str[i] !== " " && (i=== 0) || str[i-1] === " "){
-        count++
+// for(let i=0; i<str.length; i++){
+//     if(str[i] !== " " && (i=== 0) || str[i-1] === " "){
+//         count++
+//     }
+//     // if(str[i] === " "){
+//     //     count++
+//     // }
+// }
+// console.log(count);
+
+// Q 10
+
+let obj = 122333
+
+let freq = {}
+
+while(obj > 0){
+    let digit = obj % 10
+    if(freq[digit]){
+        freq[digit]++
+    }else{
+      freq[digit] =1 
     }
-    // if(str[i] === " "){
-    //     count++
-    // }
+     obj = Math.floor(obj / 10)
 }
-console.log(count);
+console.log(freq);
