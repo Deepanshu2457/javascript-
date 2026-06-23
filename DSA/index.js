@@ -3460,64 +3460,157 @@
 // }
 // console.log(arr);
 
-Q 5
+// Q 5
 
-let arr = [1,2,3,5]
+// let arr = [1,2,3,5]
 
-let n = arr.length + 1 
-let expectedNum = n * (n+1) / 2
+// let n = arr.length + 1 
+// let expectedNum = n * (n+1) / 2
 
-let actualNum = 0 
-for(let i = 0 ; i<arr.length; i++){
-    actualNum += arr[i]
+// let actualNum = 0 
+// for(let i = 0 ; i<arr.length; i++){
+//     actualNum += arr[i]
   
-}
+// }
 
-let  found = expectedNum - actualNum
-   arr.push(found)
-console.log(arr);
+// let  found = expectedNum - actualNum
+//    arr.push(found)
+// console.log(arr);
 
-Q6
+// Q6
+
+// let str = "hello world"
+
+// let ans = str.split(" ").reverse().join(" ")
+// console.log(ans);
+
+
+// let str = "hello world"
+
+// let word = ""
+// let result = ""
+
+// for(let i = str.length -1 ; i>=0; i--){
+//     if(str[i] != " "){
+//         word = str[i] + word
+//     }else{
+//         result += word + " "
+//         word = ""
+//     }
+// }
+// result += word
+// console.log(result);
+
+
+
+// let check = "i    love     javascript"
+
+// let results = ""
+// let words = ""
+
+// for(let i=check.length -1; i>=0; i--){
+//     if(check[i] != " "){
+//         words = check[i] + words
+//     }else{
+//      results += words + " "
+//      words =  ""
+//     }
+// }
+// results += words
+// console.log(results);
+
+
+// let str = " i    am learning       javascript everyday"
+
+// let word = ""
+// let result = ""
+
+// for( let i = str.length-1 ; i>=0; i--){
+//     if(str[i] != " "){
+//         word = str[i] + word
+//     }else{
+//         if(word !== ""){
+//             result += word + " "
+//         word = ""
+//         }
+       
+//     }
+    
+// }
+// if(result !== ""){
+//  result += word
+// }
+
+
+// console.log(result);
+
+
+// let str = " i    am    learning"
+
+// let word = ""
+// let result = ""
+
+// for(let i = str.length - 1 ; i>=0; i--){
+//      if(str[i] != " "){
+//         word = str[i]  + word 
+//      }else{
+//         if(word !== ""){
+//              result += word + " "
+//             word = ""
+
+//         }
+       
+        
+//      }
+   
+
+// }
+
+//   result += word
+// console.log(result);
+
 
 let str = "hello world"
 
-let ans = str.split(" ").reverse().join(" ")
-console.log(ans);
-
-
-let str = "hello world"
-
-let word = ""
 let result = ""
-
-for(let i = str.length -1 ; i>=0; i--){
-    if(str[i] != " "){
+let word = ""
+for(let i=str.length -1 ; i>=0; i--){
+     if(str[i] !== " "){
         word = str[i] + word
-    }else{
-        result += word + " "
-        word = ""
-    }
+     } else{
+        if(word !== ""){
+            result += word + " "
+            word = ""
+        }
+     }
+   
 }
-result += word
+  if(result !== ""){
+        result += word
+     }
+
 console.log(result);
 
+// let str = " i    am learning       javascript everyday"
+
+// let word = ""
+// let result = ""
+
+// for( let i = str.length-1 ; i>=0; i--){
+//     if(str[i] != " "){
+//         word = str[i] + word
+//     }else{
+//         if(word !== ""){
+//             result += word + " "
+//         word = ""
+//         }
+       
+//     }
+    
+// }
+// if(result !== ""){
+//  result += word
+// }
 
 
-let check = "i    love     javascript"
-
-let results = ""
-let words = ""
-
-for(let i=check.length -1; i>=0; i--){
-    if(check[i] != " "){
-        words = check[i] + words
-    }else{
-     results += words + " "
-     words =  ""
-    }
-}
-results += words
-console.log(results);
-
-
-
+// console.log(result);
