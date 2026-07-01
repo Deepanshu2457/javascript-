@@ -3933,12 +3933,31 @@
 
 // Q5
 
-let arr= [1,2,3,5]
-let n =5
-let expected = n * (n +1 ) / 2
-let actual = 0
+// let arr= [1,2,3,5]
+// let n =5
+// let expected = n * (n +1 ) / 2
+// let actual = 0
+
+// for(let i=0; i<arr.length; i++){
+//     actual += arr[i]
+// }
+// console.log(expected - actual);
+
+// Q6 second largest in array
+
+let arr = [12,45,7,89,23]
+
+let sLarge = -Infinity
+let largest = -Infinity
 
 for(let i=0; i<arr.length; i++){
-    actual += arr[i]
+    if(arr[i] > largest){
+        sLarge = largest
+        largest = arr[i]
+    }
+    if(arr[i] > sLarge && arr[i] !== largest){
+        sLarge = arr[i]
+    }
 }
-console.log(expected - actual);
+console.log(sLarge);
+console.log(largest);
