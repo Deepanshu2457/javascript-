@@ -3850,20 +3850,95 @@
 // }
 
 
-for(let i=0; i<=100; i++){
-    if(i % 2 === 0 ){
-    let isprime = true
-        for(let j=2; j<i; j++){
-          if(i % j === 0){
-            isprime = false
-            break;
-          }
-        }
+// for(let i=0; i<=100; i++){
+//     if(i % 2 === 0 ){
+//     let isprime = true
+//         for(let j=2; j<i; j++){
+//           if(i % j === 0){
+//             isprime = false
+//             break;
+//           }
+//         }
 
-        if(isprime && i > 1){
-            console.log(i);
-        }
+//         if(isprime && i > 1){
+//             console.log(i);
+//         }
         
-    }
+//     }
 
+// }
+
+// Q 2
+
+// for(let i=2 ; i<=100; i++){
+//     if(i % 2===0 ){
+//         let isPrime = true
+//         for(let j=2; j<i; j++){
+//             if(i % j ===0){
+//                 isPrime = false 
+//                 break;
+//             }
+
+
+//         }
+//         if(isPrime  && i > 1){
+//             console.log(i);
+//         }
+//     }
+// }
+
+// Q3
+
+// function digitFreq(num){
+//     let count = {}
+//     while(num>0){
+//         let digit = num % 10
+//         if(count[digit]){
+//             count[digit]++
+//         }else{
+//             count[digit] = 1
+//         }
+
+//         num = Math.floor(num / 10)
+//     }
+//     return count
+// }
+
+// console.log(digitFreq(122333));
+
+// Q4
+
+// function strongNum(num){
+//     let original = num
+//     let sum =0
+
+//     while(num > 0){
+//         let digit = num % 10
+//         let fact = 1
+//         for(let i=1;i<=digit; i++){
+//             fact *= i
+//         }
+//         sum += fact
+
+//         num = Math.floor(num / 10)
+
+//     }
+//     if(sum === original){
+//         return "strong Number"
+//     }else{
+//         return "Not Strong Number"
+//     }
+// }
+// console.log(strongNum(145));
+
+// Q5
+
+let arr= [1,2,3,5]
+let n =5
+let expected = n * (n +1 ) / 2
+let actual = 0
+
+for(let i=0; i<arr.length; i++){
+    actual += arr[i]
 }
+console.log(expected - actual);
