@@ -3945,19 +3945,41 @@
 
 // Q6 second largest in array
 
-let arr = [12,45,7,89,23]
+// let arr = [12,45,7,89,23]
 
-let sLarge = -Infinity
-let largest = -Infinity
+// let sLarge = -Infinity
+// let largest = -Infinity
 
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] > largest){
+//         sLarge = largest
+//         largest = arr[i]
+//     }
+//     if(arr[i] > sLarge && arr[i] !== largest){
+//         sLarge = arr[i]
+//     }
+// }
+// console.log(sLarge);
+// console.log(largest);
+
+
+let arr = [4,5,1,2,1,2,5]
+
+let result = {}
+ 
 for(let i=0; i<arr.length; i++){
-    if(arr[i] > largest){
-        sLarge = largest
-        largest = arr[i]
-    }
-    if(arr[i] > sLarge && arr[i] !== largest){
-        sLarge = arr[i]
+    let digit = arr[i]
+    if(result[digit]){
+        result[digit]++
+    }else{
+        result[digit] = 1
     }
 }
-console.log(sLarge);
-console.log(largest);
+
+for(let key in result){
+    if(result[key] === 1 ){
+        console.log(key);
+    }
+}
+
+console.log(result);
