@@ -3830,21 +3830,40 @@
 
 // Q 1
 
-for(let i=2 ; i<=100; i++){
-    if(i%2===0){
-    let isPrime = true 
-    for(let j=2 ; j<i; j++){
-        if(i %2===0){
-            isPrime = false
-            break;
-        }
+// for(let i=1 ; i<=100; i++){
+//     if(i%2===0){
+//     let isPrime = true 
+//     for(let j=2 ; j<i; j++){
+//         if(i %2===0){
+//             isPrime = false
+//             break;
+//         }
 
         
-    }
-     if(isPrime && i > 1){
-        console.log(i);
-    }
-    }
+//     }
+//      if(isPrime && i > 1){
+//         console.log(i);
+//     }
+//     }
 
    
+// }
+
+
+for(let i=0; i<=100; i++){
+    if(i % 2 === 0 ){
+    let isprime = true
+        for(let j=2; j<i; j++){
+          if(i % j === 0){
+            isprime = false
+            break;
+          }
+        }
+
+        if(isprime && i > 1){
+            console.log(i);
+        }
+        
+    }
+
 }
