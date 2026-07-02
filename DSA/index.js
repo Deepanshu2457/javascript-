@@ -3963,23 +3963,114 @@
 // console.log(largest);
 
 
-let arr = [4,5,1,2,1,2,5]
+// let arr = [4,5,1,2,1,2,5]
 
-let result = {}
+// let result = {}
  
-for(let i=0; i<arr.length; i++){
-    let digit = arr[i]
-    if(result[digit]){
-        result[digit]++
-    }else{
-        result[digit] = 1
+// for(let i=0; i<arr.length; i++){
+//     let digit = arr[i]
+//     if(result[digit]){
+//         result[digit]++
+//     }else{
+//         result[digit] = 1
+//     }
+// }
+
+// for(let key in result){
+//     if(result[key] === 1 ){
+//         console.log(key);
+//     }
+// }
+
+// console.log(result);
+
+
+// self  mini revision
+
+for(let i=0; i<=100; i++){
+    if(i % 2 ===0 ){
+        let isprime = true 
+    
+        for(let j=2; j<i; j++){
+            if(i%j === 0){
+                isprime=false
+                break;
+
+            }
+        }
+        if(isprime && i > 1){
+            console.log(i);
+        }
     }
 }
 
-for(let key in result){
-    if(result[key] === 1 ){
+function digitsFreq(num){
+    let freq = {}
+    while(num>0){
+        let digit = num % 10
+        if(freq[digit]){
+            freq[digit]++
+        }else{
+            freq[digit] =1
+        }
+        num = Math.floor(num/10)
+    }
+    return freq
+}
+
+console.log(digitsFreq(122333));
+
+let arr = [1,2,3,5]
+let n = 5
+let actual = 0
+let expected = n*(n+1) /2
+
+for(let i=0; i<arr.length; i++){
+    actual += arr[i]
+}
+console.log(expected - actual);
+// console.log(expected);
+// console.log(actual);
+
+function strongNum(num){
+    let original = num
+    let sum = 0 
+
+    while(num>0){
+        let digit = num % 10
+
+        let fact = 1
+
+        for(let i=1; i<=digit; i++){
+            fact *= i
+        }
+        sum += fact
+         
+        num = Math.floor(num/10)
+
+    }
+    if(sum===original){
+        return "strong Number"
+    }else{
+        return "Not strong number"
+    }
+}
+console.log(strongNum(145));
+
+let non = [4,5,1,2,1,2,5]
+
+let freq ={}
+
+for(let i=0; i<non.length; i++){
+    let digit = non[i]
+    if(freq[digit]){
+        freq[digit]++
+    }else{
+        freq[digit] = 1
+    }
+}
+for(let key in freq){
+    if(freq[key] === 1){
         console.log(key);
     }
 }
-
-console.log(result);
