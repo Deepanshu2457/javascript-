@@ -3830,24 +3830,20 @@
 
 // Q 1
 
-// for(let i=1 ; i<=100; i++){
-//     if(i%2===0){
-//     let isPrime = true 
-//     for(let j=2 ; j<i; j++){
-//         if(i %2===0){
-//             isPrime = false
-//             break;
-//         }
-
-        
-//     }
-//      if(isPrime && i > 1){
-//         console.log(i);
-//     }
-//     }
-
-   
-// }
+for(let i=2 ; i<=100; i++){
+    
+    let isPrime = true 
+    for(let j=2 ; j<i; j++){
+        if(i % j ===0){
+            isPrime = false
+            break;
+        }      
+    }
+    
+     if(isPrime && i > 1){
+        console.log(i);
+    }
+}
 
 
 // for(let i=0; i<=100; i++){
@@ -3961,7 +3957,7 @@
 // }
 // console.log(sLarge);
 // console.log(largest);
-
+// Q6
 
 // let arr = [4,5,1,2,1,2,5]
 
@@ -4056,7 +4052,7 @@
 //     }
 // }
 // console.log(strongNum(145));
-
+// Q7
 // let non = [4,5,1,2,1,2,5]
 
 // let freq ={}
@@ -4093,24 +4089,37 @@
 // }
 
 // Q9
-let arr = [1,2,2,3,3,3,3,4]
+// let arr = [1,2,2,3,3,3,3,4]
 
-let freq = {}
+// let freq = {}
+
+// for(let i=0; i<arr.length; i++){
+//     let digit = arr[i]
+//     if(freq[digit]){
+//         freq[digit]++
+//     }else{
+//         freq[digit] = 1
+//     }
+// }
+// let maximum = 0
+// let ans ; 
+// for(let key in freq){
+//     if(freq[key] >  maximum){
+//         maximum = freq[key]
+//         ans = key
+//     }
+// }
+// console.log(ans);
+
+// Q 10
+let arr = [2,7,11,15]
+
+let target = 9
 
 for(let i=0; i<arr.length; i++){
-    let digit = arr[i]
-    if(freq[digit]){
-        freq[digit]++
-    }else{
-        freq[digit] = 1
+    for(let j=i + 1; j<arr.length  ; j++){
+        if(arr[i] + arr[j] === target){
+            console.log(arr[i] , arr[j] ,"=" , target);
+        }
     }
 }
-let maximum = 0
-let ans ; 
-for(let key in freq){
-    if(freq[key] >  maximum){
-        maximum = freq[key]
-        ans = maximum
-    }
-}
-console.log(ans);
