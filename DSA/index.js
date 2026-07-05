@@ -3830,20 +3830,20 @@
 
 // Q 1
 
-for(let i=2 ; i<=100; i++){
+// for(let i=2 ; i<=100; i++){
     
-    let isPrime = true 
-    for(let j=2 ; j<i; j++){
-        if(i % j ===0){
-            isPrime = false
-            break;
-        }      
-    }
+//     let isPrime = true 
+//     for(let j=2 ; j<i; j++){
+//         if(i % j ===0){
+//             isPrime = false
+//             break;
+//         }      
+//     }
     
-     if(isPrime && i > 1){
-        console.log(i);
-    }
-}
+//      if(isPrime && i > 1){
+//         console.log(i);
+//     }
+// }
 
 
 // for(let i=0; i<=100; i++){
@@ -4112,14 +4112,30 @@ for(let i=2 ; i<=100; i++){
 // console.log(ans);
 
 // Q 10
-let arr = [2,7,11,15]
+// let arr = [2,7,11,15]
 
-let target = 9
+// let target = 9
+
+// for(let i=0; i<arr.length; i++){
+//     for(let j=i + 1; j<arr.length  ; j++){
+//         if(arr[i] + arr[j] === target){
+//             console.log(arr[i] , arr[j] ,"=" , target);
+//         }
+//     }
+// }
+
+
+
+// Q 11
+
+let arr = [1,1,2,3,2,4,5,4]
+
+let result = []
 
 for(let i=0; i<arr.length; i++){
-    for(let j=i + 1; j<arr.length  ; j++){
-        if(arr[i] + arr[j] === target){
-            console.log(arr[i] , arr[j] ,"=" , target);
-        }
-    }
+ if(!result.includes(arr[i])){
+    result.push(arr[i])
+ }
 }
+console.log(result);
+
