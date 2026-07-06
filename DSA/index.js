@@ -4238,19 +4238,39 @@
 // }
 // console.log(rotate([1,2,3,4,5], 2));
 
+// Q 15
+
+// let arr = [1,2,3,4]
+// let arr1 = [5,6,7,8]
+// let result = []
+
+
+// let arr2 = [...arr , ...arr1]
+// console.log(arr2);
+
+// for(let i=0; i<arr.length; i++){
+//       result.push(arr[i])
+// }
+// for(let i=0; i<arr1.length; i++){
+//     result.push(arr1[i])
+// }
+// console.log(result);
+
+// Q16
 
 let arr = [1,2,3,4]
-let arr1 = [5,6,7,8]
+let arr1 = [3,4,5,6]
+
 let result = []
 
+for(let i =0 ; i<arr.length; i++){
 
-let arr2 = [...arr , ...arr1]
-console.log(arr2);
+    for(let j=0; j<arr1.length; j++){
 
-for(let i=0; i<arr.length; i++){
-      result.push(arr[i])
-}
-for(let i=0; i<arr1.length; i++){
-    result.push(arr1[i])
+        if(arr[i] === arr1[j]){
+           result.push(arr[i])
+           break;
+        }
+    }
 }
 console.log(result);
