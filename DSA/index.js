@@ -4224,16 +4224,33 @@
 // Q 14
 
 
-function rotate(arr, k){
+// function rotate(arr, k){
 
-    let n = arr.length
-    for(let i=0; i<k; i++){
-        let first = arr[0]
-        for(let j=0; j < n -1 ; j++){
-            arr[j] = arr[j + 1]
-        }
-        arr[n -1 ] = first
-    }
-    return arr
+//     let n = arr.length
+//     for(let i=0; i<k; i++){
+//         let first = arr[0]
+//         for(let j=0; j < n -1 ; j++){
+//             arr[j] = arr[j + 1]
+//         }
+//         arr[n -1 ] = first
+//     }
+//     return arr
+// }
+// console.log(rotate([1,2,3,4,5], 2));
+
+
+let arr = [1,2,3,4]
+let arr1 = [5,6,7,8]
+let result = []
+
+
+let arr2 = [...arr , ...arr1]
+console.log(arr2);
+
+for(let i=0; i<arr.length; i++){
+      result.push(arr[i])
 }
-console.log(rotate([1,2,3,4,5], 2));
+for(let i=0; i<arr1.length; i++){
+    result.push(arr1[i])
+}
+console.log(result);
