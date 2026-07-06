@@ -4189,34 +4189,51 @@
 // console.log(result);
 
 
-let arr = [0,1,0,3,12]
+// let arr = [0,1,0,3,12]
 
-let index = 0
+// let index = 0
 
 
-for(let i=0; i<arr.length; i++){
-    if(arr[i] !== 0){
-        let temp =arr[index]
-        arr[index] = arr[i]
-        arr[i] = temp
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] !== 0){
+//         let temp =arr[index]
+//         arr[index] = arr[i]
+//         arr[i] = temp
 
-        index++
+//         index++
+//     }
+// }
+
+// console.log(arr);
+
+// let arrr = [4,0,5,0,0,2];
+
+// let indexes = 0
+
+// for(let i =0; i<arrr.length; i++){
+//   if(arrr[i] !== 0){
+//       let temp = arrr[indexes]
+//     arrr[indexes] = arrr[i]
+//     arrr[i] = temp
+
+//     indexes++
+//   }
+// }
+// console.log(arrr);
+
+// Q 14
+
+
+function rotate(arr, k){
+
+    let n = arr.length
+    for(let i=0; i<k; i++){
+        let first = arr[0]
+        for(let j=0; j < n -1 ; j++){
+            arr[j] = arr[j + 1]
+        }
+        arr[n -1 ] = first
     }
+    return arr
 }
-
-console.log(arr);
-
-let arrr = [4,0,5,0,0,2];
-
-let indexes = 0
-
-for(let i =0; i<arrr.length; i++){
-  if(arrr[i] !== 0){
-      let temp = arrr[indexes]
-    arrr[indexes] = arrr[i]
-    arrr[i] = temp
-
-    indexes++
-  }
-}
-console.log(arrr);
+console.log(rotate([1,2,3,4,5], 2));
