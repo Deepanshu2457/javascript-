@@ -4151,22 +4151,72 @@
 
 // Q 13 
 
-let arr = [0,1,0,3,12]
+// let arr = [0,1,0,3,12]
 
-let result = []
-let count = 0
-for(let i=0; i<arr.length; i++){
-    if(arr[i] !== 0){
-       result.push(arr[i])
-    }
-  else {
-    count++
-  }
-}
-for(let i=0; i<count; i++){
-    result.push(0)
-}
-console.log(result);
-console.log(count);
+// let result = []
+// let count = 0
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] !== 0){
+//        result.push(arr[i])
+//     }
+//   else {
+//     count++
+//   }
+// }
+// for(let i=0; i<count; i++){
+//     result.push(0)
+// }
+// console.log(result);
+// console.log(count);
 
 // let arr = [4,0,5,0,0,2];
+
+// let result = []
+// let zeros = 0
+
+
+// for(let i = 0; i<arr.length; i++){
+//     if(arr[i] !== 0){
+//         result.push(arr[i])
+//     }else{
+//         zeros++
+//     }
+// }
+
+// for(let i=0; i<zeros; i++){
+//     result.push(0)
+// }
+// console.log(result);
+
+
+let arr = [0,1,0,3,12]
+
+let index = 0
+
+
+for(let i=0; i<arr.length; i++){
+    if(arr[i] !== 0){
+        let temp =arr[index]
+        arr[index] = arr[i]
+        arr[i] = temp
+
+        index++
+    }
+}
+
+console.log(arr);
+
+let arrr = [4,0,5,0,0,2];
+
+let indexes = 0
+
+for(let i =0; i<arrr.length; i++){
+  if(arrr[i] !== 0){
+      let temp = arrr[indexes]
+    arrr[indexes] = arrr[i]
+    arrr[i] = temp
+
+    indexes++
+  }
+}
+console.log(arrr);
