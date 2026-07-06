@@ -4258,19 +4258,32 @@
 
 // Q16
 
-let arr = [1,2,3,4]
-let arr1 = [3,4,5,6]
+// let arr = [1,2,3,4]
+// let arr1 = [3,4,5,6]
 
-let result = []
+// let result = []
 
-for(let i =0 ; i<arr.length; i++){
+// for(let i =0 ; i<arr.length; i++){
 
-    for(let j=0; j<arr1.length; j++){
+//     for(let j=0; j<arr1.length; j++){
 
-        if(arr[i] === arr1[j]){
-           result.push(arr[i])
-           break;
-        }
-    }
+//         if(arr[i] === arr1[j]){
+//            result.push(arr[i])
+//            break;
+//         }
+//     }
+// }
+// console.log(result);
+
+// Q 17
+
+let arr = [1,3,5,2]
+
+for(let i=0; i<arr.length-1; i++){
+     if(arr[i] > arr[i+1]){
+        console.log("false");
+     }
+     else{
+        console.log("true");
+     }
 }
-console.log(result);
