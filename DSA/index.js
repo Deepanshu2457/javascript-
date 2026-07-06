@@ -4290,11 +4290,29 @@
 
 // Q 18
 
-let arr = [2,-3,4,-1,5]
-let result =[]
-for(let i=0; i<arr.length ; i++){
-    if(arr[i] > 0){
-       result.push(arr[i])
+// let arr = [2,-3,4,-1,5]
+// let result =[]
+// for(let i=0; i<arr.length ; i++){
+//     if(arr[i] > 0){
+//        result.push(arr[i])
+//     }
+// }
+// console.log(result);
+
+// Q19
+
+function maxdiff(arr){
+    let maxDiffrence = -Infinity
+
+    for(let i=0; i<arr.length; i++){
+
+        for(let j=i+1; j<arr.length; j++){
+            let diff = arr[j] - arr[i]
+            if(diff > maxDiffrence){
+                maxDiffrence = diff
+            }
+        }
     }
+    return maxDiffrence
 }
-console.log(result);
+console.log(maxdiff([2,3,10,6,4,8,1]));
