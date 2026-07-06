@@ -4139,9 +4139,34 @@
 // }
 // console.log(result);
 
-let arr = [10,20,30,40,50]
+
+// Q 12 
+
+// let arr = [10,20,30,40,50]
+// let result = []
+// for(let i=arr.length-1 ; i>=0; i--){
+//     result.push(arr[i])
+// }
+// console.log(result);
+
+// Q 13 
+
+let arr = [0,1,0,3,12]
+
 let result = []
-for(let i=arr.length-1 ; i>=0; i--){
-    result.push(arr[i])
+let count = 0
+for(let i=0; i<arr.length; i++){
+    if(arr[i] !== 0){
+       result.push(arr[i])
+    }
+  else {
+    count++
+  }
+}
+for(let i=0; i<count; i++){
+    result.push(0)
 }
 console.log(result);
+console.log(count);
+
+// let arr = [4,0,5,0,0,2];
