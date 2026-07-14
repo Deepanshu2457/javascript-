@@ -4344,33 +4344,55 @@
 //           =======   strings 
 // Q 21  
 
-function reverseWord(str){
-    let result = ""
-    let word = str.split(" ")
+// function reverseWord(str){
+//     let result = ""
+//     let word = str.split(" ")
 
-    for(let i=word.length -1 ; i>=0; i--){
-        result +=word[i]
+//     for(let i=word.length -1 ; i>=0; i--){
+//         result +=word[i]
 
-        if(i !== 0 ){
-            result += " "
-        }
-    }
-    return result
+//         if(i !== 0 ){
+//             result += " "
+//         }
+//     }
+//     return result
 
-}
-console.log(reverseWord("hello world"));
+// }
+// console.log(reverseWord("hello world"));
+
+// function reverse(str){
+
+//     let word = str.split(" ")
+//     let result = ""
+
+//     for(let i= word.length -1 ; i>=0; i--){
+//         result += word[i]
+//         if( i !== 0){
+//             result += " "
+//         }
+//     }
+//     return result
+// }
+// console.log(reverse("i love javascript"));
+
 
 function reverse(str){
+    let words = str.split(" ")
 
-    let word = str.split(" ")
     let result = ""
 
-    for(let i= word.length -1 ; i>=0; i--){
-        result += word[i]
-        if( i !== 0){
-            result += " "
-        }
+  for(let i=0; i<words.length ; i++){
+    let word = words[i]
+    for(let j= word.length -1 ; j>=0; j--){
+        result += word[j]
+
+    
     }
-    return result
+        if(i !== words.length -1 ){
+        result += " "
+    }
+  }
+return result
+
 }
-console.log(reverse("i love javascript"));
+console.log(reverse("hello world"));
