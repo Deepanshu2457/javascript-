@@ -4275,7 +4275,7 @@
 // }
 // console.log(result);
 
-// Q 17
+// Q 17 sorted
 
 // let arr = [1,3,5,2]
 
@@ -4301,18 +4301,76 @@
 
 // Q19
 
-function maxdiff(arr){
-    let maxDiffrence = -Infinity
+// function maxdiff(arr){
+//     let maxDiffrence = -Infinity
 
-    for(let i=0; i<arr.length; i++){
+//     for(let i=0; i<arr.length; i++){
 
-        for(let j=i+1; j<arr.length; j++){
-            let diff = arr[j] - arr[i]
-            if(diff > maxDiffrence){
-                maxDiffrence = diff
-            }
+//         for(let j=i+1; j<arr.length; j++){
+//             let diff = arr[j] - arr[i]
+//             if(diff > maxDiffrence){
+//                 maxDiffrence = diff
+//             }
+//         }
+//     }
+//     return maxDiffrence
+// }
+// console.log(maxdiff([2,3,10,6,4,8,1]));
+
+
+// Q 20
+
+// function someMising(arr){
+//     let min = Math.min(...arr)
+//     let max = Math.max(...arr)
+
+//     let obj = {}
+//     let result = []
+
+//     for(let num of arr){
+//         obj[num]=true
+//     }
+//     for(let i = min; i<=max; i++){
+//         if(!obj[i]){
+//             result.push(i)
+//             // console.log(i);
+//         }
+//     }
+// return result
+// }
+// console.log(someMising([1,3,5,6]));
+
+
+//           =======   strings 
+// Q 21  
+
+function reverseWord(str){
+    let result = ""
+    let word = str.split(" ")
+
+    for(let i=word.length -1 ; i>=0; i--){
+        result +=word[i]
+
+        if(i !== 0 ){
+            result += " "
         }
     }
-    return maxDiffrence
+    return result
+
 }
-console.log(maxdiff([2,3,10,6,4,8,1]));
+console.log(reverseWord("hello world"));
+
+function reverse(str){
+
+    let word = str.split(" ")
+    let result = ""
+
+    for(let i= word.length -1 ; i>=0; i--){
+        result += word[i]
+        if( i !== 0){
+            result += " "
+        }
+    }
+    return result
+}
+console.log(reverse("i love javascript"));
