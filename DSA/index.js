@@ -4376,23 +4376,43 @@
 // console.log(reverse("i love javascript"));
 
 
-function reverse(str){
-    let words = str.split(" ")
+// function reverse(str){
+//     let words = str.split(" ")
 
-    let result = ""
+//     let result = ""
 
-  for(let i=0; i<words.length ; i++){
-    let word = words[i]
-    for(let j= word.length -1 ; j>=0; j--){
-        result += word[j]
+//   for(let i=0; i<words.length ; i++){
+//     let word = words[i]
+//     for(let j= word.length -1 ; j>=0; j--){
+//         result += word[j]
 
     
-    }
-        if(i !== words.length -1 ){
-        result += " "
-    }
-  }
-return result
+//     }
+//         if(i !== words.length -1 ){
+//         result += " "
+//     }
+//   }
+// return result
 
+// }
+// console.log(reverse("hello world"));
+
+// Q 22   with out split() reverse string
+
+function reverseStr(str){
+let result = ""
+let word = " "
+for(let i=str.length -1 ; i>=0; i--){
+    
+     if(str[i] === " "){
+      result += word + " "
+      word = " "
+     }else{
+        word = str[i] + word
+     }
 }
-console.log(reverse("hello world"));
+result += word
+return result
+}
+
+console.log(reverseStr(" this is javascript"));
