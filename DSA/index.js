@@ -4399,20 +4399,44 @@
 
 // Q 22   with out split() reverse string
 
-function reverseStr(str){
-let result = ""
-let word = " "
-for(let i=str.length -1 ; i>=0; i--){
+// function reverseStr(str){
+// let result = ""
+// let word = " "
+// for(let i=str.length -1 ; i>=0; i--){
     
-     if(str[i] === " "){
-      result += word + " "
-      word = " "
-     }else{
-        word = str[i] + word
-     }
-}
-result += word
-return result
+//      if(str[i] === " "){
+//       result += word + " "
+//       word = " "
+//      }else{
+//         word = str[i] + word
+//      }
+// }
+// result += word
+// return result
+// }
+
+// console.log(reverseStr("this is javascript"));
+
+// Q 23
+
+function anagram(str1,str2){
+    if(str1.length !== str2.length){
+        return false
+    }
+    let freq = {}
+
+    for(let ch of str1){
+        freq[ch] = (freq[ch] || 0) + 1 
+    }
+
+    for(let ch of str2){
+        if(!freq[ch]){
+            return false
+        }
+        freq[ch]--
+    }
+    return true 
 }
 
-console.log(reverseStr(" this is javascript"));
+console.log(anagram("listen" , "silent"));
+console.log(anagram("car" , "cat"));
