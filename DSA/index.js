@@ -4419,24 +4419,69 @@
 
 // Q 23
 
-function anagram(str1,str2){
+// function anagram(str1,str2){
+//     if(str1.length !== str2.length){
+//         return false
+//     }
+//     let freq = {}
+
+//     for(let ch of str1){
+//         freq[ch] = (freq[ch] || 0) + 1 
+//     }
+
+//     for(let ch of str2){
+//         if(!freq[ch]){
+//             return false
+//         }
+//         freq[ch]--
+//     }
+//     return true 
+// }
+
+// console.log(anagram("listen" , "silent"));
+// console.log(anagram("car" , "cat"));
+
+
+function anarams(str1 , str2){
     if(str1.length !== str2.length){
-        return false
+        return false 
     }
     let freq = {}
-
     for(let ch of str1){
-        freq[ch] = (freq[ch] || 0) + 1 
+        freq[ch] = (freq[ch] || 0) + 1
     }
-
     for(let ch of str2){
         if(!freq[ch]){
             return false
         }
+
         freq[ch]--
     }
-    return true 
+    return  true
 }
 
-console.log(anagram("listen" , "silent"));
-console.log(anagram("car" , "cat"));
+// console.log(anarams("listen" , "silent"));
+// console.log(anarams("car" , "cat"));
+
+
+function firstNum(str){
+    let words = str.split(" ")
+
+    for(let i =0 ; i<words.length; i++){
+        words[i] = words[i][0].toUpperCase() + words[i].slice(1)
+
+    }
+    return words.join(" ")
+}
+console.log(firstNum("hello world")); 
+
+function firstCap(str){
+let words= str.split(" ")
+
+for(let i=0; i<words.length; i++){
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1)
+}
+return words.join(" ")
+
+}
+console.log(firstCap("hello world"));
