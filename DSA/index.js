@@ -4485,3 +4485,14 @@ return words.join(" ")
 
 }
 console.log(firstCap("hello world"));
+
+function countWord(str){
+    let count = 0
+    for(let i=0; i<str.length; i++){
+        if(str[i] !== " " &&  (i===0 || str[i -1] === " " )){
+            count++
+        }
+    }
+    return count
+}
+console.log(countWord("    javascript    is   awesome   "));
