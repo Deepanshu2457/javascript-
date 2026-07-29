@@ -4464,35 +4464,49 @@ function anarams(str1 , str2){
 // console.log(anarams("car" , "cat"));
 
 
-function firstNum(str){
-    let words = str.split(" ")
+// function firstNum(str){
+//     let words = str.split(" ")
 
-    for(let i =0 ; i<words.length; i++){
-        words[i] = words[i][0].toUpperCase() + words[i].slice(1)
+//     for(let i =0 ; i<words.length; i++){
+//         words[i] = words[i][0].toUpperCase() + words[i].slice(1)
 
-    }
-    return words.join(" ")
-}
-console.log(firstNum("hello world")); 
+//     }
+//     return words.join(" ")
+// }
+// console.log(firstNum("hello world")); 
 
-function firstCap(str){
-let words= str.split(" ")
+// function firstCap(str){
+// let words= str.split(" ")
 
-for(let i=0; i<words.length; i++){
-    words[i] = words[i][0].toUpperCase() + words[i].slice(1)
-}
-return words.join(" ")
+// for(let i=0; i<words.length; i++){
+//     words[i] = words[i][0].toUpperCase() + words[i].slice(1)
+// }
+// return words.join(" ")
 
-}
-console.log(firstCap("hello world"));
+// }
+// console.log(firstCap("hello world"));
 
-function countWord(str){
-    let count = 0
-    for(let i=0; i<str.length; i++){
-        if(str[i] !== " " &&  (i===0 || str[i -1] === " " )){
-            count++
+// function countWord(str){
+//     let count = 0
+//     for(let i=0; i<str.length; i++){
+//         if(str[i] !== " " &&  (i===0 || str[i -1] === " " )){
+//             count++
+//         }
+//     }
+//     return count
+// }
+// console.log(countWord("    javascript    is   awesome   "));
+
+function dupChar(str){
+    let obj = {}
+    let result = ""
+
+    for(let ch of str){
+        if(!obj[ch]){
+            obj[ch] = true
+            result += ch
         }
     }
-    return count
+    return result
 }
-console.log(countWord("    javascript    is   awesome   "));
+console.log(dupChar("programming"));
