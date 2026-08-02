@@ -4497,16 +4497,39 @@ function anarams(str1 , str2){
 // }
 // console.log(countWord("    javascript    is   awesome   "));
 
-function dupChar(str){
-    let obj = {}
-    let result = ""
+// function dupChar(str){
+//     let obj = {}
+//     let result = ""
 
-    for(let ch of str){
-        if(!obj[ch]){
-            obj[ch] = true
-            result += ch
-        }
+//     for(let ch of str){
+//         if(!obj[ch]){
+//             obj[ch] = true
+//             result += ch
+//         }
+//     }
+//     return result
+// }
+// console.log(dupChar("programming"));
+
+// function arr(){
+//     console.log(a);
+//     let a = 10
+// }
+// arr()
+
+// console.log(typeof typeof  3)
+
+// Q 1 
+
+function maximum(arr){
+let max = arr[0]
+for(let i=1; i<arr.length ; i++){
+    if(arr[i] > max){
+        max= arr[i]
     }
-    return result
 }
-console.log(dupChar("programming"));
+return max
+}
+console.log(maximum([12, 45, 7, 89, 34]));
+
+
