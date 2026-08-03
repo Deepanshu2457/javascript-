@@ -4534,18 +4534,65 @@ function anarams(str1 , str2){
 
 // Q2
 
-function minimum(arr){
-    let mini = arr[0]
-    if(arr.length === 0){
-        return "Array is Empty"
-    }
-    for(let i=1; i<arr.length; i++){
-        if(arr[i] < mini){
-            mini = arr[i]
+// function minimum(arr){
+
+//     if(arr.length === 0){
+//         return "Array is Empty"
+//     }
+
+//         let mini = arr[0]
+
+//     for(let i=1; i<arr.length; i++){
+//         if(arr[i] < mini){
+//             mini = arr[i]
+//         }
+//     }
+//     return mini
+// }
+// console.log(minimum([12,45,7,89,34]));      // 7
+// console.log(minimum([-10,-5,-30,-2]));      // -30
+// console.log(minimum([]));                   // "Array is Empty"
+
+function secondLargest(arr){
+    let largest = -Infinity
+    let secondLargest = -Infinity
+
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] > largest ){
+            secondLargest = largest
+            largest = arr[i]
         }
+        if(arr[i] > secondLargest && arr[i] !== largest){
+            secondLargest = arr[i]
+        }  
     }
-    return mini
+    return secondLargest
+
 }
-console.log(minimum([12,45,7,89,34]));      // 7
-console.log(minimum([-10,-5,-30,-2]));      // -30
-console.log(minimum([]));                   // "Array is Empty"
+console.log(secondLargest([12, 45, 7, 89, 34]));
+console.log(secondLargest([10,10,10]));
+
+
+function secondLarge(arr){
+    if(arr.length < 2){
+        return " second largest not Found"
+    }
+    let large = -Infinity
+    let seclarge = -Infinity
+
+    for(let i=0; i<arr.length; i++){
+      if(arr[i] > large){
+        seclarge = large
+        large = arr[i]
+      }
+      else if(arr[i] > seclarge && arr[i] !== large){
+        seclarge = arr[i]
+      }
+
+    }
+    if(secondLarge === -Infinity){
+        return null 
+    }
+    return seclarge
+} 
+console.log(secondLarge([12, 45, 7, 89, 34]));
