@@ -4521,15 +4521,31 @@ function anarams(str1 , str2){
 
 // Q 1 
 
-function maximum(arr){
-let max = arr[0]
-for(let i=1; i<arr.length ; i++){
-    if(arr[i] > max){
-        max= arr[i]
+// function maximum(arr){
+// let max = arr[0]
+// for(let i=1; i<arr.length ; i++){
+//     if(arr[i] > max){
+//         max= arr[i]
+//     }
+// }
+// return max
+// }
+// console.log(maximum([12, 45, 7, 89, 34]));
+
+// Q2
+
+function minimum(arr){
+    let mini = arr[0]
+    if(arr.length === 0){
+        return "Array is Empty"
     }
+    for(let i=1; i<arr.length; i++){
+        if(arr[i] < mini){
+            mini = arr[i]
+        }
+    }
+    return mini
 }
-return max
-}
-console.log(maximum([12, 45, 7, 89, 34]));
-
-
+console.log(minimum([12,45,7,89,34]));      // 7
+console.log(minimum([-10,-5,-30,-2]));      // -30
+console.log(minimum([]));                   // "Array is Empty"
