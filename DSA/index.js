@@ -4553,46 +4553,70 @@ function anarams(str1 , str2){
 // console.log(minimum([-10,-5,-30,-2]));      // -30
 // console.log(minimum([]));                   // "Array is Empty"
 
-function secondLargest(arr){
-    let largest = -Infinity
-    let secondLargest = -Infinity
+// function secondLargest(arr){
+//     let largest = -Infinity
+//     let secondLargest = -Infinity
 
-    for(let i=0; i<arr.length; i++){
-        if(arr[i] > largest ){
-            secondLargest = largest
-            largest = arr[i]
-        }
-        if(arr[i] > secondLargest && arr[i] !== largest){
-            secondLargest = arr[i]
-        }  
-    }
-    return secondLargest
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i] > largest ){
+//             secondLargest = largest
+//             largest = arr[i]
+//         }
+//         if(arr[i] > secondLargest && arr[i] !== largest){
+//             secondLargest = arr[i]
+//         }  
+//     }
+//     return secondLargest
 
+// }
+// console.log(secondLargest([12, 45, 7, 89, 34]));
+// console.log(secondLargest([10,10,10]));
+
+
+// function secondLarge(arr){
+//     if(arr.length < 2){
+//         return " second largest not Found"
+//     }
+//     let large = -Infinity
+//     let seclarge = -Infinity
+
+//     for(let i=0; i<arr.length; i++){
+//       if(arr[i] > large){
+//         seclarge = large
+//         large = arr[i]
+//       }
+//       else if(arr[i] > seclarge && arr[i] !== large){
+//         seclarge = arr[i]
+//       }
+
+//     }
+//     if(secLarge === -Infinity){
+//         return null 
+//     }
+//     return seclarge
+// } 
+// console.log(secondLarge([12, 45, 7, 89, 34]));
+
+
+const obj = {
+    name : "deep",
+   
 }
-console.log(secondLargest([12, 45, 7, 89, 34]));
-console.log(secondLargest([10,10,10]));
+function greet(city){
+    console.log(this.name, city);
+}
+// greet.call(obj , "delhi")
 
+const obj1 = {
+    name : "nikita"
+}
+function freet(city){
+    console.log(this.name, city);
+}
+let newFn = freet.bind(obj1 , "mumbai")
+newFn()
 
-function secondLarge(arr){
-    if(arr.length < 2){
-        return " second largest not Found"
-    }
-    let large = -Infinity
-    let seclarge = -Infinity
-
-    for(let i=0; i<arr.length; i++){
-      if(arr[i] > large){
-        seclarge = large
-        large = arr[i]
-      }
-      else if(arr[i] > seclarge && arr[i] !== large){
-        seclarge = arr[i]
-      }
-
-    }
-    if(secondLarge === -Infinity){
-        return null 
-    }
-    return seclarge
-} 
-console.log(secondLarge([12, 45, 7, 89, 34]));
+function greet(name){
+    console.log("Hello", name);
+}
+greet("deepanshu")
