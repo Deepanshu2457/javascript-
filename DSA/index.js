@@ -4598,25 +4598,33 @@ function anarams(str1 , str2){
 // console.log(secondLarge([12, 45, 7, 89, 34]));
 
 
-const obj = {
-    name : "deep",
+// const obj = {
+//     name : "deep",
    
+// }
+// function greet(city){
+//     console.log(this.name, city);
+// }
+// // greet.call(obj , "delhi")
+
+// const obj1 = {
+//     name : "nikita"
+// }
+// function freet(city){
+//     console.log(this.name, city);
+// }
+// let newFn = freet.bind(obj1 , "mumbai")
+// newFn()
+
+// function greet(name){
+//     console.log("Hello", name);
+// }
+// greet("deepanshu")
+
+const user = {
+    name : "deepanshu"
 }
 function greet(city){
-    console.log(this.name, city);
+    console.log("hello" ,this.name);
 }
-// greet.call(obj , "delhi")
-
-const obj1 = {
-    name : "nikita"
-}
-function freet(city){
-    console.log(this.name, city);
-}
-let newFn = freet.bind(obj1 , "mumbai")
-newFn()
-
-function greet(name){
-    console.log("Hello", name);
-}
-greet("deepanshu")
+greet.call(user)
