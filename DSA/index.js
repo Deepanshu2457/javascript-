@@ -4629,28 +4629,33 @@ function anarams(str1 , str2){
 // }
 // greet.call(user)
 
-// let arr = [25, 8, 91, 42, 17]
 
-// let result = arr[0]
+-----------------maximum --- minimum ----------------
 
-// for(let i=0; i<arr.length;i++){
-//     if(arr[i] > result){
-//         result = arr[i]
-//     }
-// }
-// console.log(result);
 
-//  let arr = [25, 8, 91, 42, 17];
+let arr = [25, 8, 91, 42, 17]
 
-//  let result = arr[0]
-//  for(let i=0; i<arr.length; i++){
-//     if(arr[i]<result){
-//         result = arr[i]
-//     }
-//  }
-//  console.log(result);
+let result = arr[0]
+
+for(let i=0; i<arr.length;i++){
+    if(arr[i] > result){
+        result = arr[i]
+    }
+}
+console.log(result);
+
+ let arr = [25, 8, 91, 42, 17];
+
+ let result = arr[0]
+ for(let i=0; i<arr.length; i++){
+    if(arr[i]<result){
+        result = arr[i]
+    }
+ }
+ console.log(result);
 
 let arr = [12, 45, 7, 89, 34];          // distnict 
+
 
 let largest= -Infinity
 let secondLarge = -Infinity
@@ -4686,3 +4691,76 @@ for (let i = 0; i < arr.length; i++) {
 
 console.log(largest);     // 8
 console.log(secondLarge); // 8
+
+let arr = [-10,-5,-30,-2] 
+
+let result = arr[0]
+
+for(let i=0 ; i<arr.length; i++){
+    if(arr[i] > result){
+        result = arr[i]
+    }
+}
+console.log(result);
+
+let arr1 = [-10,-5,-30,-2]
+let result1 = arr1[0]
+
+for(let i=0; i<arr1.length; i++){
+    if(arr1[i] < result1){
+        result1 = arr1[i]
+    }
+}
+console.log(result1);
+-------------------------edge case -------------------
+function edge(arr){
+    if(arr.length === 0){
+        return null
+    }
+      let max = arr[0]
+    for(let num of arr){
+         if(num < max){
+            max = num
+         }
+    }
+
+    return max
+}
+
+console.log(edge([ -5,-30,-2]));
+console.log(edge([]));
+
+let arr =[ 12,45,7,89,34]
+
+let secLarge = arr[0]
+let large = arr[1]
+
+for(let i=0; i<arr.length; i++){
+    if(arr[i] > large){
+        secLarge = large 
+        large = arr[i]
+    }
+    else if(arr[i] > secLarge && arr[i] !== large){
+        secLarge = arr[i]
+}
+    
+    }
+
+console.log(secLarge);
+console.log(large);
+
+let arr = [10,10,5]
+let large = arr[0]
+let seclarge = arr[1]
+for(let i=0; i<arr.length; i++){
+    if(arr[i] > large){
+        seclarge = large
+        large = arr[i]
+
+    }else if(arr[i] > seclarge){
+        seclarge = arr[i]
+    }
+
+}
+console.log(seclarge);
+console.log(large);
