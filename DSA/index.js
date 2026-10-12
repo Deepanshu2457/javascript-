@@ -4621,10 +4621,21 @@ function anarams(str1 , str2){
 // }
 // greet("deepanshu")
 
-const user = {
-    name : "deepanshu"
+// const user = {
+//     name : "deepanshu"
+// }
+// function greet(city){
+//     console.log("hello" ,this.name);
+// }
+// greet.call(user)
+
+let arr = [25, 8, 91, 42, 17]
+
+let result = 0
+
+for(let i=0; i<arr.length;i++){
+    if(arr[i] > result){
+        result = arr[i]
+    }
 }
-function greet(city){
-    console.log("hello" ,this.name);
-}
-greet.call(user)
+console.log(result);
