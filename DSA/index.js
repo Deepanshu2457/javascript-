@@ -4629,13 +4629,23 @@ function anarams(str1 , str2){
 // }
 // greet.call(user)
 
-let arr = [25, 8, 91, 42, 17]
+// let arr = [25, 8, 91, 42, 17]
 
-let result = 0
+// let result = arr[0]
 
-for(let i=0; i<arr.length;i++){
-    if(arr[i] > result){
+// for(let i=0; i<arr.length;i++){
+//     if(arr[i] > result){
+//         result = arr[i]
+//     }
+// }
+// console.log(result);
+
+ let arr = [25, 8, 91, 42, 17];
+
+ let result = arr[0]
+ for(let i=0; i<arr.length; i++){
+    if(arr[i]<result){
         result = arr[i]
     }
-}
-console.log(result);
+ }
+ console.log(result);
