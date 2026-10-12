@@ -4640,12 +4640,49 @@ function anarams(str1 , str2){
 // }
 // console.log(result);
 
- let arr = [25, 8, 91, 42, 17];
+//  let arr = [25, 8, 91, 42, 17];
 
- let result = arr[0]
- for(let i=0; i<arr.length; i++){
-    if(arr[i]<result){
-        result = arr[i]
+//  let result = arr[0]
+//  for(let i=0; i<arr.length; i++){
+//     if(arr[i]<result){
+//         result = arr[i]
+//     }
+//  }
+//  console.log(result);
+
+let arr = [12, 45, 7, 89, 34];          // distnict 
+
+let largest= -Infinity
+let secondLarge = -Infinity
+
+
+
+for(let i=0; i<arr.length; i++){
+   if(arr[i] > largest){
+    secondLarge = largest
+    largest = arr[i]
+   }
+  else if(arr[i] > secondLarge && arr[i] !== largest){
+      secondLarge = arr[i] 
+   }
+}
+console.log(largest);
+console.log(secondLarge);
+
+
+let arr = [8, 3, 8, 6, 2];   // non -distnict question answer wil be same 
+
+let largest = -Infinity;
+let secondLarge = -Infinity;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+        secondLarge = largest;
+        largest = arr[i];
+    } else if (arr[i] > secondLarge) {
+        secondLarge = arr[i];
     }
- }
- console.log(result);
+}
+
+console.log(largest);     // 8
+console.log(secondLarge); // 8
