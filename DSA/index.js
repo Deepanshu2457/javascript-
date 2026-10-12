@@ -4766,89 +4766,159 @@ function anarams(str1 , str2){
 // console.log(large);
 
 
--------------2 sum and reverse array ----------------------
+// -------------2 sum and reverse array ----------------------
+
+// Q1
+// let arr = [1,2,3,4]
+
+// let result = 0 
+// for(let i=0; i<arr.length ; i++){
+//     result = arr[i] + result
+// }
+// console.log(result);
+
+// Q2
+// let arr = [1,2,3,4,5]
+// let result = []
+// for(let i=arr.length -1 ; i>=0; i--){
+//      result.push(arr[i])
+// }
+// // console.log(result);
+
+// function reverse(arr){
+//     let right = arr.length-1
+//     let left = 0 
+
+//     while(left < right){
+//         let temp = arr[left] 
+//         arr[left] = arr[right]
+//         arr[right] = temp
+
+//         right--
+//         left++
+
+//     }
+//     return arr
+
+// }
+// console.log(reverse([1,2,3,4,5]));
+
+// Q 3
+// function reverse(arr){
+//     let left = 0
+//     let right = arr.length-1
+
+//     while(left < right){
+//         let temp = arr[left]
+//         arr[left] = arr[right]
+//         arr[right] = temp
+
+//         left++
+//         right--
+//     }
+//     return arr
+// }
+
+// console.log(reverse([1,2,3,4,5]));
+
+// Q4
+
+// function reverseHalf(arr){
+//     let mid = Math.floor(arr.length / 2)
+//     let left =0
+//     let right = mid -1 
+
+//     while(left < right){
+//         let temp = arr[left]
+//         arr[left] = arr[right]
+//         arr[right] = temp
+
+//         left++
+//         right--
+//     }
+
+//     left = mid
+//     right = arr.length -1 
+
+//     while(left < right){
+//         let temp = arr[left] 
+//         arr[left] = arr[right]
+//         arr[right] = temp
+
+//         left++
+//         right--
+//     }
+
+//     return arr
+// }
+// console.log(reverseHalf([1,2,3,4,5,6]));
+
+
+//----------------------------- array rotation -----------
 
 Q1
 let arr = [1,2,3,4]
-
-let result = 0 
-for(let i=0; i<arr.length ; i++){
-    result = arr[i] + result
+let temp = arr[0]
+for(let i=0; i<arr.length-1; i++ ){
+    arr[i] = arr[i+1]
 }
-console.log(result);
+arr[arr.length -1 ] = temp
+console.log(arr);
+ 
+Q 2
 
-Q2
-let arr = [1,2,3,4,5]
-let result = []
-for(let i=arr.length -1 ; i>=0; i--){
-     result.push(arr[i])
-}
-// console.log(result);
+function rotateKtime(arr , k){
 
-function reverse(arr){
-    let right = arr.length-1
-    let left = 0 
+    if(arr.length === 0) return arr
 
-    while(left < right){
-        let temp = arr[left] 
-        arr[left] = arr[right]
-        arr[right] = temp
+    // let n = k % arr.length
 
-        right--
-        left++
-
+    for(let i=0; i<k; i++){
+        let temp = arr[0]
+   
+    for(let i=0; i<arr.length -1 ;i++){
+        arr[i] = arr[i+1]
     }
-    return arr
-
-}
-console.log(reverse([1,2,3,4,5]));
-
-Q 3
-function reverse(arr){
-    let left = 0
-    let right = arr.length-1
-
-    while(left < right){
-        let temp = arr[left]
-        arr[left] = arr[right]
-        arr[right] = temp
-
-        left++
-        right--
-    }
+    arr[arr.length -1 ] = temp
+ }
     return arr
 }
 
-console.log(reverse([1,2,3,4,5]));
+console.log(rotateKtime([1,2,3,4,5],2));
+
+
+Q3
+
+function rightRotate(arr){
+    if(arr.length === 0) return arr
+
+    let temp = arr[arr.length-1]
+
+
+    for(let i=arr.length -1; i>0; i--){
+        arr[i] = arr[i-1]
+    }
+    arr[0] = temp
+    return arr
+}
+
+console.log(rightRotate([1,2,3,4,5]));
 
 Q4
+function rightRotateKtime(arr, k){
+    if(arr.length === 0) return arr
+  
 
-function reverseHalf(arr){
-    let mid = Math.floor(arr.length / 2)
-    let left =0
-    let right = mid -1 
+    for(let i=0; i<k; i++){
+         let temp = arr[arr.length -1]
+         for(let i=arr.length -1 ; i>0; i--){
+            arr[i] = arr[i-1]
+         }
 
-    while(left < right){
-        let temp = arr[left]
-        arr[left] = arr[right]
-        arr[right] = temp
-
-        left++
-        right--
+         arr[0] = temp
     }
-
-    left = mid
-    right = arr.length -1 
-
-    while(left < right){
-        let temp = arr[left] 
-        arr[left] = arr[right]
-        arr[right] = temp
-
-        left++
-        right--
-    }
-
     return arr
 }
-console.log(reverseHalf([1,2,3,4,5,6]));
+
+console.log(rightRotateKtime([1,2,3,4,5],2));
+
