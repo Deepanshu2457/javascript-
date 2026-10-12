@@ -4630,137 +4630,225 @@ function anarams(str1 , str2){
 // greet.call(user)
 
 
------------------maximum --- minimum ----------------
+//-----------------maximum --- minimum ----------------
 
 
-let arr = [25, 8, 91, 42, 17]
+// let arr = [25, 8, 91, 42, 17]
 
-let result = arr[0]
+// let result = arr[0]
 
-for(let i=0; i<arr.length;i++){
-    if(arr[i] > result){
-        result = arr[i]
-    }
-}
-console.log(result);
+// for(let i=0; i<arr.length;i++){
+//     if(arr[i] > result){
+//         result = arr[i]
+//     }
+// }
+// console.log(result);
 
- let arr = [25, 8, 91, 42, 17];
+//  let arr = [25, 8, 91, 42, 17];
 
- let result = arr[0]
- for(let i=0; i<arr.length; i++){
-    if(arr[i]<result){
-        result = arr[i]
-    }
- }
- console.log(result);
+//  let result = arr[0]
+//  for(let i=0; i<arr.length; i++){
+//     if(arr[i]<result){
+//         result = arr[i]
+//     }
+//  }
+//  console.log(result);
 
-let arr = [12, 45, 7, 89, 34];          // distnict 
-
-
-let largest= -Infinity
-let secondLarge = -Infinity
+// let arr = [12, 45, 7, 89, 34];          // distnict 
 
 
-
-for(let i=0; i<arr.length; i++){
-   if(arr[i] > largest){
-    secondLarge = largest
-    largest = arr[i]
-   }
-  else if(arr[i] > secondLarge && arr[i] !== largest){
-      secondLarge = arr[i] 
-   }
-}
-console.log(largest);
-console.log(secondLarge);
+// let largest= -Infinity
+// let secondLarge = -Infinity
 
 
-let arr = [8, 3, 8, 6, 2];   // non -distnict question answer wil be same 
 
-let largest = -Infinity;
-let secondLarge = -Infinity;
+// for(let i=0; i<arr.length; i++){
+//    if(arr[i] > largest){
+//     secondLarge = largest
+//     largest = arr[i]
+//    }
+//   else if(arr[i] > secondLarge && arr[i] !== largest){
+//       secondLarge = arr[i] 
+//    }
+// }
+// console.log(largest);
+// console.log(secondLarge);
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > largest) {
-        secondLarge = largest;
-        largest = arr[i];
-    } else if (arr[i] > secondLarge) {
-        secondLarge = arr[i];
-    }
-}
 
-console.log(largest);     // 8
-console.log(secondLarge); // 8
+// let arr = [8, 3, 8, 6, 2];   // non -distnict question answer wil be same 
 
-let arr = [-10,-5,-30,-2] 
+// let largest = -Infinity;
+// let secondLarge = -Infinity;
 
-let result = arr[0]
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > largest) {
+//         secondLarge = largest;
+//         largest = arr[i];
+//     } else if (arr[i] > secondLarge) {
+//         secondLarge = arr[i];
+//     }
+// }
 
-for(let i=0 ; i<arr.length; i++){
-    if(arr[i] > result){
-        result = arr[i]
-    }
-}
-console.log(result);
+// console.log(largest);     // 8
+// console.log(secondLarge); // 8
 
-let arr1 = [-10,-5,-30,-2]
-let result1 = arr1[0]
+// let arr = [-10,-5,-30,-2] 
 
-for(let i=0; i<arr1.length; i++){
-    if(arr1[i] < result1){
-        result1 = arr1[i]
-    }
-}
-console.log(result1);
--------------------------edge case -------------------
-function edge(arr){
-    if(arr.length === 0){
-        return null
-    }
-      let max = arr[0]
-    for(let num of arr){
-         if(num < max){
-            max = num
-         }
-    }
+// let result = arr[0]
 
-    return max
-}
+// for(let i=0 ; i<arr.length; i++){
+//     if(arr[i] > result){
+//         result = arr[i]
+//     }
+// }
+// console.log(result);
 
-console.log(edge([ -5,-30,-2]));
-console.log(edge([]));
+// let arr1 = [-10,-5,-30,-2]
+// let result1 = arr1[0]
 
-let arr =[ 12,45,7,89,34]
+// for(let i=0; i<arr1.length; i++){
+//     if(arr1[i] < result1){
+//         result1 = arr1[i]
+//     }
+// }
+// console.log(result1);
+// -------------------------edge case -------------------
+// function edge(arr){
+//     if(arr.length === 0){
+//         return null
+//     }
+//       let max = arr[0]
+//     for(let num of arr){
+//          if(num < max){
+//             max = num
+//          }
+//     }
 
-let secLarge = arr[0]
-let large = arr[1]
+//     return max
+// }
 
-for(let i=0; i<arr.length; i++){
-    if(arr[i] > large){
-        secLarge = large 
-        large = arr[i]
-    }
-    else if(arr[i] > secLarge && arr[i] !== large){
-        secLarge = arr[i]
-}
+// console.log(edge([ -5,-30,-2]));
+// console.log(edge([]));
+
+// let arr =[ 12,45,7,89,34]
+
+// let secLarge = arr[0]
+// let large = arr[1]
+
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] > large){
+//         secLarge = large 
+//         large = arr[i]
+//     }
+//     else if(arr[i] > secLarge && arr[i] !== large){
+//         secLarge = arr[i]
+// }
     
+//     }
+
+// console.log(secLarge);
+// console.log(large);
+
+// let arr = [10,10,5]
+// let large = arr[0]
+// let seclarge = arr[1]
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i] > large){
+//         seclarge = large
+//         large = arr[i]
+
+//     }else if(arr[i] > seclarge){
+//         seclarge = arr[i]
+//     }
+
+// }
+// console.log(seclarge);
+// console.log(large);
+
+
+-------------2 sum and reverse array ----------------------
+
+Q1
+let arr = [1,2,3,4]
+
+let result = 0 
+for(let i=0; i<arr.length ; i++){
+    result = arr[i] + result
+}
+console.log(result);
+
+Q2
+let arr = [1,2,3,4,5]
+let result = []
+for(let i=arr.length -1 ; i>=0; i--){
+     result.push(arr[i])
+}
+// console.log(result);
+
+function reverse(arr){
+    let right = arr.length-1
+    let left = 0 
+
+    while(left < right){
+        let temp = arr[left] 
+        arr[left] = arr[right]
+        arr[right] = temp
+
+        right--
+        left++
+
     }
-
-console.log(secLarge);
-console.log(large);
-
-let arr = [10,10,5]
-let large = arr[0]
-let seclarge = arr[1]
-for(let i=0; i<arr.length; i++){
-    if(arr[i] > large){
-        seclarge = large
-        large = arr[i]
-
-    }else if(arr[i] > seclarge){
-        seclarge = arr[i]
-    }
+    return arr
 
 }
-console.log(seclarge);
-console.log(large);
+console.log(reverse([1,2,3,4,5]));
+
+Q 3
+function reverse(arr){
+    let left = 0
+    let right = arr.length-1
+
+    while(left < right){
+        let temp = arr[left]
+        arr[left] = arr[right]
+        arr[right] = temp
+
+        left++
+        right--
+    }
+    return arr
+}
+
+console.log(reverse([1,2,3,4,5]));
+
+Q4
+
+function reverseHalf(arr){
+    let mid = Math.floor(arr.length / 2)
+    let left =0
+    let right = mid -1 
+
+    while(left < right){
+        let temp = arr[left]
+        arr[left] = arr[right]
+        arr[right] = temp
+
+        left++
+        right--
+    }
+
+    left = mid
+    right = arr.length -1 
+
+    while(left < right){
+        let temp = arr[left] 
+        arr[left] = arr[right]
+        arr[right] = temp
+
+        left++
+        right--
+    }
+
+    return arr
+}
+console.log(reverseHalf([1,2,3,4,5,6]));
